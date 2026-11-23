@@ -29,6 +29,8 @@ const server = http.createServer((req, res) => {
     reqPath = '/collections.html';
   } else if (reqPath === '/deals' || reqPath === '/deals/' || reqPath === '/offers' || reqPath === '/offers/') {
     reqPath = '/deals.html';
+  } else if (reqPath === '/about' || reqPath === '/about/' || reqPath === '/about-us' || reqPath === '/about-us/') {
+    reqPath = '/about.html';
   } else if (reqPath.startsWith('/products/') || reqPath.startsWith('/product/') || reqPath === '/products' || reqPath === '/product') {
     reqPath = '/product.html';
   }

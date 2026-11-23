@@ -17,6 +17,16 @@
   status = 200
 
 [[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/about-us"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
   from = "/products/*"
   to = "/product.html"
   status = 200
