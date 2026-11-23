@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initDealsPage() {
-  // 1. Deals Catalog Definitions (Referencing existing PRODUCTS_DATA and exact reference items)
+  // 1. Deals Catalog Definitions (Matching Exact Reference Image 1)
   const DEALS_ITEMS = [
     {
       id: 'elfbar-raya-d3',
@@ -21,7 +21,7 @@ function initDealsPage() {
       discountNumber: 20,
       rating: 4.8,
       reviewsCount: '2.5k reviews',
-      image: '/assets/collections/card_img_1.png',
+      image: '/assets/deals/deal_prod_raya_d3.png',
       badge: '20% OFF'
     },
     {
@@ -34,7 +34,7 @@ function initDealsPage() {
       discountNumber: 17,
       rating: 4.7,
       reviewsCount: '1.1k reviews',
-      image: '/assets/collections/card_img_2.png',
+      image: '/assets/deals/deal_prod_raya_q7.png',
       badge: '17% OFF'
     },
     {
@@ -47,7 +47,7 @@ function initDealsPage() {
       discountNumber: 10,
       rating: 4.8,
       reviewsCount: '1.2k reviews',
-      image: '/assets/collections/card_img_3.png',
+      image: '/assets/deals/deal_prod_caliburn_g3.png',
       badge: '10% OFF'
     },
     {
@@ -60,7 +60,7 @@ function initDealsPage() {
       discountNumber: 9,
       rating: 4.9,
       reviewsCount: '1k reviews',
-      image: '/assets/collections/card_img_4.png',
+      image: '/assets/deals/deal_prod_caliburn_g4.png',
       badge: '9% OFF'
     }
   ];
@@ -94,12 +94,10 @@ function initCountdownTimer() {
 
   if (!elHours || !elMins || !elSecs) return;
 
-  // Key stored in session or calculated relative to 6h 24m 15s
   const STORAGE_KEY = 'vapehouse_deal_end_time';
   let endTime = localStorage.getItem(STORAGE_KEY);
 
   if (!endTime || parseInt(endTime, 10) < Date.now()) {
-    // 6 hours 24 minutes 15 seconds in ms
     const initialDurationMs = (6 * 3600 + 24 * 60 + 15) * 1000;
     endTime = Date.now() + initialDurationMs;
     localStorage.setItem(STORAGE_KEY, endTime);
@@ -112,7 +110,6 @@ function initCountdownTimer() {
     let diff = Math.max(0, Math.floor((endTime - now) / 1000));
 
     if (diff <= 0) {
-      // Reset for next flash cycle
       endTime = Date.now() + (6 * 3600 + 24 * 60 + 15) * 1000;
       localStorage.setItem(STORAGE_KEY, endTime);
       diff = Math.floor((endTime - now) / 1000);
@@ -132,7 +129,7 @@ function initCountdownTimer() {
 }
 
 /**
- * Render Flash Deals Grid
+ * Render Flash Deals Grid (Exact Match to Reference Card Layout)
  */
 function renderFlashDeals(items) {
   const container = document.getElementById('flash-deals-grid');
@@ -143,11 +140,11 @@ function renderFlashDeals(items) {
     const detailUrl = `/products/${item.slug}`;
 
     return `
-      <div class="bg-white rounded-2xl p-4 sm:p-5 text-[#0B0D12] flex flex-col justify-between relative shadow-sm hover:shadow-lg transition-all group border border-gray-100">
+      <div class="bg-white rounded-2xl p-4 sm:p-5 text-[#0B0D12] flex flex-col justify-between relative shadow-sm hover:shadow-md transition-all group border border-gray-100">
         
         <!-- Top Row: Badge & Wishlist -->
         <div class="flex items-center justify-between mb-2">
-          <span class="bg-[#E9FCD4] text-[#2F6803] text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full border border-[#A3FF12]/40 tracking-wider">
+          <span class="bg-[#A3FF12] text-black text-[11px] font-black uppercase px-2.5 py-0.5 rounded-md tracking-wider">
             ${item.badge}
           </span>
           <button class="btn-card-wishlist p-1 text-gray-400 hover:text-red-500 transition-colors" data-id="${item.id}" title="Add to Wishlist">
@@ -157,15 +154,15 @@ function renderFlashDeals(items) {
           </button>
         </div>
 
-        <!-- Product Image -->
-        <a href="${detailUrl}" class="block my-2 py-3 flex items-center justify-center overflow-hidden cursor-pointer group-hover:scale-105 transition-transform duration-300">
-          <img src="${item.image}" alt="${item.name}" class="h-32 sm:h-36 w-auto object-contain drop-shadow-md" loading="lazy" />
+        <!-- Product Image (Clean Isolated Image on White Background) -->
+        <a href="${detailUrl}" class="block my-2 py-2 flex items-center justify-center overflow-hidden cursor-pointer group-hover:scale-105 transition-transform duration-300">
+          <img src="${item.image}" alt="${item.name}" class="h-32 sm:h-36 w-auto object-contain" loading="lazy" />
         </a>
 
-        <!-- Title & Price -->
+        <!-- Title & Price Row -->
         <div class="pt-2">
           <a href="${detailUrl}" class="block">
-            <h3 class="font-display font-black text-sm text-[#0B0D12] group-hover:text-[#8B00FF] transition-colors leading-snug">
+            <h3 class="font-display font-black text-sm text-[#0B0D12] group-hover:text-[#8B00FF] transition-colors leading-snug truncate">
               ${item.name}
             </h3>
           </a>
@@ -178,7 +175,7 @@ function renderFlashDeals(items) {
             </div>
 
             <!-- Round Lime Cart Button -->
-            <button class="btn-add-flash-cart w-8 h-8 rounded-full bg-[#A3FF12] hover:bg-[#b3ff3b] text-[#0B0D12] flex items-center justify-center shadow-md shadow-[#A3FF12]/20 hover:scale-110 active:scale-95 transition-transform" data-id="${item.id}" data-name="${item.name}" data-price="${item.price}" title="Add to Cart">
+            <button class="btn-add-flash-cart w-8 h-8 rounded-full bg-[#A3FF12] hover:bg-[#b2ff33] text-[#0B0D12] flex items-center justify-center shadow-sm hover:scale-110 active:scale-95 transition-transform" data-id="${item.id}" data-name="${item.name}" data-price="${item.price}" title="Add to Cart">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
               </svg>
@@ -208,11 +205,11 @@ function initMoreOffersFilter(items) {
       const detailUrl = `/products/${item.slug}`;
 
       return `
-        <div class="bg-white rounded-3xl p-5 border border-gray-200/80 shadow-sm hover:shadow-lg transition-all group flex flex-col justify-between relative" data-discount="${item.discountNumber}">
+        <div class="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-md transition-all group flex flex-col justify-between relative" data-discount="${item.discountNumber}">
           
           <!-- Top Row: Badge & Wishlist -->
           <div class="flex items-center justify-between mb-2">
-            <span class="bg-[#E9FCD4] text-[#2F6803] text-[10px] font-black uppercase px-2.5 py-1 rounded-full border border-[#A3FF12]/40 tracking-wider">
+            <span class="bg-[#A3FF12] text-black text-[11px] font-black uppercase px-2.5 py-0.5 rounded-md tracking-wider">
               ${item.badge}
             </span>
             <button class="btn-card-wishlist p-1 text-gray-400 hover:text-red-500 transition-colors" data-id="${item.id}" title="Add to Wishlist">
@@ -222,15 +219,15 @@ function initMoreOffersFilter(items) {
             </button>
           </div>
 
-          <!-- Product Image -->
-          <a href="${detailUrl}" class="block my-2 py-4 flex items-center justify-center overflow-hidden cursor-pointer group-hover:scale-105 transition-transform duration-300">
-            <img src="${item.image}" alt="${item.name}" class="h-36 sm:h-40 w-auto object-contain drop-shadow-md" loading="lazy" />
+          <!-- Product Image (Clean Isolated Image on White Background) -->
+          <a href="${detailUrl}" class="block my-2 py-3 flex items-center justify-center overflow-hidden cursor-pointer group-hover:scale-105 transition-transform duration-300">
+            <img src="${item.image}" alt="${item.name}" class="h-36 sm:h-40 w-auto object-contain" loading="lazy" />
           </a>
 
           <!-- Info & Rating -->
           <div class="space-y-1.5 pt-2">
             <a href="${detailUrl}" class="block">
-              <h3 class="font-display font-black text-base text-[#0B0D12] group-hover:text-[#8B00FF] transition-colors leading-snug">
+              <h3 class="font-display font-black text-sm text-[#0B0D12] group-hover:text-[#8B00FF] transition-colors leading-snug truncate">
                 ${item.name}
               </h3>
             </a>
@@ -246,12 +243,12 @@ function initMoreOffersFilter(items) {
 
             <!-- Price Row -->
             <div class="flex items-center gap-2 pt-1 pb-2">
-              <span class="font-display font-black text-lg text-[#0B0D12]">₹${item.price.toLocaleString('en-IN')}</span>
+              <span class="font-display font-black text-base text-[#0B0D12]">₹${item.price.toLocaleString('en-IN')}</span>
               <span class="text-xs text-gray-400 line-through">₹${item.originalPrice.toLocaleString('en-IN')}</span>
             </div>
 
             <!-- Full-Width Dark Add to Cart Button -->
-            <button class="btn-add-more-cart w-full bg-[#18181B] hover:bg-[#27272a] text-white py-2.5 px-4 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all shadow-sm active:scale-95" data-id="${item.id}" data-name="${item.name}" data-price="${item.price}">
+            <button class="btn-add-more-cart w-full bg-[#181C28] hover:bg-[#252B3B] text-white py-2.5 px-4 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all shadow-sm active:scale-95" data-id="${item.id}" data-name="${item.name}" data-price="${item.price}">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
               </svg>
@@ -266,184 +263,181 @@ function initMoreOffersFilter(items) {
     attachDealEvents();
   }
 
-  // Filter Tab Click Handlers
+  // Initial render with all deals
+  renderMoreOffers(items);
+
+  // Filter Buttons Click
   filterButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       filterButtons.forEach(b => {
-        b.classList.remove('active', 'bg-[#18181B]', 'text-white');
-        b.classList.add('bg-white', 'text-gray-700');
+        b.classList.remove('bg-[#181126]', 'text-white', 'border-[#181126]');
+        b.classList.add('bg-transparent', 'text-gray-700', 'border-gray-300');
       });
-      btn.classList.add('active', 'bg-[#18181B]', 'text-white');
-      btn.classList.remove('bg-white', 'text-gray-700');
 
-      const filterType = btn.dataset.filter;
+      btn.classList.add('bg-[#181126]', 'text-white', 'border-[#181126]');
+      btn.classList.remove('bg-transparent', 'text-gray-700', 'border-gray-300');
+
+      const filterType = btn.getAttribute('data-filter');
       let filtered = items;
 
       if (filterType === 'up-to-10') {
-        filtered = items.filter(it => it.discountNumber <= 10);
+        filtered = items.filter(i => i.discountNumber <= 10);
       } else if (filterType === '10-20') {
-        filtered = items.filter(it => it.discountNumber > 10 && it.discountNumber <= 20);
+        filtered = items.filter(i => i.discountNumber >= 10 && i.discountNumber <= 20);
       } else if (filterType === 'above-20') {
-        filtered = items.filter(it => it.discountNumber >= 20);
+        filtered = items.filter(i => i.discountNumber >= 20);
       }
 
       renderMoreOffers(filtered);
     });
   });
-
-  // Initial render with all deals
-  renderMoreOffers(items);
 }
 
 /**
- * Attach Card Events (Cart & Wishlist)
+ * Bundle Deals Cart Integration
+ */
+function initBundleActions() {
+  const bundleBtns = document.querySelectorAll('.btn-add-bundle');
+  bundleBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const name = btn.getAttribute('data-name');
+      const price = parseInt(btn.getAttribute('data-price') || '4500', 10);
+
+      incrementCart(name, price);
+      
+      const originalHTML = btn.innerHTML;
+      btn.innerHTML = `
+        <svg class="w-4 h-4 text-[#A3FF12]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+        </svg>
+        <span>Added to Cart!</span>
+      `;
+      btn.classList.add('bg-[#581C87]');
+
+      setTimeout(() => {
+        btn.innerHTML = originalHTML;
+        btn.classList.remove('bg-[#581C87]');
+      }, 1600);
+    });
+  });
+}
+
+/**
+ * Event Listeners for Product Card Cart and Wishlist
  */
 function attachDealEvents() {
-  // Flash Cart buttons
+  // Flash Deal Cart Buttons
   document.querySelectorAll('.btn-add-flash-cart').forEach(btn => {
     btn.onclick = (e) => {
-      e.preventDefault();
-      const name = btn.dataset.name;
-      incrementCart();
-      showToast(`Added ${name} to your cart! 🛍️`);
+      e.stopPropagation();
+      const name = btn.getAttribute('data-name');
+      const price = parseInt(btn.getAttribute('data-price') || '2500', 10);
+      incrementCart(name, price);
+      
+      btn.classList.add('scale-125', 'bg-white');
+      setTimeout(() => btn.classList.remove('scale-125', 'bg-white'), 300);
     };
   });
 
-  // More Offers Cart buttons
+  // More Offers Cart Buttons
   document.querySelectorAll('.btn-add-more-cart').forEach(btn => {
     btn.onclick = (e) => {
-      e.preventDefault();
-      const name = btn.dataset.name;
-      incrementCart();
-      showToast(`Added ${name} to your cart! 🛍️`);
+      e.stopPropagation();
+      const name = btn.getAttribute('data-name');
+      const price = parseInt(btn.getAttribute('data-price') || '2500', 10);
+      incrementCart(name, price);
+
+      const originalText = btn.innerHTML;
+      btn.innerHTML = `
+        <svg class="w-4 h-4 text-[#A3FF12]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+        </svg>
+        <span>Added!</span>
+      `;
+      setTimeout(() => btn.innerHTML = originalText, 1400);
     };
   });
 
-  // Wishlist buttons
+  // Wishlist Toggle
   document.querySelectorAll('.btn-card-wishlist').forEach(btn => {
     btn.onclick = (e) => {
-      e.preventDefault();
-      const id = btn.dataset.id;
-      const nowActive = toggleWishlist(id);
+      e.stopPropagation();
+      const id = btn.getAttribute('data-id');
+      const isNowWishlisted = toggleWishlist(id);
       const svg = btn.querySelector('svg');
-      if (svg) {
-        if (nowActive) {
-          svg.classList.add('text-red-500', 'fill-red-500');
-          svg.classList.remove('fill-none');
-          showToast('Added to your Wishlist! ❤️');
-        } else {
-          svg.classList.remove('text-red-500', 'fill-red-500');
-          svg.classList.add('fill-none');
-          showToast('Removed from your Wishlist.');
-        }
+      if (isNowWishlisted) {
+        svg.classList.add('text-red-500', 'fill-red-500');
+        svg.classList.remove('fill-none');
+      } else {
+        svg.classList.remove('text-red-500', 'fill-red-500');
+        svg.classList.add('fill-none');
       }
     };
   });
 }
 
 /**
- * Bundle Deal Actions
- */
-function initBundleActions() {
-  document.querySelectorAll('.btn-add-bundle').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const name = btn.dataset.name;
-      incrementCart();
-      showToast(`Bundle "${name}" added to cart! 🎁`);
-    });
-  });
-}
-
-/**
- * Newsletter Subscription
+ * Newsletter Form
  */
 function initNewsletter() {
   const form = document.getElementById('deals-newsletter-form');
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const input = form.querySelector('input');
-      const email = input ? input.value.trim() : '';
-      if (email) {
-        showToast(`Subscribed successfully with ${email}! ✉️`);
-        if (input) input.value = '';
-      }
-    });
-  }
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const input = form.querySelector('input');
+    const button = form.querySelector('button');
+
+    if (!input || !input.value) return;
+
+    button.innerHTML = `<span>Subscribed!</span>`;
+    button.classList.add('bg-white', 'text-[#0B0D12]');
+    input.value = '';
+
+    setTimeout(() => {
+      button.innerHTML = `
+        <span>Subscribe</span>
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+        </svg>
+      `;
+      button.classList.remove('bg-white', 'text-[#0B0D12]');
+    }, 2500);
+  });
 }
 
 /**
- * Shared Helpers: Cart, Wishlist, Toast
+ * LocalStorage Helpers
  */
-function getCartCount() {
-  return parseInt(localStorage.getItem('vapehouse_cart_count') || '0', 10);
-}
-
-function incrementCart() {
-  const current = getCartCount();
-  const next = current + 1;
-  localStorage.setItem('vapehouse_cart_count', next);
+function incrementCart(name, price) {
+  let count = parseInt(localStorage.getItem('vapehouse_cart_count') || '0', 10);
+  count += 1;
+  localStorage.setItem('vapehouse_cart_count', count);
   updateCartBadge();
 }
 
 function updateCartBadge() {
-  const count = getCartCount();
+  const count = parseInt(localStorage.getItem('vapehouse_cart_count') || '0', 10);
   const badge = document.getElementById('cart-badge-count');
   if (badge) {
     badge.textContent = count;
-    badge.classList.add('scale-125');
-    setTimeout(() => badge.classList.remove('scale-125'), 200);
-  }
-}
-
-function getWishlist() {
-  try {
-    return JSON.parse(localStorage.getItem('vapehouse_wishlist') || '[]');
-  } catch (e) {
-    return [];
   }
 }
 
 function checkIfWishlisted(id) {
-  const list = getWishlist();
+  const list = JSON.parse(localStorage.getItem('vapehouse_wishlist') || '[]');
   return list.includes(id);
 }
 
 function toggleWishlist(id) {
-  let list = getWishlist();
-  let added = false;
-  if (list.includes(id)) {
+  let list = JSON.parse(localStorage.getItem('vapehouse_wishlist') || '[]');
+  let exists = list.includes(id);
+  if (exists) {
     list = list.filter(item => item !== id);
-    added = false;
   } else {
     list.push(id);
-    added = true;
   }
   localStorage.setItem('vapehouse_wishlist', JSON.stringify(list));
-  return added;
-}
-
-function showToast(message) {
-  let toast = document.getElementById('vape-deal-toast');
-  if (!toast) {
-    toast = document.createElement('div');
-    toast.id = 'vape-deal-toast';
-    toast.className = 'fixed bottom-6 right-6 z-50 bg-[#0B0D12] text-white border border-[#A3FF12]/50 shadow-2xl px-5 py-3 rounded-2xl flex items-center gap-3 text-xs font-bold transition-all duration-300 transform translate-y-16 opacity-0';
-    document.body.appendChild(toast);
-  }
-
-  toast.innerHTML = `
-    <span class="w-2 h-2 rounded-full bg-[#A3FF12] animate-ping"></span>
-    <span>${message}</span>
-  `;
-
-  toast.classList.remove('translate-y-16', 'opacity-0');
-  toast.classList.add('translate-y-0', 'opacity-100');
-
-  if (window.toastTimeout) clearTimeout(window.toastTimeout);
-  window.toastTimeout = setTimeout(() => {
-    toast.classList.remove('translate-y-0', 'opacity-100');
-    toast.classList.add('translate-y-16', 'opacity-0');
-  }, 3000);
+  return !exists;
 }

@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- Precompiled Production Tailwind CSS (Zero CDN dependency, 100% resilient) -->
+  <!-- Precompiled Production Tailwind CSS -->
   <link rel="stylesheet" href="/css/tailwind.min.css">
   <link rel="stylesheet" href="css/tailwind.min.css">
 
@@ -27,8 +27,7 @@
               purple: '#8B00FF',
               charcoal: '#0B0D12',
               white: '#FFFFFF',
-              gray: '#F4F6F9',
-              muted: '#94A3B8'
+              cream: '#FAF4ED'
             }
           },
           fontFamily: {
@@ -47,35 +46,20 @@
   <style>
     /* Specific Deals Page Styles */
     .deal-filter-btn.active {
-      background-color: #18181B !important;
+      background-color: #181126 !important;
       color: #FFFFFF !important;
-      border-color: #18181B !important;
-    }
-    .custom-scrollbar::-webkit-scrollbar {
-      width: 5px;
-      height: 5px;
-    }
-    .custom-scrollbar::-webkit-scrollbar-thumb {
-      background: #CBD5E1;
-      border-radius: 9999px;
+      border-color: #181126 !important;
     }
     @keyframes pulseGlow {
-      0%, 100% { opacity: 0.6; transform: scale(1); }
-      50% { opacity: 0.9; transform: scale(1.05); }
+      0%, 100% { opacity: 0.5; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(1.04); }
     }
     .ambient-pulse {
       animation: pulseGlow 4s infinite ease-in-out;
     }
-    @keyframes floatTag {
-      0%, 100% { transform: translateY(0) rotate(0deg); }
-      50% { transform: translateY(-5px) rotate(1deg); }
-    }
-    .floating-tag {
-      animation: floatTag 3.5s infinite ease-in-out;
-    }
   </style>
 </head>
-<body class="bg-[#F8FAFC] text-[#0B0D12] selection:bg-[#A3FF12] selection:text-[#0B0D12] min-h-screen flex flex-col justify-between font-sans">
+<body class="bg-[#FAF4ED] text-[#0B0D12] selection:bg-[#A3FF12] selection:text-[#0B0D12] min-h-screen flex flex-col justify-between font-sans">
 
   <!-- =========================================================================
        1. TOP ANNOUNCEMENT BAR (Exact match to reference)
@@ -222,17 +206,16 @@
   <!-- =========================================================================
        3. HERO OFFERS BANNER (Exact Match to Reference Image)
        ========================================================================= -->
-  <section class="relative bg-gradient-to-b from-[#150727] via-[#0E071D] to-[#0B0D12] overflow-hidden pt-8 sm:pt-12 pb-16 sm:pb-20 border-b border-white/[0.06]">
+  <section class="relative bg-gradient-to-b from-[#140624] via-[#0E031A] to-[#0A0213] overflow-hidden pt-8 sm:pt-12 pb-14 sm:pb-20 border-b border-white/[0.06]">
     
-    <!-- Atmospheric Ambient Glows & Mist -->
-    <div class="absolute -top-24 -left-20 w-[600px] h-[600px] bg-[#8B00FF]/25 rounded-full blur-[140px] pointer-events-none select-none ambient-pulse"></div>
-    <div class="absolute top-1/3 right-10 w-[650px] h-[650px] bg-[#A3FF12]/15 rounded-full blur-[160px] pointer-events-none select-none"></div>
-    <div class="absolute inset-0 bg-radial-gradient from-transparent via-[#0B0D12]/50 to-[#0B0D12] pointer-events-none"></div>
+    <!-- Atmospheric Ambient Violet Smoke -->
+    <div class="absolute -top-24 -left-20 w-[600px] h-[600px] bg-[#8B00FF]/20 rounded-full blur-[140px] pointer-events-none select-none ambient-pulse"></div>
+    <div class="absolute top-1/4 right-0 w-[650px] h-[650px] bg-[#8B00FF]/15 rounded-full blur-[160px] pointer-events-none select-none"></div>
 
-    <div class="max-w-[1600px] mx-auto px-4 sm:px-8 relative z-20">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-8 relative z-20">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         
-        <!-- Left: Text Content & CTA -->
+        <!-- Left Column: Copy & CTA -->
         <div class="lg:col-span-6 space-y-6">
           <div class="flex items-center gap-3">
             <span class="w-8 h-[2px] bg-[#A3FF12] inline-block shadow-[0_0_10px_#A3FF12]"></span>
@@ -241,7 +224,7 @@
             </span>
           </div>
 
-          <h1 class="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.08]">
+          <h1 class="font-display font-black text-4xl sm:text-5xl lg:text-[54px] text-white tracking-tight leading-[1.08]">
             Big Savings on <br>
             <span class="text-[#A3FF12] drop-shadow-[0_0_25px_rgba(163,255,18,0.45)]">Your Favourite Vapes</span>
           </h1>
@@ -261,12 +244,12 @@
           </div>
         </div>
 
-        <!-- Right: 3D Product Showcase on Rock Pedestal with Hanging Tag -->
+        <!-- Right Column: 3D Product Showcase on Rock with Hanging Tag (Seamlessly Blended) -->
         <div class="lg:col-span-6 relative flex items-center justify-center">
-          <div class="relative w-full max-w-[620px] flex items-center justify-center">
+          <div class="relative w-full flex items-center justify-center">
             
-            <!-- High-Res Studio Master Banner Render -->
-            <img src="/assets/deals/hero_deals_banner.png" alt="Big Savings on Your Favourite Vapes - Up to 30% Off" class="relative z-10 w-full h-auto max-h-[380px] sm:max-h-[440px] object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.85)] filter brightness-105 select-none" />
+            <!-- High-Res Studio Render with Natural Transparent Alpha Edge -->
+            <img src="/assets/deals/hero_deals_devices.png" alt="Big Savings on Your Favourite Vapes - Up to 30% Off" class="relative z-10 w-full h-auto max-h-[380px] sm:max-h-[460px] object-contain select-none drop-shadow-[0_20px_45px_rgba(0,0,0,0.8)] filter brightness-105" />
             
           </div>
         </div>
@@ -276,16 +259,16 @@
   </section>
 
   <!-- =========================================================================
-       4. SERVICE BENEFITS STRIP (White Floating Dock)
+       4. SERVICE BENEFITS STRIP (Floating White Dock - Exact Match to Reference)
        ========================================================================= -->
   <section class="max-w-[1440px] mx-auto px-4 sm:px-8 -mt-6 sm:-mt-8 relative z-30">
-    <div class="bg-white rounded-2xl border border-gray-100 shadow-xl py-6 px-6 sm:px-10 grid grid-cols-2 lg:grid-cols-4 gap-6 items-center">
+    <div class="bg-white rounded-2xl border border-gray-100 shadow-md py-6 px-6 sm:px-10 grid grid-cols-2 lg:grid-cols-4 gap-6 items-center">
       
       <!-- Benefit 1: Fast Delivery -->
       <div class="flex items-center gap-3.5">
-        <div class="w-12 h-12 rounded-2xl bg-[#E9FCD4] text-[#2F6803] border border-[#A3FF12]/40 flex items-center justify-center flex-shrink-0 shadow-sm">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"/>
+        <div class="text-[#65A30D] flex-shrink-0">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"/>
           </svg>
         </div>
         <div>
@@ -296,9 +279,9 @@
 
       <!-- Benefit 2: 100% Authentic -->
       <div class="flex items-center gap-3.5">
-        <div class="w-12 h-12 rounded-2xl bg-[#E9FCD4] text-[#2F6803] border border-[#A3FF12]/40 flex items-center justify-center flex-shrink-0 shadow-sm">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+        <div class="text-[#65A30D] flex-shrink-0">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
           </svg>
         </div>
         <div>
@@ -309,9 +292,9 @@
 
       <!-- Benefit 3: Discreet Packaging -->
       <div class="flex items-center gap-3.5">
-        <div class="w-12 h-12 rounded-2xl bg-[#E9FCD4] text-[#2F6803] border border-[#A3FF12]/40 flex items-center justify-center flex-shrink-0 shadow-sm">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+        <div class="text-[#65A30D] flex-shrink-0">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
           </svg>
         </div>
         <div>
@@ -322,9 +305,9 @@
 
       <!-- Benefit 4: Customer Support -->
       <div class="flex items-center gap-3.5">
-        <div class="w-12 h-12 rounded-2xl bg-[#E9FCD4] text-[#2F6803] border border-[#A3FF12]/40 flex items-center justify-center flex-shrink-0 shadow-sm">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414"/>
+        <div class="text-[#65A30D] flex-shrink-0">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414"/>
           </svg>
         </div>
         <div>
@@ -337,22 +320,21 @@
   </section>
 
   <!-- =========================================================================
-       5. FLASH DEALS SECTION (Dark Card Container with Live Countdown)
+       5. FLASH DEALS SECTION (Wide Dark Panel with Live Countdown)
        ========================================================================= -->
-  <section id="flash-deals-section" class="max-w-[1440px] mx-auto px-4 sm:px-8 pt-12 pb-6">
-    <div class="bg-[#12141D] rounded-3xl border border-white/[0.08] p-6 sm:p-8 lg:p-10 shadow-2xl relative overflow-hidden text-white">
+  <section id="flash-deals-section" class="max-w-[1440px] mx-auto px-4 sm:px-8 pt-10 pb-6">
+    <div class="bg-[#181126] rounded-3xl border border-white/10 p-6 sm:p-8 lg:p-10 shadow-2xl relative overflow-hidden text-white">
       
       <!-- Ambient Purple & Lime Glow Behind Cards -->
       <div class="absolute -top-20 -left-20 w-80 h-80 bg-[#8B00FF]/20 rounded-full blur-[90px] pointer-events-none"></div>
-      <div class="absolute -bottom-20 -right-20 w-80 h-80 bg-[#A3FF12]/15 rounded-full blur-[90px] pointer-events-none"></div>
 
       <div class="relative z-10 flex flex-col lg:flex-row gap-8 lg:gap-10 items-stretch">
         
         <!-- Left: Flash Deals Title & Countdown Clock -->
-        <div class="lg:w-72 xl:w-80 flex flex-col justify-between space-y-6 flex-shrink-0">
+        <div class="lg:w-64 xl:w-72 flex flex-col justify-between space-y-6 flex-shrink-0">
           <div>
             <!-- Lime Lightning Bolt Icon Badge -->
-            <div class="w-12 h-12 rounded-2xl bg-[#A3FF12]/20 border border-[#A3FF12]/50 text-[#A3FF12] flex items-center justify-center mb-4 shadow-[0_0_15px_rgba(163,255,18,0.3)]">
+            <div class="w-12 h-12 rounded-full bg-[#A3FF12]/20 border border-[#A3FF12]/50 text-[#A3FF12] flex items-center justify-center mb-4 shadow-[0_0_15px_rgba(163,255,18,0.3)]">
               <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
                 <path d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
@@ -369,22 +351,22 @@
           <!-- Dynamic Countdown Clock -->
           <div class="space-y-2 pt-4">
             <span class="text-xs uppercase font-extrabold tracking-wider text-gray-400">Ends in</span>
-            <div class="flex items-center gap-3 text-center">
+            <div class="flex items-center gap-2.5 sm:gap-3 text-center">
               
               <!-- Hours Box -->
-              <div class="flex-1 bg-[#1A1D2A] border border-white/10 rounded-2xl p-3 shadow-inner">
+              <div class="flex-1 bg-[#221B35] border border-white/10 rounded-2xl py-3 px-2 shadow-inner">
                 <span id="countdown-hours" class="block font-display font-black text-2xl sm:text-3xl text-white leading-none">06</span>
                 <span class="text-[10px] text-gray-400 font-bold uppercase tracking-wider mt-1 block">Hrs</span>
               </div>
 
               <!-- Minutes Box -->
-              <div class="flex-1 bg-[#1A1D2A] border border-white/10 rounded-2xl p-3 shadow-inner">
+              <div class="flex-1 bg-[#221B35] border border-white/10 rounded-2xl py-3 px-2 shadow-inner">
                 <span id="countdown-minutes" class="block font-display font-black text-2xl sm:text-3xl text-white leading-none">24</span>
                 <span class="text-[10px] text-gray-400 font-bold uppercase tracking-wider mt-1 block">Min</span>
               </div>
 
               <!-- Seconds Box -->
-              <div class="flex-1 bg-[#1A1D2A] border border-white/10 rounded-2xl p-3 shadow-inner">
+              <div class="flex-1 bg-[#221B35] border border-white/10 rounded-2xl py-3 px-2 shadow-inner">
                 <span id="countdown-seconds" class="block font-display font-black text-2xl sm:text-3xl text-[#A3FF12] leading-none">15</span>
                 <span class="text-[10px] text-gray-400 font-bold uppercase tracking-wider mt-1 block">Sec</span>
               </div>
@@ -403,7 +385,7 @@
   </section>
 
   <!-- =========================================================================
-       6. BUNDLE DEALS SECTION (Combo Packs with Big Savings)
+       6. BUNDLE DEALS SECTION (Combo Packs - Exact Match to Reference)
        ========================================================================= -->
   <section class="max-w-[1440px] mx-auto px-4 sm:px-8 py-12 sm:py-16">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
@@ -417,9 +399,9 @@
           More value. More savings. Exclusive combo offers only at VapeHouse.
         </p>
         <div class="pt-2">
-          <a href="/collections?category=disposable" class="inline-flex items-center gap-2 border border-gray-300 hover:border-gray-400 bg-white hover:bg-gray-50 text-xs font-bold px-6 py-3 rounded-full text-gray-800 shadow-sm transition-all">
+          <a href="/collections?category=disposable" class="inline-flex items-center gap-2 border border-gray-900 hover:border-gray-900 bg-white hover:bg-gray-900 hover:text-white text-xs font-bold px-6 py-3 rounded-full text-gray-900 shadow-sm transition-all">
             <span>View All Bundles</span>
-            <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
             </svg>
           </a>
@@ -430,14 +412,14 @@
       <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
         
         <!-- Bundle Card 1: ElfBar Combo Pack -->
-        <div class="bg-white rounded-3xl p-5 sm:p-6 border border-gray-200/80 shadow-sm hover:shadow-md transition-all relative overflow-hidden flex flex-col justify-between group">
-          <!-- Top Badge: Save ₹800 -->
+        <div class="bg-white rounded-2xl p-5 sm:p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all relative overflow-hidden flex flex-col justify-between group">
+          <!-- Top Badge: Save ₹800 in Lime -->
           <div class="flex items-center justify-between mb-2">
-            <span class="bg-[#E9FCD4] text-[#2F6803] text-[11px] font-black uppercase px-3 py-1 rounded-full border border-[#A3FF12]/40 tracking-wider">
+            <span class="bg-[#A3FF12] text-black text-[11px] font-black uppercase px-3 py-1 rounded-full tracking-wider">
               Save ₹800
             </span>
             <button class="btn-card-wishlist p-1.5 text-gray-400 hover:text-red-500 transition-colors" data-id="elfbar-combo" title="Add to Wishlist">
-              <svg class="w-5 h-5 fill-none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-4 h-4 fill-none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
               </svg>
             </button>
@@ -445,8 +427,8 @@
 
           <!-- Product Combo Graphic & Info Row -->
           <div class="flex items-center gap-5 my-2">
-            <div class="w-28 sm:w-32 h-28 sm:h-32 rounded-2xl bg-gray-50 flex items-center justify-center p-2 flex-shrink-0 group-hover:scale-105 transition-transform">
-              <img src="/assets/deals/bundle_elfbar.png" alt="ElfBar Combo Pack" class="w-full h-full object-contain drop-shadow-sm" />
+            <div class="w-28 sm:w-32 h-28 sm:h-32 flex items-center justify-center p-1 flex-shrink-0 group-hover:scale-105 transition-transform">
+              <img src="/assets/deals/bundle_elfbar.png" alt="ElfBar Combo Pack" class="w-full h-full object-contain" />
             </div>
 
             <div class="space-y-1.5 flex-1">
@@ -465,7 +447,7 @@
 
           <!-- Add to Cart Purple Button -->
           <div class="pt-3">
-            <button class="btn-add-bundle w-full bg-[#7E22CE] hover:bg-[#6b21a8] text-white py-2.5 px-4 rounded-xl text-xs font-black flex items-center justify-center gap-2 shadow-sm transition-all active:scale-95" data-name="ElfBar Combo Pack" data-price="4700">
+            <button class="btn-add-bundle w-full bg-[#7E22CE] hover:bg-[#6b21a8] text-white py-2.5 px-4 rounded-xl text-xs font-bold flex items-center justify-center gap-2 shadow-sm transition-all active:scale-95" data-name="ElfBar Combo Pack" data-price="4700">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
               </svg>
@@ -475,14 +457,14 @@
         </div>
 
         <!-- Bundle Card 2: Caliburn Value Pack -->
-        <div class="bg-white rounded-3xl p-5 sm:p-6 border border-gray-200/80 shadow-sm hover:shadow-md transition-all relative overflow-hidden flex flex-col justify-between group">
-          <!-- Top Badge: Save ₹1,000 -->
+        <div class="bg-white rounded-2xl p-5 sm:p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all relative overflow-hidden flex flex-col justify-between group">
+          <!-- Top Badge: Save ₹1,000 in Lime -->
           <div class="flex items-center justify-between mb-2">
-            <span class="bg-[#E9FCD4] text-[#2F6803] text-[11px] font-black uppercase px-3 py-1 rounded-full border border-[#A3FF12]/40 tracking-wider">
+            <span class="bg-[#A3FF12] text-black text-[11px] font-black uppercase px-3 py-1 rounded-full tracking-wider">
               Save ₹1,000
             </span>
             <button class="btn-card-wishlist p-1.5 text-gray-400 hover:text-red-500 transition-colors" data-id="caliburn-bundle" title="Add to Wishlist">
-              <svg class="w-5 h-5 fill-none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-4 h-4 fill-none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
               </svg>
             </button>
@@ -490,8 +472,8 @@
 
           <!-- Product Combo Graphic & Info Row -->
           <div class="flex items-center gap-5 my-2">
-            <div class="w-28 sm:w-32 h-28 sm:h-32 rounded-2xl bg-gray-50 flex items-center justify-center p-2 flex-shrink-0 group-hover:scale-105 transition-transform">
-              <img src="/assets/deals/bundle_caliburn.png" alt="Caliburn Value Pack" class="w-full h-full object-contain drop-shadow-sm" />
+            <div class="w-28 sm:w-32 h-28 sm:h-32 flex items-center justify-center p-1 flex-shrink-0 group-hover:scale-105 transition-transform">
+              <img src="/assets/deals/bundle_caliburn.png" alt="Caliburn Value Pack" class="w-full h-full object-contain" />
             </div>
 
             <div class="space-y-1.5 flex-1">
@@ -510,7 +492,7 @@
 
           <!-- Add to Cart Purple Button -->
           <div class="pt-3">
-            <button class="btn-add-bundle w-full bg-[#7E22CE] hover:bg-[#6b21a8] text-white py-2.5 px-4 rounded-xl text-xs font-black flex items-center justify-center gap-2 shadow-sm transition-all active:scale-95" data-name="Caliburn Value Pack" data-price="4500">
+            <button class="btn-add-bundle w-full bg-[#7E22CE] hover:bg-[#6b21a8] text-white py-2.5 px-4 rounded-xl text-xs font-bold flex items-center justify-center gap-2 shadow-sm transition-all active:scale-95" data-name="Caliburn Value Pack" data-price="4500">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
               </svg>
@@ -538,16 +520,16 @@
 
       <!-- Filter Tabs Strip -->
       <div class="flex flex-wrap items-center gap-2 text-xs font-bold">
-        <button class="deal-filter-btn active px-4 py-2 rounded-full border border-gray-200 transition-all shadow-sm" data-filter="all">
+        <button class="deal-filter-btn active px-5 py-2 rounded-full border border-[#181126] bg-[#181126] text-white transition-all shadow-sm" data-filter="all">
           All Deals
         </button>
-        <button class="deal-filter-btn bg-white hover:bg-gray-50 text-gray-700 px-4 py-2 rounded-full border border-gray-200 transition-all shadow-sm" data-filter="up-to-10">
+        <button class="deal-filter-btn bg-transparent hover:bg-gray-100 text-gray-700 px-4 py-2 rounded-full border border-gray-300 transition-all shadow-sm" data-filter="up-to-10">
           Up to 10%
         </button>
-        <button class="deal-filter-btn bg-white hover:bg-gray-50 text-gray-700 px-4 py-2 rounded-full border border-gray-200 transition-all shadow-sm" data-filter="10-20">
+        <button class="deal-filter-btn bg-transparent hover:bg-gray-100 text-gray-700 px-4 py-2 rounded-full border border-gray-300 transition-all shadow-sm" data-filter="10-20">
           10 – 20%
         </button>
-        <button class="deal-filter-btn bg-white hover:bg-gray-50 text-gray-700 px-4 py-2 rounded-full border border-gray-200 transition-all shadow-sm" data-filter="above-20">
+        <button class="deal-filter-btn bg-transparent hover:bg-gray-100 text-gray-700 px-4 py-2 rounded-full border border-gray-300 transition-all shadow-sm" data-filter="above-20">
           Above 20%
         </button>
       </div>
@@ -560,18 +542,18 @@
   </section>
 
   <!-- =========================================================================
-       8. NEWSLETTER BANNER ("Never Miss a Deal!")
+       8. NEWSLETTER BANNER ("Never Miss a Deal!" - Exact Match to Reference)
        ========================================================================= -->
   <section class="max-w-[1440px] mx-auto px-4 sm:px-8 pb-16">
-    <div class="bg-gradient-to-r from-[#1E0538] via-[#350761] to-[#120024] rounded-3xl p-6 sm:p-10 border border-[#8B00FF]/30 text-white shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class="bg-gradient-to-r from-[#200B3B] via-[#2E0E52] to-[#1E0936] rounded-3xl p-6 sm:p-10 border border-[#8B00FF]/30 text-white shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6">
       
       <!-- Ambient mist behind banner -->
       <div class="absolute -right-10 -bottom-10 w-80 h-80 bg-[#8B00FF]/30 rounded-full blur-3xl pointer-events-none"></div>
 
       <!-- Left: Bell Icon & Heading -->
       <div class="flex items-center gap-4 sm:gap-5 relative z-10">
-        <div class="w-14 h-14 rounded-2xl bg-[#A3FF12]/20 border border-[#A3FF12]/50 text-[#A3FF12] flex items-center justify-center flex-shrink-0 shadow-[0_0_20px_rgba(163,255,18,0.35)]">
-          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="w-12 h-12 rounded-2xl bg-[#A3FF12]/15 border border-[#A3FF12]/40 text-[#A3FF12] flex items-center justify-center flex-shrink-0 shadow-[0_0_15px_rgba(163,255,18,0.3)]">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
           </svg>
         </div>
@@ -587,8 +569,8 @@
 
       <!-- Right: Email Input & Subscribe Button -->
       <form id="deals-newsletter-form" class="relative z-10 flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
-        <input type="email" required placeholder="Enter your email" class="w-full sm:w-72 px-5 py-3 rounded-full text-xs bg-white text-[#0B0D12] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#A3FF12] shadow-sm" />
-        <button type="submit" class="w-full sm:w-auto bg-[#A3FF12] hover:bg-[#b2ff33] text-[#0B0D12] font-black text-xs px-6 py-3 rounded-full shadow-lg shadow-[#A3FF12]/30 flex items-center justify-center gap-1.5 transition-all active:scale-95">
+        <input type="email" required placeholder="Enter your email" class="w-full sm:w-72 px-6 py-3.5 rounded-full text-xs bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#A3FF12] shadow-sm" />
+        <button type="submit" class="w-full sm:w-auto bg-[#A3FF12] hover:bg-[#b2ff33] text-[#0B0D12] font-black text-xs px-7 py-3.5 rounded-full shadow-lg shadow-[#A3FF12]/30 flex items-center justify-center gap-1.5 transition-all active:scale-95">
           <span>Subscribe</span>
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
