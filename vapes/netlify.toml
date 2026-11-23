@@ -1,0 +1,27 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/collections"
+  to = "/collections.html"
+  status = 200
+
+[[redirects]]
+  from = "/deals"
+  to = "/deals.html"
+  status = 200
+
+[[redirects]]
+  from = "/offers"
+  to = "/deals.html"
+  status = 200
+
+[[redirects]]
+  from = "/products/*"
+  to = "/product.html"
+  status = 200
+
+[[redirects]]
+  from = "/product/*"
+  to = "/product.html"
+  status = 200

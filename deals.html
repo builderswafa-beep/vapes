@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <base href="/">
   <title>Offers & Deals | VAPE HOUSE Bangalore</title>
-
+  
   <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+  
   <!-- Precompiled Production Tailwind CSS (Zero CDN dependency, 100% resilient) -->
   <link rel="stylesheet" href="/css/tailwind.min.css">
   <link rel="stylesheet" href="css/tailwind.min.css">
@@ -43,42 +43,49 @@
   <!-- Custom Styles -->
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="css/styles.css">
-
+  
   <style>
-    /* Offers Page Unique Styles */
-    .hanging-tag {
-      transform-origin: top center;
-      animation: gentle-sway 4s ease-in-out infinite alternate;
-    }
-    @keyframes gentle-sway {
-      0% { transform: rotate(-4deg); }
-      100% { transform: rotate(4deg); }
-    }
-    .timer-box {
-      background: rgba(11, 13, 18, 0.85);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 12px;
-      min-width: 54px;
-      padding: 8px 6px;
-      text-align: center;
-    }
-    .filter-tab-pill.active {
-      background-color: #0B0D12 !important;
+    /* Specific Deals Page Styles */
+    .deal-filter-btn.active {
+      background-color: #18181B !important;
       color: #FFFFFF !important;
-      border-color: #0B0D12 !important;
+      border-color: #18181B !important;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 9999px;
+    }
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.6; transform: scale(1); }
+      50% { opacity: 0.9; transform: scale(1.05); }
+    }
+    .ambient-pulse {
+      animation: pulseGlow 4s infinite ease-in-out;
+    }
+    @keyframes floatTag {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-5px) rotate(1deg); }
+    }
+    .floating-tag {
+      animation: floatTag 3.5s infinite ease-in-out;
     }
   </style>
 </head>
-<body class="bg-[#F8FAFC] text-[#0B0D12] selection:bg-[#A3FF12] selection:text-[#0B0D12] min-h-screen flex flex-col justify-between">
+<body class="bg-[#F8FAFC] text-[#0B0D12] selection:bg-[#A3FF12] selection:text-[#0B0D12] min-h-screen flex flex-col justify-between font-sans">
 
   <!-- =========================================================================
-       1. TOP ANNOUNCEMENT BAR (Exact match to Reference)
+       1. TOP ANNOUNCEMENT BAR (Exact match to reference)
        ========================================================================= -->
   <div class="bg-[#0B0D12] border-b border-white/[0.08] text-xs text-white/90 py-2.5 px-4 sm:px-8 relative z-50">
     <div class="max-w-[1600px] mx-auto flex flex-wrap items-center justify-between gap-y-2">
       
       <!-- Left trust badges -->
       <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-[12px] font-medium tracking-wide">
+        <!-- 25 Minutes Delivery -->
         <div class="flex items-center gap-2 group cursor-pointer">
           <svg class="w-4 h-4 text-[#A3FF12]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -88,6 +95,7 @@
 
         <span class="text-white/20 select-none hidden sm:inline">|</span>
 
+        <!-- 100% Authentic -->
         <div class="flex items-center gap-2 group cursor-pointer">
           <svg class="w-4 h-4 text-[#A3FF12]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -97,6 +105,7 @@
 
         <span class="text-white/20 select-none hidden md:inline">|</span>
 
+        <!-- Discreet Packaging -->
         <div class="flex items-center gap-2 group cursor-pointer hidden md:flex">
           <svg class="w-4 h-4 text-[#A3FF12]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
@@ -122,9 +131,9 @@
   </div>
 
   <!-- =========================================================================
-       2. MAIN NAVIGATION HEADER (Dark Bar - Exact match to Reference)
+       2. MAIN NAVIGATION HEADER (Dark Header matching reference design)
        ========================================================================= -->
-  <header class="bg-[#0B0D12] text-white sticky top-0 z-40 border-b border-white/[0.08] shadow-md">
+  <header class="bg-[#0B0D12] text-white sticky top-0 z-40 border-b border-white/[0.08] shadow-lg backdrop-blur-md bg-opacity-95">
     <div class="max-w-[1600px] mx-auto px-4 sm:px-8 h-18 sm:h-20 flex items-center justify-between">
       
       <!-- Brand Logo: VAPE HOUSE -->
@@ -132,9 +141,9 @@
         <div class="relative">
           <div class="font-display font-black italic tracking-tighter text-2xl sm:text-3xl leading-none flex items-center">
             <span class="text-white pr-1">VAPE</span>
-            <span class="text-[#A3FF12] drop-shadow-[0_1px_2px_rgba(0,0,0,0.15)] filter brightness-95">HOUSE</span>
+            <span class="text-[#A3FF12] drop-shadow-[0_0_12px_rgba(163,255,18,0.5)]">HOUSE</span>
           </div>
-          <!-- Lime swoosh under HOUSE -->
+          <!-- Exact lime swoosh under HOUSE -->
           <svg class="absolute -bottom-1 right-0 w-24 h-2 text-[#A3FF12] group-hover:scale-x-105 transition-transform" viewBox="0 0 100 8" fill="none">
             <path d="M0 2C30 6 70 6 100 1C70 4 30 4 0 2Z" fill="currentColor"/>
           </svg>
@@ -144,7 +153,7 @@
       <!-- Center Navigation Links -->
       <nav class="hidden md:flex items-center gap-1 lg:gap-2 font-medium text-[15px]">
         <!-- Home -->
-        <a href="/" class="px-4 py-2 text-gray-300 hover:text-[#A3FF12] transition-colors">
+        <a href="/" class="px-4 py-2 text-gray-300 hover:text-white transition-colors">
           Home
         </a>
 
@@ -164,9 +173,9 @@
           </div>
         </div>
 
-        <!-- Offers & Deals (Active Pill in Purple #8B00FF - Exact to Reference) -->
-        <a href="/deals" class="bg-[#8B00FF] text-white px-5 py-2 rounded-full font-semibold shadow-md shadow-[#8B00FF]/30 hover:bg-[#7a00e0] transition-all">
-          Offers & Deals
+        <!-- Offers & Deals (Active Pill in Purple #8B00FF) -->
+        <a href="/deals" class="bg-[#8B00FF] text-white px-5 py-2 rounded-full font-semibold shadow-md shadow-[#8B00FF]/30 flex items-center gap-1.5 transition-all">
+          <span>Offers & Deals</span>
         </a>
 
         <!-- About -->
@@ -183,11 +192,11 @@
       <!-- Right Utility Actions -->
       <div class="flex items-center gap-3 sm:gap-5">
         <!-- Search Trigger -->
-        <a href="/collections" class="p-2 text-gray-300 hover:text-[#A3FF12] hover:scale-110 transition-all" title="Search">
+        <button id="btn-search-trigger" class="p-2 text-gray-300 hover:text-[#A3FF12] hover:scale-110 transition-all" title="Search">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
-        </a>
+        </button>
 
         <!-- User Profile Icon -->
         <button class="p-2 text-gray-300 hover:text-[#A3FF12] hover:scale-110 transition-all" title="My Account">
@@ -196,8 +205,8 @@
           </svg>
         </button>
 
-        <!-- Shopping Cart Icon with Lime Badge (Exact match) -->
-        <a href="/collections" class="relative p-2 text-gray-300 hover:text-[#A3FF12] hover:scale-110 transition-all" title="Shopping Cart">
+        <!-- Shopping Cart Icon with Lime Badge -->
+        <a href="/collections" id="btn-cart-nav" class="relative p-2 text-gray-300 hover:text-[#A3FF12] hover:scale-110 transition-all" title="Shopping Cart">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
           </svg>
@@ -211,22 +220,20 @@
   </header>
 
   <!-- =========================================================================
-       3. HERO BANNER: OFFERS & DEALS (Dark Purple Atmosphere - Exact to Reference)
+       3. HERO OFFERS BANNER (Exact Match to Reference Image)
        ========================================================================= -->
-  <section class="relative bg-[#0B0D12] text-white overflow-hidden pt-10 pb-16 lg:py-20 border-b border-white/[0.06]">
+  <section class="relative bg-gradient-to-b from-[#150727] via-[#0E071D] to-[#0B0D12] overflow-hidden pt-8 sm:pt-12 pb-16 sm:pb-20 border-b border-white/[0.06]">
     
-    <!-- Atmospheric Ambient Vapor Glow (Purple clouds & smoke) -->
-    <div class="absolute -top-24 -left-20 w-[600px] h-[600px] bg-[#8B00FF]/25 rounded-full blur-[140px] pointer-events-none select-none"></div>
-    <div class="absolute top-1/4 right-0 w-[650px] h-[650px] bg-[#8B00FF]/20 rounded-full blur-[160px] pointer-events-none select-none"></div>
-    <div class="absolute inset-0 bg-radial-gradient from-transparent via-[#0B0D12]/40 to-[#0B0D12] pointer-events-none"></div>
+    <!-- Atmospheric Ambient Glows & Mist -->
+    <div class="absolute -top-24 -left-20 w-[600px] h-[600px] bg-[#8B00FF]/25 rounded-full blur-[140px] pointer-events-none select-none ambient-pulse"></div>
+    <div class="absolute top-1/3 right-10 w-[650px] h-[650px] bg-[#A3FF12]/15 rounded-full blur-[160px] pointer-events-none select-none"></div>
+    <div class="absolute inset-0 bg-radial-gradient from-transparent via-[#0B0D12]/50 to-[#0B0D12] pointer-events-none"></div>
 
     <div class="max-w-[1600px] mx-auto px-4 sm:px-8 relative z-20">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center min-h-[460px]">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         
-        <!-- ================= LEFT COLUMN: HERO HEADLINE & CTA ================= -->
+        <!-- Left: Text Content & CTA -->
         <div class="lg:col-span-6 space-y-6">
-          
-          <!-- Eyebrow Tag -->
           <div class="flex items-center gap-3">
             <span class="w-8 h-[2px] bg-[#A3FF12] inline-block shadow-[0_0_10px_#A3FF12]"></span>
             <span class="text-xs uppercase font-extrabold tracking-[0.24em] text-gray-300">
@@ -234,146 +241,33 @@
             </span>
           </div>
 
-          <!-- Main Title -->
-          <div class="space-y-1">
-            <h1 class="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.08]">
-              Big Savings on
-            </h1>
-            <div class="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-[#A3FF12] tracking-tight leading-[1.08] drop-shadow-[0_0_25px_rgba(163,255,18,0.45)]">
-              Your Favourite Vapes
-            </div>
-          </div>
+          <h1 class="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.08]">
+            Big Savings on <br>
+            <span class="text-[#A3FF12] drop-shadow-[0_0_25px_rgba(163,255,18,0.45)]">Your Favourite Vapes</span>
+          </h1>
 
-          <!-- Subtitle Description -->
-          <p class="text-gray-300 text-base sm:text-lg max-w-lg leading-relaxed font-normal">
+          <p class="text-gray-300 text-base sm:text-lg max-w-lg leading-relaxed">
             Exclusive offers, bundle deals and limited-time discounts on top vape products.
           </p>
 
-          <!-- CTA Button: Shop Offers -> -->
+          <!-- CTA Shop Offers Button -->
           <div class="pt-2">
-            <a href="#flash-deals" class="inline-flex items-center gap-2.5 bg-[#A3FF12] text-[#0B0D12] px-8 py-3.5 rounded-full font-black text-[15px] tracking-wide shadow-lg shadow-[#A3FF12]/30 hover:scale-105 hover:bg-[#b2ff33] transition-all group cursor-pointer">
+            <a href="#flash-deals-section" class="inline-flex items-center gap-2.5 bg-[#A3FF12] hover:bg-[#b2ff33] text-[#0B0D12] px-8 py-3.5 rounded-full font-black text-sm tracking-wide shadow-xl shadow-[#A3FF12]/30 hover:scale-105 active:scale-95 transition-all">
               <span>Shop Offers</span>
               <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
               </svg>
             </a>
           </div>
-
         </div>
 
-        <!-- ================= RIGHT COLUMN: 3D VAPES ON PEDESTAL WITH HANGING 30% TAG ================= -->
-        <div class="lg:col-span-6 relative flex items-center justify-center min-h-[380px] sm:min-h-[460px] select-none">
-          
-          <!-- Atmospheric Purple Mist Behind Devices -->
-          <div class="absolute w-80 h-80 sm:w-96 sm:h-96 rounded-full bg-gradient-to-tr from-[#8B00FF]/40 to-transparent blur-3xl pointer-events-none"></div>
-
-          <!-- 3D Devices Stage -->
-          <div class="relative w-full max-w-[560px] flex flex-col items-center justify-end">
+        <!-- Right: 3D Product Showcase on Rock Pedestal with Hanging Tag -->
+        <div class="lg:col-span-6 relative flex items-center justify-center">
+          <div class="relative w-full max-w-[620px] flex items-center justify-center">
             
-            <!-- Hanging Neon Lime Discount Tag (Exact to Reference) -->
-            <div class="hanging-tag absolute top-0 right-4 sm:right-8 z-30 flex flex-col items-center">
-              <!-- Purple String Hanging from top -->
-              <div class="w-[2px] h-12 bg-gradient-to-b from-[#8B00FF] to-[#A855F7] shadow-[0_0_8px_#8B00FF]"></div>
-              
-              <!-- Lime Tag Badge -->
-              <div class="relative bg-[#A3FF12] text-[#0B0D12] rounded-2xl px-4 py-3 shadow-[0_15px_30px_rgba(0,0,0,0.6)] border border-[#b8ff3d] flex flex-col items-center leading-none">
-                <!-- Hole Grommet -->
-                <div class="w-3 h-3 rounded-full bg-[#0B0D12] border-2 border-white/40 mb-1.5 shadow-inner"></div>
-                <span class="text-[10px] font-extrabold tracking-widest uppercase text-[#0B0D12]">UP TO</span>
-                <span class="font-display font-black text-2xl sm:text-3xl tracking-tighter text-[#0B0D12]">30%</span>
-                <span class="text-[10px] font-black tracking-widest uppercase text-[#0B0D12]">OFF</span>
-              </div>
-            </div>
-
-            <!-- 3 Vape Devices in Row (Exact match to reference lineup) -->
-            <div class="relative z-20 flex items-end justify-center gap-2 sm:gap-4 mb-2">
-              
-              <!-- Device 1 (Left): ElfBar Raya D3 Purple -->
-              <div class="relative transition-transform duration-300 hover:scale-105 hover:-translate-y-2">
-                <img src="/assets/collections/card_img_1.png" alt="ElfBar Raya D3" class="h-48 sm:h-64 w-auto object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.8)] filter brightness-105" />
-              </div>
-
-              <!-- Device 2 (Center): ElfBar Raya Q7 Gradient Blue/Pink -->
-              <div class="relative transition-transform duration-300 hover:scale-105 hover:-translate-y-2 -mx-1 sm:-mx-2 z-10">
-                <img src="/assets/collections/card_img_2.png" alt="ElfBar Raya Q7" class="h-44 sm:h-60 w-auto object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.8)] filter brightness-105" />
-              </div>
-
-              <!-- Device 3 (Right): Caliburn G3/G4 Pod Device with Screen -->
-              <div class="relative transition-transform duration-300 hover:scale-105 hover:-translate-y-2">
-                <img src="/assets/collections/card_img_3.png" alt="Caliburn G3 Lite" class="h-52 sm:h-72 w-auto object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.8)] filter brightness-105" />
-              </div>
-
-            </div>
-
-            <!-- Craggy Stone Pedestal Base -->
-            <div class="relative z-10 w-full max-w-[460px] -mt-8 sm:-mt-12 pointer-events-none">
-              <img src="/assets/mossy-rock-pedestal.png" alt="Stone Pedestal" class="w-full h-auto object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.9)] opacity-95" />
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       4. BENEFIT TRUST STRIP (White Clean Bar - Exact match to Reference)
-       ========================================================================= -->
-  <section class="bg-white border-b border-gray-200/80 py-5 sm:py-6 px-4 sm:px-8 relative z-30">
-    <div class="max-w-[1600px] mx-auto">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 items-center">
-        
-        <!-- Item 1: Fast Delivery -->
-        <div class="flex items-center gap-3.5 group cursor-pointer">
-          <div class="w-11 h-11 rounded-xl bg-lime-50 text-[#4D7C0F] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-            <svg class="w-6 h-6 text-[#65A30D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
-            </svg>
-          </div>
-          <div>
-            <div class="font-display font-black text-sm text-[#0B0D12] group-hover:text-[#8B00FF] transition-colors leading-tight">Fast Delivery</div>
-            <div class="text-xs text-gray-500 font-medium mt-0.5">in just 25 minutes</div>
-          </div>
-        </div>
-
-        <!-- Item 2: 100% Authentic -->
-        <div class="flex items-center gap-3.5 group cursor-pointer">
-          <div class="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-            <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-            </svg>
-          </div>
-          <div>
-            <div class="font-display font-black text-sm text-[#0B0D12] group-hover:text-[#8B00FF] transition-colors leading-tight">100% Authentic</div>
-            <div class="text-xs text-gray-500 font-medium mt-0.5">Genuine products only</div>
-          </div>
-        </div>
-
-        <!-- Item 3: Discreet Packaging -->
-        <div class="flex items-center gap-3.5 group cursor-pointer">
-          <div class="w-11 h-11 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-            </svg>
-          </div>
-          <div>
-            <div class="font-display font-black text-sm text-[#0B0D12] group-hover:text-[#8B00FF] transition-colors leading-tight">Discreet Packaging</div>
-            <div class="text-xs text-gray-500 font-medium mt-0.5">Private & secure</div>
-          </div>
-        </div>
-
-        <!-- Item 4: Customer Support -->
-        <div class="flex items-center gap-3.5 group cursor-pointer">
-          <div class="w-11 h-11 rounded-xl bg-purple-50 text-[#8B00FF] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-            <svg class="w-6 h-6 text-[#8B00FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-            </svg>
-          </div>
-          <div>
-            <div class="font-display font-black text-sm text-[#0B0D12] group-hover:text-[#8B00FF] transition-colors leading-tight">Customer Support</div>
-            <div class="text-xs text-gray-500 font-medium mt-0.5">Here to help always</div>
+            <!-- High-Res Studio Master Banner Render -->
+            <img src="/assets/deals/hero_deals_banner.png" alt="Big Savings on Your Favourite Vapes - Up to 30% Off" class="relative z-10 w-full h-auto max-h-[380px] sm:max-h-[440px] object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.85)] filter brightness-105 select-none" />
+            
           </div>
         </div>
 
@@ -382,341 +276,126 @@
   </section>
 
   <!-- =========================================================================
-       5. FLASH DEALS SECTION (Dark Container + Live Countdown - Exact to Reference)
+       4. SERVICE BENEFITS STRIP (White Floating Dock)
        ========================================================================= -->
-  <section id="flash-deals" class="py-10 sm:py-14 px-4 sm:px-8">
-    <div class="max-w-[1600px] mx-auto">
+  <section class="max-w-[1440px] mx-auto px-4 sm:px-8 -mt-6 sm:-mt-8 relative z-30">
+    <div class="bg-white rounded-2xl border border-gray-100 shadow-xl py-6 px-6 sm:px-10 grid grid-cols-2 lg:grid-cols-4 gap-6 items-center">
       
-      <!-- Big Dark Curved Container -->
-      <div class="relative bg-[#0F131E] rounded-3xl p-6 sm:p-10 border border-white/[0.08] shadow-2xl overflow-hidden">
-        
-        <!-- Subtle Glow Blob in Background -->
-        <div class="absolute -top-16 -left-16 w-80 h-80 rounded-full bg-[#8B00FF]/15 blur-3xl pointer-events-none"></div>
+      <!-- Benefit 1: Fast Delivery -->
+      <div class="flex items-center gap-3.5">
+        <div class="w-12 h-12 rounded-2xl bg-[#E9FCD4] text-[#2F6803] border border-[#A3FF12]/40 flex items-center justify-center flex-shrink-0 shadow-sm">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"/>
+          </svg>
+        </div>
+        <div>
+          <h4 class="font-display font-black text-sm text-[#0B0D12]">Fast Delivery</h4>
+          <p class="text-xs text-gray-500 font-medium">in just 25 minutes</p>
+        </div>
+      </div>
 
-        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          
-          <!-- Left Header: Title + Countdown Clock -->
-          <div class="lg:col-span-3 space-y-4">
-            
-            <!-- Lightning Bolt Icon -->
-            <div class="w-12 h-12 rounded-full border border-[#A3FF12] bg-[#A3FF12]/10 flex items-center justify-center text-[#A3FF12] shadow-[0_0_15px_rgba(163,255,18,0.3)]">
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+      <!-- Benefit 2: 100% Authentic -->
+      <div class="flex items-center gap-3.5">
+        <div class="w-12 h-12 rounded-2xl bg-[#E9FCD4] text-[#2F6803] border border-[#A3FF12]/40 flex items-center justify-center flex-shrink-0 shadow-sm">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+        </div>
+        <div>
+          <h4 class="font-display font-black text-sm text-[#0B0D12]">100% Authentic</h4>
+          <p class="text-xs text-gray-500 font-medium">Genuine products only</p>
+        </div>
+      </div>
+
+      <!-- Benefit 3: Discreet Packaging -->
+      <div class="flex items-center gap-3.5">
+        <div class="w-12 h-12 rounded-2xl bg-[#E9FCD4] text-[#2F6803] border border-[#A3FF12]/40 flex items-center justify-center flex-shrink-0 shadow-sm">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+          </svg>
+        </div>
+        <div>
+          <h4 class="font-display font-black text-sm text-[#0B0D12]">Discreet Packaging</h4>
+          <p class="text-xs text-gray-500 font-medium">Private & secure</p>
+        </div>
+      </div>
+
+      <!-- Benefit 4: Customer Support -->
+      <div class="flex items-center gap-3.5">
+        <div class="w-12 h-12 rounded-2xl bg-[#E9FCD4] text-[#2F6803] border border-[#A3FF12]/40 flex items-center justify-center flex-shrink-0 shadow-sm">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414"/>
+          </svg>
+        </div>
+        <div>
+          <h4 class="font-display font-black text-sm text-[#0B0D12]">Customer Support</h4>
+          <p class="text-xs text-gray-500 font-medium">Here to help always</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. FLASH DEALS SECTION (Dark Card Container with Live Countdown)
+       ========================================================================= -->
+  <section id="flash-deals-section" class="max-w-[1440px] mx-auto px-4 sm:px-8 pt-12 pb-6">
+    <div class="bg-[#12141D] rounded-3xl border border-white/[0.08] p-6 sm:p-8 lg:p-10 shadow-2xl relative overflow-hidden text-white">
+      
+      <!-- Ambient Purple & Lime Glow Behind Cards -->
+      <div class="absolute -top-20 -left-20 w-80 h-80 bg-[#8B00FF]/20 rounded-full blur-[90px] pointer-events-none"></div>
+      <div class="absolute -bottom-20 -right-20 w-80 h-80 bg-[#A3FF12]/15 rounded-full blur-[90px] pointer-events-none"></div>
+
+      <div class="relative z-10 flex flex-col lg:flex-row gap-8 lg:gap-10 items-stretch">
+        
+        <!-- Left: Flash Deals Title & Countdown Clock -->
+        <div class="lg:w-72 xl:w-80 flex flex-col justify-between space-y-6 flex-shrink-0">
+          <div>
+            <!-- Lime Lightning Bolt Icon Badge -->
+            <div class="w-12 h-12 rounded-2xl bg-[#A3FF12]/20 border border-[#A3FF12]/50 text-[#A3FF12] flex items-center justify-center mb-4 shadow-[0_0_15px_rgba(163,255,18,0.3)]">
+              <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
                 <path d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
             </div>
 
-            <!-- Title: Flash Deals -->
-            <h2 class="font-display font-black text-3xl sm:text-4xl text-white tracking-tight leading-tight">
+            <h2 class="font-display font-black text-3xl sm:text-4xl text-white tracking-tight">
               Flash <span class="text-[#A3FF12]">Deals</span>
             </h2>
-
-            <p class="text-xs sm:text-sm text-gray-400 leading-relaxed">
+            <p class="text-xs sm:text-sm text-gray-400 mt-2 leading-relaxed">
               Limited-time offers on selected products.
             </p>
-
-            <!-- Countdown Timer Container -->
-            <div class="pt-2">
-              <div class="text-xs font-bold text-gray-400 mb-2">Ends in</div>
-              <div class="flex items-center gap-2 text-white">
-                
-                <!-- Hours -->
-                <div class="timer-box">
-                  <div id="flash-hours" class="font-display font-black text-xl sm:text-2xl text-white leading-none">06</div>
-                  <div class="text-[9px] uppercase tracking-wider text-gray-400 mt-1">Hrs</div>
-                </div>
-
-                <!-- Minutes -->
-                <div class="timer-box">
-                  <div id="flash-minutes" class="font-display font-black text-xl sm:text-2xl text-white leading-none">24</div>
-                  <div class="text-[9px] uppercase tracking-wider text-gray-400 mt-1">Min</div>
-                </div>
-
-                <!-- Seconds -->
-                <div class="timer-box">
-                  <div id="flash-seconds" class="font-display font-black text-xl sm:text-2xl text-[#A3FF12] leading-none">15</div>
-                  <div class="text-[9px] uppercase tracking-wider text-gray-400 mt-1">Sec</div>
-                </div>
-
-              </div>
-            </div>
-
           </div>
 
-          <!-- Right 4 Flash Deal Product Cards (Exact match to Reference) -->
-          <div class="lg:col-span-9 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-5">
-            
-            <!-- Card 1: ElfBar Raya D3 -->
-            <div class="bg-white rounded-2xl p-4 flex flex-col justify-between relative shadow-md hover:shadow-xl hover:-translate-y-1 transition-all group">
-              <!-- Top Row: Badge + Wishlist -->
-              <div class="flex items-center justify-between mb-1">
-                <span class="bg-[#E9FCD4] text-[#2F6803] text-[10px] font-black uppercase px-2 py-0.5 rounded-full border border-[#A3FF12]/40">
-                  20% OFF
-                </span>
-                <button class="btn-deal-wishlist text-gray-400 hover:text-red-500 transition-colors" data-id="elfbar-raya-d3" title="Add to Wishlist">
-                  <svg class="w-4 h-4 fill-none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-                </button>
+          <!-- Dynamic Countdown Clock -->
+          <div class="space-y-2 pt-4">
+            <span class="text-xs uppercase font-extrabold tracking-wider text-gray-400">Ends in</span>
+            <div class="flex items-center gap-3 text-center">
+              
+              <!-- Hours Box -->
+              <div class="flex-1 bg-[#1A1D2A] border border-white/10 rounded-2xl p-3 shadow-inner">
+                <span id="countdown-hours" class="block font-display font-black text-2xl sm:text-3xl text-white leading-none">06</span>
+                <span class="text-[10px] text-gray-400 font-bold uppercase tracking-wider mt-1 block">Hrs</span>
               </div>
 
-              <!-- Product Image -->
-              <a href="/products/elfbar-raya-d3" class="my-2 py-2 flex items-center justify-center relative overflow-hidden">
-                <div class="absolute inset-0 bg-radial-gradient from-purple-100/60 to-transparent rounded-full blur-lg opacity-70"></div>
-                <img src="/assets/collections/card_img_1.png" alt="ElfBar Raya D3" class="relative z-10 h-36 w-auto object-contain group-hover:scale-105 transition-transform" />
-              </a>
-
-              <!-- Details & Bottom Actions -->
-              <div class="pt-1">
-                <a href="/products/elfbar-raya-d3">
-                  <h3 class="font-display font-black text-sm text-[#0B0D12] group-hover:text-[#8B00FF] transition-colors leading-tight">
-                    ElfBar Raya D3
-                  </h3>
-                </a>
-
-                <div class="flex items-center justify-between mt-2 pt-1">
-                  <div class="flex items-baseline gap-1.5">
-                    <span class="font-display font-black text-base text-[#0B0D12]">₹2,400</span>
-                    <span class="text-xs text-gray-400 line-through">₹3,000</span>
-                  </div>
-                  <!-- Round Lime Cart Button -->
-                  <button class="btn-quick-add w-8 h-8 rounded-full bg-[#A3FF12] text-[#0B0D12] flex items-center justify-center hover:bg-[#b5ff3b] hover:scale-110 active:scale-95 transition-all shadow-sm" data-id="elfbar-raya-d3" title="Add to Cart">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
-                  </button>
-                </div>
+              <!-- Minutes Box -->
+              <div class="flex-1 bg-[#1A1D2A] border border-white/10 rounded-2xl p-3 shadow-inner">
+                <span id="countdown-minutes" class="block font-display font-black text-2xl sm:text-3xl text-white leading-none">24</span>
+                <span class="text-[10px] text-gray-400 font-bold uppercase tracking-wider mt-1 block">Min</span>
               </div>
+
+              <!-- Seconds Box -->
+              <div class="flex-1 bg-[#1A1D2A] border border-white/10 rounded-2xl p-3 shadow-inner">
+                <span id="countdown-seconds" class="block font-display font-black text-2xl sm:text-3xl text-[#A3FF12] leading-none">15</span>
+                <span class="text-[10px] text-gray-400 font-bold uppercase tracking-wider mt-1 block">Sec</span>
+              </div>
+
             </div>
-
-            <!-- Card 2: ElfBar Raya Q7 -->
-            <div class="bg-white rounded-2xl p-4 flex flex-col justify-between relative shadow-md hover:shadow-xl hover:-translate-y-1 transition-all group">
-              <!-- Top Row: Badge + Wishlist -->
-              <div class="flex items-center justify-between mb-1">
-                <span class="bg-[#E9FCD4] text-[#2F6803] text-[10px] font-black uppercase px-2 py-0.5 rounded-full border border-[#A3FF12]/40">
-                  17% OFF
-                </span>
-                <button class="btn-deal-wishlist text-gray-400 hover:text-red-500 transition-colors" data-id="elfbar-raya-q7" title="Add to Wishlist">
-                  <svg class="w-4 h-4 fill-none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-                </button>
-              </div>
-
-              <!-- Product Image -->
-              <a href="/products/elfbar-raya-q7" class="my-2 py-2 flex items-center justify-center relative overflow-hidden">
-                <div class="absolute inset-0 bg-radial-gradient from-cyan-100/60 to-transparent rounded-full blur-lg opacity-70"></div>
-                <img src="/assets/collections/card_img_2.png" alt="ElfBar Raya Q7" class="relative z-10 h-36 w-auto object-contain group-hover:scale-105 transition-transform" />
-              </a>
-
-              <!-- Details & Bottom Actions -->
-              <div class="pt-1">
-                <a href="/products/elfbar-raya-q7">
-                  <h3 class="font-display font-black text-sm text-[#0B0D12] group-hover:text-[#8B00FF] transition-colors leading-tight">
-                    ElfBar Raya Q7
-                  </h3>
-                </a>
-
-                <div class="flex items-center justify-between mt-2 pt-1">
-                  <div class="flex items-baseline gap-1.5">
-                    <span class="font-display font-black text-base text-[#0B0D12]">₹2,500</span>
-                    <span class="text-xs text-gray-400 line-through">₹3,000</span>
-                  </div>
-                  <button class="btn-quick-add w-8 h-8 rounded-full bg-[#A3FF12] text-[#0B0D12] flex items-center justify-center hover:bg-[#b5ff3b] hover:scale-110 active:scale-95 transition-all shadow-sm" data-id="elfbar-raya-q7" title="Add to Cart">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 3: Caliburn G3 Lite -->
-            <div class="bg-white rounded-2xl p-4 flex flex-col justify-between relative shadow-md hover:shadow-xl hover:-translate-y-1 transition-all group">
-              <!-- Top Row: Badge + Wishlist -->
-              <div class="flex items-center justify-between mb-1">
-                <span class="bg-[#E9FCD4] text-[#2F6803] text-[10px] font-black uppercase px-2 py-0.5 rounded-full border border-[#A3FF12]/40">
-                  10% OFF
-                </span>
-                <button class="btn-deal-wishlist text-gray-400 hover:text-red-500 transition-colors" data-id="caliburn-g3-lite" title="Add to Wishlist">
-                  <svg class="w-4 h-4 fill-none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-                </button>
-              </div>
-
-              <!-- Product Image -->
-              <a href="/products/caliburn-g3-lite" class="my-2 py-2 flex items-center justify-center relative overflow-hidden">
-                <div class="absolute inset-0 bg-radial-gradient from-gray-100 to-transparent rounded-full blur-lg opacity-70"></div>
-                <img src="/assets/collections/card_img_3.png" alt="Caliburn G3 Lite" class="relative z-10 h-36 w-auto object-contain group-hover:scale-105 transition-transform" />
-              </a>
-
-              <!-- Details & Bottom Actions -->
-              <div class="pt-1">
-                <a href="/products/caliburn-g3-lite">
-                  <h3 class="font-display font-black text-sm text-[#0B0D12] group-hover:text-[#8B00FF] transition-colors leading-tight">
-                    Caliburn G3 Lite
-                  </h3>
-                </a>
-
-                <div class="flex items-center justify-between mt-2 pt-1">
-                  <div class="flex items-baseline gap-1.5">
-                    <span class="font-display font-black text-base text-[#0B0D12]">₹4,500</span>
-                    <span class="text-xs text-gray-400 line-through">₹5,000</span>
-                  </div>
-                  <button class="btn-quick-add w-8 h-8 rounded-full bg-[#A3FF12] text-[#0B0D12] flex items-center justify-center hover:bg-[#b5ff3b] hover:scale-110 active:scale-95 transition-all shadow-sm" data-id="caliburn-g3-lite" title="Add to Cart">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 4: Caliburn G4 Pro -->
-            <div class="bg-white rounded-2xl p-4 flex flex-col justify-between relative shadow-md hover:shadow-xl hover:-translate-y-1 transition-all group">
-              <!-- Top Row: Badge + Wishlist -->
-              <div class="flex items-center justify-between mb-1">
-                <span class="bg-[#E9FCD4] text-[#2F6803] text-[10px] font-black uppercase px-2 py-0.5 rounded-full border border-[#A3FF12]/40">
-                  9% OFF
-                </span>
-                <button class="btn-deal-wishlist text-gray-400 hover:text-red-500 transition-colors" data-id="caliburn-g4-pro" title="Add to Wishlist">
-                  <svg class="w-4 h-4 fill-none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-                </button>
-              </div>
-
-              <!-- Product Image -->
-              <a href="/products/caliburn-g4-pro" class="my-2 py-2 flex items-center justify-center relative overflow-hidden">
-                <div class="absolute inset-0 bg-radial-gradient from-blue-100/60 to-transparent rounded-full blur-lg opacity-70"></div>
-                <img src="/assets/collections/card_img_4.png" alt="Caliburn G4 Pro" class="relative z-10 h-36 w-auto object-contain group-hover:scale-105 transition-transform" />
-              </a>
-
-              <!-- Details & Bottom Actions -->
-              <div class="pt-1">
-                <a href="/products/caliburn-g4-pro">
-                  <h3 class="font-display font-black text-sm text-[#0B0D12] group-hover:text-[#8B00FF] transition-colors leading-tight">
-                    Caliburn G4 Pro
-                  </h3>
-                </a>
-
-                <div class="flex items-center justify-between mt-2 pt-1">
-                  <div class="flex items-baseline gap-1.5">
-                    <span class="font-display font-black text-base text-[#0B0D12]">₹5,000</span>
-                    <span class="text-xs text-gray-400 line-through">₹5,500</span>
-                  </div>
-                  <button class="btn-quick-add w-8 h-8 rounded-full bg-[#A3FF12] text-[#0B0D12] flex items-center justify-center hover:bg-[#b5ff3b] hover:scale-110 active:scale-95 transition-all shadow-sm" data-id="caliburn-g4-pro" title="Add to Cart">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       6. BUNDLE DEALS SECTION (Exact match to Reference)
-       ========================================================================= -->
-  <section class="py-10 sm:py-14 px-4 sm:px-8">
-    <div class="max-w-[1600px] mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-        
-        <!-- Left Headline & Description -->
-        <div class="lg:col-span-4 space-y-4">
-          <h2 class="font-display font-black text-3xl sm:text-4xl text-[#0B0D12] tracking-tight">
-            Bundle <span class="text-[#8B00FF]">Deals</span>
-          </h2>
-          <p class="text-sm text-gray-600 leading-relaxed max-w-sm">
-            More value. More savings. Exclusive combo offers only at VapeHouse.
-          </p>
-          <div class="pt-2">
-            <a href="/collections" class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-gray-300 bg-white hover:bg-gray-50 text-xs font-bold text-gray-800 shadow-sm transition-all group">
-              <span>View All Bundles</span>
-              <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-              </svg>
-            </a>
           </div>
         </div>
 
-        <!-- Right 2 Bundle Cards (Wide White Cards) -->
-        <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
-          
-          <!-- Bundle 1: ElfBar Combo Pack -->
-          <div class="bg-white rounded-3xl p-6 border border-gray-200/90 shadow-sm hover:shadow-md transition-all relative flex flex-col justify-between group">
-            <!-- Save Pill -->
-            <div class="absolute -top-3 left-6">
-              <span class="bg-[#A3FF12] text-[#0B0D12] text-xs font-black uppercase px-3 py-1 rounded-full shadow-sm">
-                Save ₹800
-              </span>
-            </div>
-
-            <!-- Content Row: Visuals + Details -->
-            <div class="pt-3 flex items-center justify-between gap-4">
-              
-              <!-- Left Visual: Purple Device + 2 Pods -->
-              <div class="relative flex items-center justify-center flex-shrink-0 w-36 sm:w-40 h-32 bg-gray-50/70 rounded-2xl p-2 overflow-hidden">
-                <img src="/assets/collections/card_img_1.png" alt="ElfBar Device" class="h-28 w-auto object-contain drop-shadow-md z-10 -mr-3" />
-                <img src="/assets/category_trending/cat_prod_4_hd.png" alt="Replacement Pod 1" class="h-16 w-auto object-contain drop-shadow -mr-2 opacity-95" />
-                <img src="/assets/category_trending/cat_prod_4_hd.png" alt="Replacement Pod 2" class="h-16 w-auto object-contain drop-shadow opacity-90" />
-              </div>
-
-              <!-- Right Info -->
-              <div class="flex-1 space-y-2">
-                <h3 class="font-display font-black text-base text-[#0B0D12] group-hover:text-[#8B00FF] transition-colors leading-tight">
-                  ElfBar Combo Pack
-                </h3>
-                <div class="text-xs text-gray-500 font-medium">1 Device + 2 Pods</div>
-                
-                <div class="flex items-baseline gap-2 pt-1">
-                  <span class="font-display font-black text-xl text-[#0B0D12]">₹4,700</span>
-                  <span class="text-xs text-gray-400 line-through">₹5,500</span>
-                </div>
-
-                <!-- Add to Cart (Purple Button) -->
-                <button class="btn-bundle-add w-full bg-[#8B00FF] hover:bg-[#7a00e0] text-white py-2 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-2 shadow-sm transition-all active:scale-95" data-name="ElfBar Combo Pack" data-price="4700">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
-                  <span>Add to Cart</span>
-                </button>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- Bundle 2: Caliburn Value Pack -->
-          <div class="bg-white rounded-3xl p-6 border border-gray-200/90 shadow-sm hover:shadow-md transition-all relative flex flex-col justify-between group">
-            <!-- Save Pill -->
-            <div class="absolute -top-3 left-6">
-              <span class="bg-[#A3FF12] text-[#0B0D12] text-xs font-black uppercase px-3 py-1 rounded-full shadow-sm">
-                Save ₹1,000
-              </span>
-            </div>
-
-            <!-- Content Row: Visuals + Details -->
-            <div class="pt-3 flex items-center justify-between gap-4">
-              
-              <!-- Left Visual: Black Caliburn Device + 2 Pods -->
-              <div class="relative flex items-center justify-center flex-shrink-0 w-36 sm:w-40 h-32 bg-gray-50/70 rounded-2xl p-2 overflow-hidden">
-                <img src="/assets/collections/card_img_3.png" alt="Caliburn Device" class="h-28 w-auto object-contain drop-shadow-md z-10 -mr-3" />
-                <img src="/assets/category_trending/cat_prod_4_hd.png" alt="Replacement Pod 1" class="h-16 w-auto object-contain drop-shadow -mr-2 opacity-95" />
-                <img src="/assets/category_trending/cat_prod_4_hd.png" alt="Replacement Pod 2" class="h-16 w-auto object-contain drop-shadow opacity-90" />
-              </div>
-
-              <!-- Right Info -->
-              <div class="flex-1 space-y-2">
-                <h3 class="font-display font-black text-base text-[#0B0D12] group-hover:text-[#8B00FF] transition-colors leading-tight">
-                  Caliburn Value Pack
-                </h3>
-                <div class="text-xs text-gray-500 font-medium">1 Device + 2 Pods</div>
-                
-                <div class="flex items-baseline gap-2 pt-1">
-                  <span class="font-display font-black text-xl text-[#0B0D12]">₹4,500</span>
-                  <span class="text-xs text-gray-400 line-through">₹5,500</span>
-                </div>
-
-                <!-- Add to Cart (Purple Button) -->
-                <button class="btn-bundle-add w-full bg-[#8B00FF] hover:bg-[#7a00e0] text-white py-2 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-2 shadow-sm transition-all active:scale-95" data-name="Caliburn Value Pack" data-price="4500">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
-                  <span>Add to Cart</span>
-                </button>
-              </div>
-
-            </div>
-          </div>
-
+        <!-- Right: 4 Product Cards Grid (Clean White Cards) -->
+        <div id="flash-deals-grid" class="flex-1 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-5">
+          <!-- Dynamically populated via deals.js -->
         </div>
 
       </div>
@@ -724,335 +403,289 @@
   </section>
 
   <!-- =========================================================================
-       7. MORE OFFERS FOR YOU SECTION (Filtered Grid - Exact match to Reference)
+       6. BUNDLE DEALS SECTION (Combo Packs with Big Savings)
        ========================================================================= -->
-  <section class="py-10 sm:py-14 px-4 sm:px-8">
-    <div class="max-w-[1600px] mx-auto space-y-8">
+  <section class="max-w-[1440px] mx-auto px-4 sm:px-8 py-12 sm:py-16">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
       
-      <!-- Section Header with Filter Pills -->
-      <div class="flex flex-wrap items-center justify-between gap-4">
-        <h2 class="font-display font-black text-2xl sm:text-3xl text-[#0B0D12] tracking-tight">
+      <!-- Left Column: Copy & View All Button -->
+      <div class="lg:col-span-4 space-y-4">
+        <h2 class="font-display font-black text-3xl sm:text-4xl text-[#0B0D12] tracking-tight">
+          Bundle <span class="text-[#8B00FF]">Deals</span>
+        </h2>
+        <p class="text-sm text-gray-600 leading-relaxed max-w-sm">
+          More value. More savings. Exclusive combo offers only at VapeHouse.
+        </p>
+        <div class="pt-2">
+          <a href="/collections?category=disposable" class="inline-flex items-center gap-2 border border-gray-300 hover:border-gray-400 bg-white hover:bg-gray-50 text-xs font-bold px-6 py-3 rounded-full text-gray-800 shadow-sm transition-all">
+            <span>View All Bundles</span>
+            <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: 2 Horizontal Combo Cards -->
+      <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
+        
+        <!-- Bundle Card 1: ElfBar Combo Pack -->
+        <div class="bg-white rounded-3xl p-5 sm:p-6 border border-gray-200/80 shadow-sm hover:shadow-md transition-all relative overflow-hidden flex flex-col justify-between group">
+          <!-- Top Badge: Save ₹800 -->
+          <div class="flex items-center justify-between mb-2">
+            <span class="bg-[#E9FCD4] text-[#2F6803] text-[11px] font-black uppercase px-3 py-1 rounded-full border border-[#A3FF12]/40 tracking-wider">
+              Save ₹800
+            </span>
+            <button class="btn-card-wishlist p-1.5 text-gray-400 hover:text-red-500 transition-colors" data-id="elfbar-combo" title="Add to Wishlist">
+              <svg class="w-5 h-5 fill-none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Product Combo Graphic & Info Row -->
+          <div class="flex items-center gap-5 my-2">
+            <div class="w-28 sm:w-32 h-28 sm:h-32 rounded-2xl bg-gray-50 flex items-center justify-center p-2 flex-shrink-0 group-hover:scale-105 transition-transform">
+              <img src="/assets/deals/bundle_elfbar.png" alt="ElfBar Combo Pack" class="w-full h-full object-contain drop-shadow-sm" />
+            </div>
+
+            <div class="space-y-1.5 flex-1">
+              <h3 class="font-display font-black text-base sm:text-lg text-[#0B0D12] group-hover:text-[#8B00FF] transition-colors leading-tight">
+                ElfBar Combo Pack
+              </h3>
+              <p class="text-xs text-gray-500 font-semibold">1 Device + 2 Pods</p>
+              
+              <!-- Pricing -->
+              <div class="flex items-center gap-2 pt-1">
+                <span class="font-display font-black text-lg text-[#0B0D12]">₹4,700</span>
+                <span class="text-xs text-gray-400 line-through">₹5,500</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add to Cart Purple Button -->
+          <div class="pt-3">
+            <button class="btn-add-bundle w-full bg-[#7E22CE] hover:bg-[#6b21a8] text-white py-2.5 px-4 rounded-xl text-xs font-black flex items-center justify-center gap-2 shadow-sm transition-all active:scale-95" data-name="ElfBar Combo Pack" data-price="4700">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              <span>Add to Cart</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Bundle Card 2: Caliburn Value Pack -->
+        <div class="bg-white rounded-3xl p-5 sm:p-6 border border-gray-200/80 shadow-sm hover:shadow-md transition-all relative overflow-hidden flex flex-col justify-between group">
+          <!-- Top Badge: Save ₹1,000 -->
+          <div class="flex items-center justify-between mb-2">
+            <span class="bg-[#E9FCD4] text-[#2F6803] text-[11px] font-black uppercase px-3 py-1 rounded-full border border-[#A3FF12]/40 tracking-wider">
+              Save ₹1,000
+            </span>
+            <button class="btn-card-wishlist p-1.5 text-gray-400 hover:text-red-500 transition-colors" data-id="caliburn-bundle" title="Add to Wishlist">
+              <svg class="w-5 h-5 fill-none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Product Combo Graphic & Info Row -->
+          <div class="flex items-center gap-5 my-2">
+            <div class="w-28 sm:w-32 h-28 sm:h-32 rounded-2xl bg-gray-50 flex items-center justify-center p-2 flex-shrink-0 group-hover:scale-105 transition-transform">
+              <img src="/assets/deals/bundle_caliburn.png" alt="Caliburn Value Pack" class="w-full h-full object-contain drop-shadow-sm" />
+            </div>
+
+            <div class="space-y-1.5 flex-1">
+              <h3 class="font-display font-black text-base sm:text-lg text-[#0B0D12] group-hover:text-[#8B00FF] transition-colors leading-tight">
+                Caliburn Value Pack
+              </h3>
+              <p class="text-xs text-gray-500 font-semibold">1 Device + 2 Pods</p>
+              
+              <!-- Pricing -->
+              <div class="flex items-center gap-2 pt-1">
+                <span class="font-display font-black text-lg text-[#0B0D12]">₹4,500</span>
+                <span class="text-xs text-gray-400 line-through">₹5,500</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add to Cart Purple Button -->
+          <div class="pt-3">
+            <button class="btn-add-bundle w-full bg-[#7E22CE] hover:bg-[#6b21a8] text-white py-2.5 px-4 rounded-xl text-xs font-black flex items-center justify-center gap-2 shadow-sm transition-all active:scale-95" data-name="Caliburn Value Pack" data-price="4500">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              <span>Add to Cart</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. "MORE OFFERS FOR YOU" SECTION (With Interactive Discount Filters)
+       ========================================================================= -->
+  <section class="max-w-[1440px] mx-auto px-4 sm:px-8 py-10 sm:py-14">
+    <!-- Header Row: Title & Filter Tabs -->
+    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-8">
+      <div>
+        <h2 class="font-display font-black text-3xl sm:text-4xl text-[#0B0D12] tracking-tight">
           More Offers <span class="text-[#8B00FF]">for You</span>
         </h2>
-
-        <!-- Discount Filter Pills (Exact to Reference) -->
-        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
-          <button class="filter-tab-pill active px-4 py-1.5 rounded-full text-xs font-bold transition-all border border-[#0B0D12] bg-[#0B0D12] text-white" data-filter="all">
-            All Deals
-          </button>
-          <button class="filter-tab-pill px-4 py-1.5 rounded-full text-xs font-bold transition-all border border-gray-300 text-gray-700 hover:bg-gray-100" data-filter="up-to-10">
-            Up to 10%
-          </button>
-          <button class="filter-tab-pill px-4 py-1.5 rounded-full text-xs font-bold transition-all border border-gray-300 text-gray-700 hover:bg-gray-100" data-filter="10-20">
-            10 - 20%
-          </button>
-          <button class="filter-tab-pill px-4 py-1.5 rounded-full text-xs font-bold transition-all border border-gray-300 text-gray-700 hover:bg-gray-100" data-filter="above-20">
-            Above 20%
-          </button>
-        </div>
       </div>
 
-      <!-- 4 Product Cards Grid -->
-      <div id="more-offers-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        
-        <!-- Offer Card 1: ElfBar Raya D3 (20% OFF) -->
-        <div class="offer-card group bg-white rounded-2xl border border-gray-200/90 p-5 flex flex-col justify-between relative shadow-sm hover:shadow-md hover:border-[#8B00FF]/40 transition-all" data-discount="20">
-          <div class="flex items-center justify-between mb-2">
-            <span class="bg-[#E9FCD4] text-[#2F6803] text-[10px] font-black uppercase px-2.5 py-1 rounded-full border border-[#A3FF12]/40 tracking-wider">
-              20% OFF
-            </span>
-            <button class="btn-deal-wishlist p-1 text-gray-400 hover:text-red-500 transition-colors" data-id="elfbar-raya-d3" title="Add to Wishlist">
-              <svg class="w-5 h-5 fill-none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-            </button>
-          </div>
-
-          <!-- Image -->
-          <a href="/products/elfbar-raya-d3" class="block my-3 py-4 flex items-center justify-center relative overflow-hidden">
-            <div class="absolute inset-0 bg-radial-gradient from-purple-100/60 to-transparent rounded-full blur-xl opacity-70 group-hover:scale-110 transition-transform"></div>
-            <img src="/assets/collections/card_img_1.png" alt="ElfBar Raya D3" class="relative z-10 h-44 w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform" />
-          </a>
-
-          <!-- Details & Rating -->
-          <div class="space-y-2 pt-2">
-            <a href="/products/elfbar-raya-d3">
-              <h3 class="font-display font-black text-base text-[#0B0D12] group-hover:text-[#8B00FF] transition-colors leading-snug">
-                ElfBar Raya D3
-              </h3>
-            </a>
-
-            <!-- Rating Row -->
-            <div class="flex items-center gap-1.5 text-xs text-gray-500">
-              <svg class="w-3.5 h-3.5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <span class="font-bold text-[#0B0D12]">4.8</span>
-              <span class="text-gray-400">(2.5k reviews)</span>
-            </div>
-
-            <!-- Price -->
-            <div class="flex items-center gap-2 pt-1 pb-2">
-              <span class="font-display font-black text-lg text-[#0B0D12]">₹2,400</span>
-              <span class="text-xs text-gray-400 line-through">₹3,000</span>
-            </div>
-
-            <!-- Full Width Dark Button (Add to Cart) -->
-            <button class="btn-card-add-cart w-full bg-[#0B0D12] hover:bg-[#1f2430] text-white py-2.5 px-4 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all shadow-sm active:scale-95" data-id="elfbar-raya-d3">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
-              <span>Add to Cart</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Offer Card 2: ElfBar Raya Q7 (17% OFF) -->
-        <div class="offer-card group bg-white rounded-2xl border border-gray-200/90 p-5 flex flex-col justify-between relative shadow-sm hover:shadow-md hover:border-[#8B00FF]/40 transition-all" data-discount="17">
-          <div class="flex items-center justify-between mb-2">
-            <span class="bg-[#E9FCD4] text-[#2F6803] text-[10px] font-black uppercase px-2.5 py-1 rounded-full border border-[#A3FF12]/40 tracking-wider">
-              17% OFF
-            </span>
-            <button class="btn-deal-wishlist p-1 text-gray-400 hover:text-red-500 transition-colors" data-id="elfbar-raya-q7" title="Add to Wishlist">
-              <svg class="w-5 h-5 fill-none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-            </button>
-          </div>
-
-          <a href="/products/elfbar-raya-q7" class="block my-3 py-4 flex items-center justify-center relative overflow-hidden">
-            <div class="absolute inset-0 bg-radial-gradient from-cyan-100/60 to-transparent rounded-full blur-xl opacity-70 group-hover:scale-110 transition-transform"></div>
-            <img src="/assets/collections/card_img_2.png" alt="ElfBar Raya Q7" class="relative z-10 h-44 w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform" />
-          </a>
-
-          <div class="space-y-2 pt-2">
-            <a href="/products/elfbar-raya-q7">
-              <h3 class="font-display font-black text-base text-[#0B0D12] group-hover:text-[#8B00FF] transition-colors leading-snug">
-                ElfBar Raya Q7
-              </h3>
-            </a>
-
-            <div class="flex items-center gap-1.5 text-xs text-gray-500">
-              <svg class="w-3.5 h-3.5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <span class="font-bold text-[#0B0D12]">4.7</span>
-              <span class="text-gray-400">(1.1k reviews)</span>
-            </div>
-
-            <div class="flex items-center gap-2 pt-1 pb-2">
-              <span class="font-display font-black text-lg text-[#0B0D12]">₹2,500</span>
-              <span class="text-xs text-gray-400 line-through">₹3,000</span>
-            </div>
-
-            <button class="btn-card-add-cart w-full bg-[#0B0D12] hover:bg-[#1f2430] text-white py-2.5 px-4 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all shadow-sm active:scale-95" data-id="elfbar-raya-q7">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
-              <span>Add to Cart</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Offer Card 3: Caliburn G3 Lite (10% OFF) -->
-        <div class="offer-card group bg-white rounded-2xl border border-gray-200/90 p-5 flex flex-col justify-between relative shadow-sm hover:shadow-md hover:border-[#8B00FF]/40 transition-all" data-discount="10">
-          <div class="flex items-center justify-between mb-2">
-            <span class="bg-[#E9FCD4] text-[#2F6803] text-[10px] font-black uppercase px-2.5 py-1 rounded-full border border-[#A3FF12]/40 tracking-wider">
-              10% OFF
-            </span>
-            <button class="btn-deal-wishlist p-1 text-gray-400 hover:text-red-500 transition-colors" data-id="caliburn-g3-lite" title="Add to Wishlist">
-              <svg class="w-5 h-5 fill-none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-            </button>
-          </div>
-
-          <a href="/products/caliburn-g3-lite" class="block my-3 py-4 flex items-center justify-center relative overflow-hidden">
-            <div class="absolute inset-0 bg-radial-gradient from-gray-100 to-transparent rounded-full blur-xl opacity-70 group-hover:scale-110 transition-transform"></div>
-            <img src="/assets/collections/card_img_3.png" alt="Caliburn G3 Lite" class="relative z-10 h-44 w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform" />
-          </a>
-
-          <div class="space-y-2 pt-2">
-            <a href="/products/caliburn-g3-lite">
-              <h3 class="font-display font-black text-base text-[#0B0D12] group-hover:text-[#8B00FF] transition-colors leading-snug">
-                Caliburn G3 Lite
-              </h3>
-            </a>
-
-            <div class="flex items-center gap-1.5 text-xs text-gray-500">
-              <svg class="w-3.5 h-3.5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <span class="font-bold text-[#0B0D12]">4.8</span>
-              <span class="text-gray-400">(1.2k reviews)</span>
-            </div>
-
-            <div class="flex items-center gap-2 pt-1 pb-2">
-              <span class="font-display font-black text-lg text-[#0B0D12]">₹4,500</span>
-              <span class="text-xs text-gray-400 line-through">₹5,000</span>
-            </div>
-
-            <button class="btn-card-add-cart w-full bg-[#0B0D12] hover:bg-[#1f2430] text-white py-2.5 px-4 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all shadow-sm active:scale-95" data-id="caliburn-g3-lite">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
-              <span>Add to Cart</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Offer Card 4: Caliburn G4 Pro (9% OFF) -->
-        <div class="offer-card group bg-white rounded-2xl border border-gray-200/90 p-5 flex flex-col justify-between relative shadow-sm hover:shadow-md hover:border-[#8B00FF]/40 transition-all" data-discount="9">
-          <div class="flex items-center justify-between mb-2">
-            <span class="bg-[#E9FCD4] text-[#2F6803] text-[10px] font-black uppercase px-2.5 py-1 rounded-full border border-[#A3FF12]/40 tracking-wider">
-              9% OFF
-            </span>
-            <button class="btn-deal-wishlist p-1 text-gray-400 hover:text-red-500 transition-colors" data-id="caliburn-g4-pro" title="Add to Wishlist">
-              <svg class="w-5 h-5 fill-none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-            </button>
-          </div>
-
-          <a href="/products/caliburn-g4-pro" class="block my-3 py-4 flex items-center justify-center relative overflow-hidden">
-            <div class="absolute inset-0 bg-radial-gradient from-blue-100/60 to-transparent rounded-full blur-xl opacity-70 group-hover:scale-110 transition-transform"></div>
-            <img src="/assets/collections/card_img_4.png" alt="Caliburn G4 Pro" class="relative z-10 h-44 w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform" />
-          </a>
-
-          <div class="space-y-2 pt-2">
-            <a href="/products/caliburn-g4-pro">
-              <h3 class="font-display font-black text-base text-[#0B0D12] group-hover:text-[#8B00FF] transition-colors leading-snug">
-                Caliburn G4 Pro
-              </h3>
-            </a>
-
-            <div class="flex items-center gap-1.5 text-xs text-gray-500">
-              <svg class="w-3.5 h-3.5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <span class="font-bold text-[#0B0D12]">4.9</span>
-              <span class="text-gray-400">(1k reviews)</span>
-            </div>
-
-            <div class="flex items-center gap-2 pt-1 pb-2">
-              <span class="font-display font-black text-lg text-[#0B0D12]">₹5,000</span>
-              <span class="text-xs text-gray-400 line-through">₹5,500</span>
-            </div>
-
-            <button class="btn-card-add-cart w-full bg-[#0B0D12] hover:bg-[#1f2430] text-white py-2.5 px-4 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all shadow-sm active:scale-95" data-id="caliburn-g4-pro">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
-              <span>Add to Cart</span>
-            </button>
-          </div>
-        </div>
-
+      <!-- Filter Tabs Strip -->
+      <div class="flex flex-wrap items-center gap-2 text-xs font-bold">
+        <button class="deal-filter-btn active px-4 py-2 rounded-full border border-gray-200 transition-all shadow-sm" data-filter="all">
+          All Deals
+        </button>
+        <button class="deal-filter-btn bg-white hover:bg-gray-50 text-gray-700 px-4 py-2 rounded-full border border-gray-200 transition-all shadow-sm" data-filter="up-to-10">
+          Up to 10%
+        </button>
+        <button class="deal-filter-btn bg-white hover:bg-gray-50 text-gray-700 px-4 py-2 rounded-full border border-gray-200 transition-all shadow-sm" data-filter="10-20">
+          10 – 20%
+        </button>
+        <button class="deal-filter-btn bg-white hover:bg-gray-50 text-gray-700 px-4 py-2 rounded-full border border-gray-200 transition-all shadow-sm" data-filter="above-20">
+          Above 20%
+        </button>
       </div>
+    </div>
 
+    <!-- Product Cards Grid (4 Cards with Full Width Add to Cart) -->
+    <div id="more-offers-grid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 sm:gap-6">
+      <!-- Dynamically populated via deals.js -->
     </div>
   </section>
 
   <!-- =========================================================================
-       8. NEVER MISS A DEAL! (Newsletter Banner - Exact match to Reference)
+       8. NEWSLETTER BANNER ("Never Miss a Deal!")
        ========================================================================= -->
-  <section class="py-10 sm:py-14 px-4 sm:px-8">
-    <div class="max-w-[1600px] mx-auto">
-      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#200045] via-[#3B0072] to-[#16002E] text-white p-6 sm:p-10 shadow-2xl border border-[#8B00FF]/40">
-        
-        <!-- Ambient Vapor Glow Texture Overlay -->
-        <div class="absolute -right-10 -bottom-10 w-96 h-96 rounded-full bg-[#8B00FF]/30 blur-3xl pointer-events-none"></div>
-
-        <div class="relative z-10 flex flex-wrap items-center justify-between gap-6">
-          
-          <!-- Left: Bell Icon + Copy -->
-          <div class="flex items-center gap-4 sm:gap-6">
-            <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white/10 border border-white/15 text-amber-300 flex items-center justify-center flex-shrink-0 shadow-lg">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-              </svg>
-            </div>
-            <div>
-              <h3 class="font-display font-black text-2xl sm:text-3xl text-white tracking-tight leading-tight">
-                Never Miss a Deal!
-              </h3>
-              <p class="text-xs sm:text-sm text-gray-300 font-medium mt-1">
-                Get early access to offers, new arrivals and exclusive discounts.
-              </p>
-            </div>
-          </div>
-
-          <!-- Right: Email Input + Subscribe Button Form -->
-          <form id="deals-newsletter-form" class="w-full sm:w-auto flex-1 max-w-md flex items-center gap-2 bg-white rounded-full p-1.5 shadow-lg">
-            <input type="email" required placeholder="Enter your email" class="flex-1 bg-transparent px-4 py-2 text-xs sm:text-sm text-gray-800 placeholder-gray-400 focus:outline-none" />
-            <button type="submit" class="bg-[#A3FF12] hover:bg-[#b2ff33] text-[#0B0D12] px-6 py-2.5 rounded-full font-black text-xs sm:text-sm flex items-center gap-2 shadow-sm transition-all flex-shrink-0">
-              <span>Subscribe</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-              </svg>
-            </button>
-          </form>
-
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       9. MAIN SITE FOOTER (Matching Site Standards)
-       ========================================================================= -->
-  <footer id="site-footer" class="relative bg-gradient-to-b from-[#0F121C] via-[#0B0D12] to-[#07080B] text-white pt-16 sm:pt-20 pb-12 border-t border-white/[0.08]">
-    <div class="max-w-[1600px] mx-auto px-4 sm:px-8 relative z-10">
+  <section class="max-w-[1440px] mx-auto px-4 sm:px-8 pb-16">
+    <div class="bg-gradient-to-r from-[#1E0538] via-[#350761] to-[#120024] rounded-3xl p-6 sm:p-10 border border-[#8B00FF]/30 text-white shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6">
       
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-6 pb-12">
-        
-        <!-- Column 1: Brand Info & Social Media -->
-        <div class="lg:col-span-4 space-y-4">
-          <a href="/" class="inline-block group">
-            <div class="flex items-center gap-1.5 leading-none">
-              <span class="font-display font-black text-3xl sm:text-4xl text-white tracking-tighter">VAPE</span>
-              <span class="font-display font-black text-3xl sm:text-4xl text-[#A3FF12] tracking-tighter drop-shadow-[0_2px_8px_rgba(163,255,18,0.6)]">HOUSE</span>
-            </div>
-            <div class="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.25em] text-gray-400 mt-1">
-              PREMIUM VAPE STORE
-            </div>
-          </a>
-          <p class="text-xs sm:text-sm text-gray-400 max-w-sm leading-relaxed">
-            Bangalore’s premier destination for genuine disposable vapes, pod kits, and e-liquids. Lightning-fast 25-minute discreet delivery.
+      <!-- Ambient mist behind banner -->
+      <div class="absolute -right-10 -bottom-10 w-80 h-80 bg-[#8B00FF]/30 rounded-full blur-3xl pointer-events-none"></div>
+
+      <!-- Left: Bell Icon & Heading -->
+      <div class="flex items-center gap-4 sm:gap-5 relative z-10">
+        <div class="w-14 h-14 rounded-2xl bg-[#A3FF12]/20 border border-[#A3FF12]/50 text-[#A3FF12] flex items-center justify-center flex-shrink-0 shadow-[0_0_20px_rgba(163,255,18,0.35)]">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-display font-black text-xl sm:text-2xl text-white tracking-tight">
+            Never Miss a Deal!
+          </h3>
+          <p class="text-xs sm:text-sm text-gray-300 mt-1 max-w-md">
+            Get early access to offers, new arrivals and exclusive discounts.
           </p>
         </div>
+      </div>
 
-        <!-- Column 2: Shop Links -->
+      <!-- Right: Email Input & Subscribe Button -->
+      <form id="deals-newsletter-form" class="relative z-10 flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
+        <input type="email" required placeholder="Enter your email" class="w-full sm:w-72 px-5 py-3 rounded-full text-xs bg-white text-[#0B0D12] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#A3FF12] shadow-sm" />
+        <button type="submit" class="w-full sm:w-auto bg-[#A3FF12] hover:bg-[#b2ff33] text-[#0B0D12] font-black text-xs px-6 py-3 rounded-full shadow-lg shadow-[#A3FF12]/30 flex items-center justify-center gap-1.5 transition-all active:scale-95">
+          <span>Subscribe</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </button>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       9. MAIN SITE FOOTER (Exact match to existing pages)
+       ========================================================================= -->
+  <footer id="site-footer" class="bg-[#0B0D12] text-white pt-14 pb-8 border-t border-white/[0.08] relative z-20">
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-12">
+        
+        <!-- Column 1: Brand Info (4 cols) -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="flex items-center gap-1.5 leading-none">
+            <span class="font-display font-black text-3xl sm:text-4xl text-white tracking-tighter">NOX</span>
+            <span class="font-display font-black text-3xl sm:text-4xl text-[#A3FF12] tracking-tighter drop-shadow-[0_2px_8px_rgba(163,255,18,0.6)]">I</span>
+          </div>
+          <div class="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.25em] text-gray-400 mt-1">
+            PREMIUM VAPE STORE
+          </div>
+          <p class="text-xs text-gray-400 max-w-sm leading-relaxed">
+            Bangalore's trusted destination for authentic vape devices, disposable vapes, and premium nicotine salts. Lightning fast 25-minute delivery.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="#" class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-300 hover:text-[#A3FF12] hover:border-[#A3FF12] transition-colors" title="Instagram">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-300 hover:text-[#A3FF12] hover:border-[#A3FF12] transition-colors" title="Facebook">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Shop Links (2 cols) -->
         <div class="lg:col-span-2 space-y-3">
           <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider">Shop</h4>
           <ul class="space-y-2 text-xs text-gray-400">
             <li><a href="/" class="hover:text-[#A3FF12] transition-colors">Home</a></li>
             <li><a href="/collections" class="hover:text-[#A3FF12] transition-colors">All Products</a></li>
-            <li><a href="/deals" class="hover:text-[#A3FF12] transition-colors">Offers & Deals</a></li>
+            <li><a href="/deals" class="hover:text-[#A3FF12] text-[#A3FF12] font-bold transition-colors">Offers & Deals</a></li>
             <li><a href="/#about" class="hover:text-[#A3FF12] transition-colors">About</a></li>
             <li><a href="/#contact" class="hover:text-[#A3FF12] transition-colors">Contact</a></li>
           </ul>
         </div>
 
-        <!-- Column 3: Customer Care -->
+        <!-- Column 3: Categories (3 cols) -->
         <div class="lg:col-span-3 space-y-3">
-          <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider">Customer Care</h4>
+          <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider">Categories</h4>
           <ul class="space-y-2 text-xs text-gray-400">
-            <li><a href="/#about" class="hover:text-[#A3FF12] transition-colors">Shipping & 25m Delivery</a></li>
-            <li><a href="/#about" class="hover:text-[#A3FF12] transition-colors">100% Authenticity Guarantee</a></li>
-            <li><a href="/#about" class="hover:text-[#A3FF12] transition-colors">Privacy & Discreet Packaging</a></li>
-            <li><a href="/#contact" class="hover:text-[#A3FF12] transition-colors">Track Your Order</a></li>
+            <li><a href="/collections?category=disposable" class="hover:text-[#A3FF12] transition-colors">Disposable Vapes</a></li>
+            <li><a href="/collections?category=reusable" class="hover:text-[#A3FF12] transition-colors">Reusable Pod Kits</a></li>
+            <li><a href="/collections?category=salts" class="hover:text-[#A3FF12] transition-colors">Nicotine Salts</a></li>
+            <li><a href="/collections?category=pods" class="hover:text-[#A3FF12] transition-colors">Replacement Pods</a></li>
           </ul>
         </div>
 
-        <!-- Column 4: Contact & Location -->
+        <!-- Column 4: Help & Contact (3 cols) -->
         <div class="lg:col-span-3 space-y-3">
-          <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider">Store Location</h4>
-          <ul class="space-y-2.5 text-xs text-gray-400">
+          <h4 class="font-display font-bold text-sm text-white uppercase tracking-wider">Contact & Support</h4>
+          <ul class="space-y-2 text-xs text-gray-400">
             <li class="flex items-center gap-2">
               <svg class="w-3.5 h-3.5 text-[#A3FF12]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
               <span>+91 98765 43210</span>
             </li>
             <li class="flex items-center gap-2">
               <svg class="w-3.5 h-3.5 text-[#A3FF12]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-              <span>deals@vapehouse.in</span>
+              <span>hello@vapehouse.in</span>
             </li>
             <li class="flex items-center gap-2">
               <svg class="w-3.5 h-3.5 text-[#A3FF12]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-              <span>Indiranagar & Koramangala, Bangalore</span>
+              <span>Bangalore, Karnataka</span>
             </li>
           </ul>
         </div>
 
       </div>
 
-      <!-- Bottom Bar -->
       <div class="border-t border-white/[0.08] pt-8 flex flex-wrap items-center justify-between gap-4 text-xs text-gray-500">
-        <div>© 2026 VapeHouse Bangalore. All Rights Reserved.</div>
-        <div class="flex items-center gap-2">
-          <span class="px-2 py-0.5 rounded bg-white/10 text-white font-extrabold text-[11px] tracking-widest">VISA</span>
-          <span class="px-2 py-0.5 rounded bg-white/10 text-[#F97316] font-extrabold text-[11px] tracking-widest">MC</span>
-          <span class="px-2 py-0.5 rounded bg-white/10 text-[#A3FF12] font-black text-[11px] tracking-widest">UPI</span>
+        <div>© 2026 VapeHouse. All Rights Reserved.</div>
+        <div class="flex items-center gap-4">
+          <div class="flex items-center gap-1.5 text-gray-400">
+            <svg class="w-4 h-4 text-[#A3FF12]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            <span class="font-bold text-gray-300">Secure Payments</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="px-2 py-0.5 rounded bg-white/10 text-white font-extrabold text-[11px] tracking-widest">VISA</span>
+            <span class="px-2 py-0.5 rounded bg-white/10 text-[#F97316] font-extrabold text-[11px] tracking-widest">MC</span>
+            <span class="px-2 py-0.5 rounded bg-white/10 text-[#A3FF12] font-black text-[11px] tracking-widest">UPI</span>
+          </div>
         </div>
       </div>
-
     </div>
   </footer>
 
