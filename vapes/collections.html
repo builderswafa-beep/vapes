@@ -15,6 +15,31 @@
   <link rel="stylesheet" href="/css/tailwind.min.css">
   <link rel="stylesheet" href="css/tailwind.min.css">
 
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              lime: '#A3FF12',
+              purple: '#8B00FF',
+              charcoal: '#0B0D12',
+              white: '#FFFFFF',
+              gray: '#F4F6F9',
+              muted: '#94A3B8'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Outfit"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
   <!-- Custom Styles -->
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="css/styles.css">

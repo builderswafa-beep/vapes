@@ -747,8 +747,8 @@ const PRODUCTS_DATA = [
     "positiveReviews": "97% Positive Reviews",
     "badge": "New Arrival",
     "badgeType": "blue",
-    "image": "assets/bottle-purple-raya.png",
-    "fullImage": "assets/bottle-purple-raya.png",
+    "image": "assets/collections/card_img_1.png",
+    "fullImage": "assets/collections/card_img_1.png",
     "glowColor": "purple",
     "tagline": "Metallic unibody with silent draw technology",
     "shortDescription": "ElfBar TE6000 Extreme by Elf Bar delivers exceptional quality, precision engineering, and outstanding performance.",
@@ -791,7 +791,7 @@ const PRODUCTS_DATA = [
       }
     ],
     "thumbnails": [
-      "assets/bottle-purple-raya.png",
+      "assets/collections/card_img_1.png",
       "assets/product/thumb_1.png",
       "assets/product/thumb_2.png"
     ],
@@ -1004,8 +1004,8 @@ const PRODUCTS_DATA = [
     "positiveReviews": "97% Positive Reviews",
     "badge": "",
     "badgeType": "none",
-    "image": "assets/bottle-iget-body-clean.png",
-    "fullImage": "assets/bottle-iget-body-clean.png",
+    "image": "assets/iget-bar-plus-vap.webp",
+    "fullImage": "assets/iget-bar-plus-vap.webp",
     "glowColor": "green",
     "tagline": "Eco-conscious replaceable pod disposable system",
     "shortDescription": "iGET Bar Plus 6000 by Others delivers exceptional quality, precision engineering, and outstanding performance.",
@@ -1049,7 +1049,7 @@ const PRODUCTS_DATA = [
       }
     ],
     "thumbnails": [
-      "assets/bottle-iget-body-clean.png",
+      "assets/iget-bar-plus-vap.webp",
       "assets/product/thumb_1.png",
       "assets/product/thumb_2.png"
     ],
@@ -1090,8 +1090,8 @@ const PRODUCTS_DATA = [
     "positiveReviews": "97% Positive Reviews",
     "badge": "",
     "badgeType": "none",
-    "image": "assets/bottle-raya-full.png",
-    "fullImage": "assets/bottle-raya-full.png",
+    "image": "assets/collections/card_img_1.png",
+    "fullImage": "assets/collections/card_img_1.png",
     "glowColor": "purple",
     "tagline": "Dual tank flavor switching mechanism",
     "shortDescription": "ElfBar Raya D1 16k by Elf Bar delivers exceptional quality, precision engineering, and outstanding performance.",
@@ -1134,7 +1134,7 @@ const PRODUCTS_DATA = [
       }
     ],
     "thumbnails": [
-      "assets/bottle-raya-full.png",
+      "assets/collections/card_img_1.png",
       "assets/product/thumb_1.png",
       "assets/product/thumb_2.png"
     ],
@@ -1518,8 +1518,8 @@ const PRODUCTS_DATA = [
     "positiveReviews": "97% Positive Reviews",
     "badge": "Best Seller",
     "badgeType": "lime",
-    "image": "assets/bottle-purple-raya.png",
-    "fullImage": "assets/bottle-purple-raya.png",
+    "image": "assets/collections/card_img_1.png",
+    "fullImage": "assets/collections/card_img_1.png",
     "glowColor": "purple",
     "tagline": "Full front digital interactive display",
     "shortDescription": "ElfBar GH20000 Smart by Elf Bar delivers exceptional quality, precision engineering, and outstanding performance.",
@@ -1563,7 +1563,7 @@ const PRODUCTS_DATA = [
       }
     ],
     "thumbnails": [
-      "assets/bottle-purple-raya.png",
+      "assets/collections/card_img_1.png",
       "assets/product/thumb_1.png",
       "assets/product/thumb_2.png"
     ],
@@ -1604,8 +1604,8 @@ const PRODUCTS_DATA = [
     "positiveReviews": "97% Positive Reviews",
     "badge": "",
     "badgeType": "none",
-    "image": "assets/bottle-gold-full.png",
-    "fullImage": "assets/bottle-gold-full.png",
+    "image": "assets/elfabare-40000.webp",
+    "fullImage": "assets/elfabare-40000.webp",
     "glowColor": "green",
     "tagline": "Award-winning Nasty signature flavors",
     "shortDescription": "Nasty Bar 8500 Puffs by Others delivers exceptional quality, precision engineering, and outstanding performance.",
@@ -1649,7 +1649,7 @@ const PRODUCTS_DATA = [
       }
     ],
     "thumbnails": [
-      "assets/bottle-gold-full.png",
+      "assets/elfabare-40000.webp",
       "assets/product/thumb_1.png",
       "assets/product/thumb_2.png"
     ],
@@ -2033,8 +2033,8 @@ const PRODUCTS_DATA = [
     "positiveReviews": "97% Positive Reviews",
     "badge": "",
     "badgeType": "none",
-    "image": "assets/bottle-purple-raya.png",
-    "fullImage": "assets/bottle-purple-raya.png",
+    "image": "assets/collections/card_img_1.png",
+    "fullImage": "assets/collections/card_img_1.png",
     "glowColor": "purple",
     "tagline": "Magnetic modular battery and flavor pods",
     "shortDescription": "ElfBar Lowit 5500 Pod Kit by Elf Bar delivers exceptional quality, precision engineering, and outstanding performance.",
@@ -2078,7 +2078,7 @@ const PRODUCTS_DATA = [
       }
     ],
     "thumbnails": [
-      "assets/bottle-purple-raya.png",
+      "assets/collections/card_img_1.png",
       "assets/product/thumb_1.png",
       "assets/product/thumb_2.png"
     ],
@@ -2119,8 +2119,8 @@ const PRODUCTS_DATA = [
     "positiveReviews": "97% Positive Reviews",
     "badge": "",
     "badgeType": "none",
-    "image": "assets/bottle-iget-body-clean.png",
-    "fullImage": "assets/bottle-iget-body-clean.png",
+    "image": "assets/iget-bar-plus-vap.webp",
+    "fullImage": "assets/iget-bar-plus-vap.webp",
     "glowColor": "green",
     "tagline": "High-grade aluminum pen style vape",
     "shortDescription": "iGET Legend 4000 by Others delivers exceptional quality, precision engineering, and outstanding performance.",
@@ -2163,7 +2163,7 @@ const PRODUCTS_DATA = [
       }
     ],
     "thumbnails": [
-      "assets/bottle-iget-body-clean.png",
+      "assets/iget-bar-plus-vap.webp",
       "assets/product/thumb_1.png",
       "assets/product/thumb_2.png"
     ],
@@ -2547,8 +2547,8 @@ const PRODUCTS_DATA = [
     "positiveReviews": "97% Positive Reviews",
     "badge": "",
     "badgeType": "none",
-    "image": "assets/bottle-raya-full.png",
-    "fullImage": "assets/bottle-raya-full.png",
+    "image": "assets/collections/card_img_1.png",
+    "fullImage": "assets/collections/card_img_1.png",
     "glowColor": "purple",
     "tagline": "Transparent e-liquid view chamber with QUAQ mesh",
     "shortDescription": "ElfBar Elfa Pro 2026 by Elf Bar delivers exceptional quality, precision engineering, and outstanding performance.",
@@ -2592,7 +2592,7 @@ const PRODUCTS_DATA = [
       }
     ],
     "thumbnails": [
-      "assets/bottle-raya-full.png",
+      "assets/collections/card_img_1.png",
       "assets/product/thumb_1.png",
       "assets/product/thumb_2.png"
     ],
@@ -4366,8 +4366,8 @@ const PRODUCTS_DATA = [
     "positiveReviews": "97% Positive Reviews",
     "badge": "Best Seller",
     "badgeType": "lime",
-    "image": "assets/bottle-gold-full.png",
-    "fullImage": "assets/bottle-gold-full.png",
+    "image": "assets/elfabare-40000.webp",
+    "fullImage": "assets/elfabare-40000.webp",
     "glowColor": "green",
     "tagline": "Iconic sweet mango with low mint cooling",
     "shortDescription": "Nasty Cush Man Mango Salt by Others delivers exceptional quality, precision engineering, and outstanding performance.",
@@ -4411,7 +4411,7 @@ const PRODUCTS_DATA = [
       }
     ],
     "thumbnails": [
-      "assets/bottle-gold-full.png",
+      "assets/elfabare-40000.webp",
       "assets/product/thumb_1.png",
       "assets/product/thumb_2.png"
     ],
@@ -4452,8 +4452,8 @@ const PRODUCTS_DATA = [
     "positiveReviews": "97% Positive Reviews",
     "badge": "Trending",
     "badgeType": "lime",
-    "image": "assets/bottle-purple-raya.png",
-    "fullImage": "assets/bottle-purple-raya.png",
+    "image": "assets/collections/card_img_1.png",
+    "fullImage": "assets/collections/card_img_1.png",
     "glowColor": "purple",
     "tagline": "Official ElfBar liquid with sweet and tangy berry notes",
     "shortDescription": "ElfBar ElfLiq Blueberry Sour by Elf Bar delivers exceptional quality, precision engineering, and outstanding performance.",
@@ -4497,7 +4497,7 @@ const PRODUCTS_DATA = [
       }
     ],
     "thumbnails": [
-      "assets/bottle-purple-raya.png",
+      "assets/collections/card_img_1.png",
       "assets/product/thumb_1.png",
       "assets/product/thumb_2.png"
     ],
@@ -4710,8 +4710,8 @@ const PRODUCTS_DATA = [
     "positiveReviews": "97% Positive Reviews",
     "badge": "",
     "badgeType": "none",
-    "image": "assets/bottle-gold-full.png",
-    "fullImage": "assets/bottle-gold-full.png",
+    "image": "assets/elfabare-40000.webp",
+    "fullImage": "assets/elfabare-40000.webp",
     "glowColor": "green",
     "tagline": "Sweet pineapple infused with fizzy lime soda",
     "shortDescription": "Nasty Slow Blow Pineapple Salt by Others delivers exceptional quality, precision engineering, and outstanding performance.",
@@ -4755,7 +4755,7 @@ const PRODUCTS_DATA = [
       }
     ],
     "thumbnails": [
-      "assets/bottle-gold-full.png",
+      "assets/elfabare-40000.webp",
       "assets/product/thumb_1.png",
       "assets/product/thumb_2.png"
     ],
@@ -4796,8 +4796,8 @@ const PRODUCTS_DATA = [
     "positiveReviews": "97% Positive Reviews",
     "badge": "",
     "badgeType": "none",
-    "image": "assets/bottle-purple-raya.png",
-    "fullImage": "assets/bottle-purple-raya.png",
+    "image": "assets/collections/card_img_1.png",
+    "fullImage": "assets/collections/card_img_1.png",
     "glowColor": "purple",
     "tagline": "Crisp herbal spearmint with clean throat hit",
     "shortDescription": "ElfBar ElfLiq Spearmint 30ml by Elf Bar delivers exceptional quality, precision engineering, and outstanding performance.",
@@ -4841,7 +4841,7 @@ const PRODUCTS_DATA = [
       }
     ],
     "thumbnails": [
-      "assets/bottle-purple-raya.png",
+      "assets/collections/card_img_1.png",
       "assets/product/thumb_1.png",
       "assets/product/thumb_2.png"
     ],
@@ -4968,8 +4968,8 @@ const PRODUCTS_DATA = [
     "positiveReviews": "97% Positive Reviews",
     "badge": "",
     "badgeType": "none",
-    "image": "assets/bottle-gold-full.png",
-    "fullImage": "assets/bottle-gold-full.png",
+    "image": "assets/elfabare-40000.webp",
+    "fullImage": "assets/elfabare-40000.webp",
     "glowColor": "green",
     "tagline": "Black ripe grapes blended with mixed red berries",
     "shortDescription": "Nasty Asap Grape Salt 30ml by Others delivers exceptional quality, precision engineering, and outstanding performance.",
@@ -5013,7 +5013,7 @@ const PRODUCTS_DATA = [
       }
     ],
     "thumbnails": [
-      "assets/bottle-gold-full.png",
+      "assets/elfabare-40000.webp",
       "assets/product/thumb_1.png",
       "assets/product/thumb_2.png"
     ],
@@ -5054,8 +5054,8 @@ const PRODUCTS_DATA = [
     "positiveReviews": "97% Positive Reviews",
     "badge": "",
     "badgeType": "none",
-    "image": "assets/bottle-purple-raya.png",
-    "fullImage": "assets/bottle-purple-raya.png",
+    "image": "assets/collections/card_img_1.png",
+    "fullImage": "assets/collections/card_img_1.png",
     "glowColor": "purple",
     "tagline": "Sun-ripened summer strawberries with crushed ice",
     "shortDescription": "ElfBar ElfLiq Strawberry Ice by Elf Bar delivers exceptional quality, precision engineering, and outstanding performance.",
@@ -5099,7 +5099,7 @@ const PRODUCTS_DATA = [
       }
     ],
     "thumbnails": [
-      "assets/bottle-purple-raya.png",
+      "assets/collections/card_img_1.png",
       "assets/product/thumb_1.png",
       "assets/product/thumb_2.png"
     ],
@@ -5226,8 +5226,8 @@ const PRODUCTS_DATA = [
     "positiveReviews": "97% Positive Reviews",
     "badge": "",
     "badgeType": "none",
-    "image": "assets/bottle-gold-full.png",
-    "fullImage": "assets/bottle-gold-full.png",
+    "image": "assets/elfabare-40000.webp",
+    "fullImage": "assets/elfabare-40000.webp",
     "glowColor": "green",
     "tagline": "Earthy blackcurrant with sweet cooling menthol",
     "shortDescription": "Nasty Bad Blood Blackcurrant by Others delivers exceptional quality, precision engineering, and outstanding performance.",
@@ -5271,7 +5271,7 @@ const PRODUCTS_DATA = [
       }
     ],
     "thumbnails": [
-      "assets/bottle-gold-full.png",
+      "assets/elfabare-40000.webp",
       "assets/product/thumb_1.png",
       "assets/product/thumb_2.png"
     ],
@@ -5312,8 +5312,8 @@ const PRODUCTS_DATA = [
     "positiveReviews": "97% Positive Reviews",
     "badge": "",
     "badgeType": "none",
-    "image": "assets/bottle-purple-raya.png",
-    "fullImage": "assets/bottle-purple-raya.png",
+    "image": "assets/collections/card_img_1.png",
+    "fullImage": "assets/collections/card_img_1.png",
     "glowColor": "purple",
     "tagline": "Exotic tropical mix of kiwi, passion fruit and guava",
     "shortDescription": "ElfBar ElfLiq Kiwi Passion Fruit by Elf Bar delivers exceptional quality, precision engineering, and outstanding performance.",
@@ -5357,7 +5357,7 @@ const PRODUCTS_DATA = [
       }
     ],
     "thumbnails": [
-      "assets/bottle-purple-raya.png",
+      "assets/collections/card_img_1.png",
       "assets/product/thumb_1.png",
       "assets/product/thumb_2.png"
     ],
@@ -5398,8 +5398,8 @@ const PRODUCTS_DATA = [
     "positiveReviews": "97% Positive Reviews",
     "badge": "Best Seller",
     "badgeType": "lime",
-    "image": "assets/category_trending/cat_prod_4_isolated.png",
-    "fullImage": "assets/category_trending/cat_prod_4_isolated.png",
+    "image": "assets/pods.webp",
+    "fullImage": "assets/pods.webp",
     "glowColor": "green",
     "tagline": "Integrated mesh coil 2.5ml pods with top refill",
     "shortDescription": "Caliburn G3 Pods (4-Pack 0.6\u03a9) by Caliburn delivers exceptional quality, precision engineering, and outstanding performance.",
@@ -5442,7 +5442,7 @@ const PRODUCTS_DATA = [
       }
     ],
     "thumbnails": [
-      "assets/category_trending/cat_prod_4_isolated.png",
+      "assets/pods.webp",
       "assets/product/thumb_1.png",
       "assets/product/thumb_2.png"
     ],
@@ -5483,8 +5483,8 @@ const PRODUCTS_DATA = [
     "positiveReviews": "97% Positive Reviews",
     "badge": "Trending",
     "badgeType": "lime",
-    "image": "assets/category_trending/cat_prod_4_isolated.png",
-    "fullImage": "assets/category_trending/cat_prod_4_isolated.png",
+    "image": "assets/pods.webp",
+    "fullImage": "assets/pods.webp",
     "glowColor": "green",
     "tagline": "Tight MTL draw reproduction with ultrasonic weld",
     "shortDescription": "Caliburn G3 Pods (4-Pack 0.9\u03a9) by Caliburn delivers exceptional quality, precision engineering, and outstanding performance.",
@@ -5527,7 +5527,7 @@ const PRODUCTS_DATA = [
       }
     ],
     "thumbnails": [
-      "assets/category_trending/cat_prod_4_isolated.png",
+      "assets/pods.webp",
       "assets/product/thumb_1.png",
       "assets/product/thumb_2.png"
     ],
@@ -5568,8 +5568,8 @@ const PRODUCTS_DATA = [
     "positiveReviews": "97% Positive Reviews",
     "badge": "Best Seller",
     "badgeType": "lime",
-    "image": "assets/category_trending/cat_prod_3_isolated.png",
-    "fullImage": "assets/category_trending/cat_prod_3_isolated.png",
+    "image": "assets/nicotine-salts.png",
+    "fullImage": "assets/nicotine-salts.png",
     "glowColor": "cyan",
     "tagline": "Anti-leak top fill cartridges 0.6\u03a9 / 0.8\u03a9",
     "shortDescription": "OXVA Xlim V3 Top Fill Pods (3-Pack) by OXVA delivers exceptional quality, precision engineering, and outstanding performance.",
@@ -5612,7 +5612,7 @@ const PRODUCTS_DATA = [
       }
     ],
     "thumbnails": [
-      "assets/category_trending/cat_prod_3_isolated.png",
+      "assets/nicotine-salts.png",
       "assets/product/thumb_1.png",
       "assets/product/thumb_2.png"
     ],
@@ -5653,8 +5653,8 @@ const PRODUCTS_DATA = [
     "positiveReviews": "97% Positive Reviews",
     "badge": "",
     "badgeType": "none",
-    "image": "assets/category_trending/cat_prod_4_isolated.png",
-    "fullImage": "assets/category_trending/cat_prod_4_isolated.png",
+    "image": "assets/pods.webp",
+    "fullImage": "assets/pods.webp",
     "glowColor": "green",
     "tagline": "0.9\u03a9 UN2 Meshed-H refillable cartridges",
     "shortDescription": "Caliburn A2 / A2S Pods (4-Pack) by Caliburn delivers exceptional quality, precision engineering, and outstanding performance.",
@@ -5697,7 +5697,7 @@ const PRODUCTS_DATA = [
       }
     ],
     "thumbnails": [
-      "assets/category_trending/cat_prod_4_isolated.png",
+      "assets/pods.webp",
       "assets/product/thumb_1.png",
       "assets/product/thumb_2.png"
     ],
@@ -5738,8 +5738,8 @@ const PRODUCTS_DATA = [
     "positiveReviews": "97% Positive Reviews",
     "badge": "",
     "badgeType": "none",
-    "image": "assets/category_trending/cat_prod_3_isolated.png",
-    "fullImage": "assets/category_trending/cat_prod_3_isolated.png",
+    "image": "assets/nicotine-salts.png",
+    "fullImage": "assets/nicotine-salts.png",
     "glowColor": "cyan",
     "tagline": "Side-fill leakproof replacement pods",
     "shortDescription": "OXVA Xlim V2 Cartridges (3-Pack) by OXVA delivers exceptional quality, precision engineering, and outstanding performance.",
@@ -5782,7 +5782,7 @@ const PRODUCTS_DATA = [
       }
     ],
     "thumbnails": [
-      "assets/category_trending/cat_prod_3_isolated.png",
+      "assets/nicotine-salts.png",
       "assets/product/thumb_1.png",
       "assets/product/thumb_2.png"
     ],
@@ -5823,8 +5823,8 @@ const PRODUCTS_DATA = [
     "positiveReviews": "97% Positive Reviews",
     "badge": "",
     "badgeType": "none",
-    "image": "assets/category_trending/cat_prod_1_isolated.png",
-    "fullImage": "assets/category_trending/cat_prod_1_isolated.png",
+    "image": "assets/disposable-vapes.webp",
+    "fullImage": "assets/disposable-vapes.webp",
     "glowColor": "green",
     "tagline": "Progressive airflow adjustment coils",
     "shortDescription": "Caliburn G2 Coils (4-Pack) by Caliburn delivers exceptional quality, precision engineering, and outstanding performance.",
@@ -5867,7 +5867,7 @@ const PRODUCTS_DATA = [
       }
     ],
     "thumbnails": [
-      "assets/category_trending/cat_prod_1_isolated.png",
+      "assets/disposable-vapes.webp",
       "assets/product/thumb_1.png",
       "assets/product/thumb_2.png"
     ],
@@ -5993,8 +5993,8 @@ const PRODUCTS_DATA = [
     "positiveReviews": "97% Positive Reviews",
     "badge": "",
     "badgeType": "none",
-    "image": "assets/category_trending/cat_prod_4_isolated.png",
-    "fullImage": "assets/category_trending/cat_prod_4_isolated.png",
+    "image": "assets/pods.webp",
+    "fullImage": "assets/pods.webp",
     "glowColor": "green",
     "tagline": "4ml split tank for dual flavor selection",
     "shortDescription": "Caliburn Explorer Dual-Chamber Pods by Caliburn delivers exceptional quality, precision engineering, and outstanding performance.",
@@ -6037,7 +6037,7 @@ const PRODUCTS_DATA = [
       }
     ],
     "thumbnails": [
-      "assets/category_trending/cat_prod_4_isolated.png",
+      "assets/pods.webp",
       "assets/product/thumb_1.png",
       "assets/product/thumb_2.png"
     ],
@@ -6078,8 +6078,8 @@ const PRODUCTS_DATA = [
     "positiveReviews": "97% Positive Reviews",
     "badge": "Trending",
     "badgeType": "lime",
-    "image": "assets/category_trending/cat_prod_1_isolated.png",
-    "fullImage": "assets/category_trending/cat_prod_1_isolated.png",
+    "image": "assets/disposable-vapes.webp",
+    "fullImage": "assets/disposable-vapes.webp",
     "glowColor": "cyan",
     "tagline": "High durability braided 3A Type-C charging neck lanyard",
     "shortDescription": "OXVA Fast-Charging Lanyard Cable by OXVA delivers exceptional quality, precision engineering, and outstanding performance.",
@@ -6122,7 +6122,7 @@ const PRODUCTS_DATA = [
       }
     ],
     "thumbnails": [
-      "assets/category_trending/cat_prod_1_isolated.png",
+      "assets/disposable-vapes.webp",
       "assets/product/thumb_1.png",
       "assets/product/thumb_2.png"
     ],
@@ -6163,8 +6163,8 @@ const PRODUCTS_DATA = [
     "positiveReviews": "97% Positive Reviews",
     "badge": "",
     "badgeType": "none",
-    "image": "assets/category_trending/cat_prod_2_isolated.png",
-    "fullImage": "assets/category_trending/cat_prod_2_isolated.png",
+    "image": "assets/reusable-vape-kits.webp",
+    "fullImage": "assets/reusable-vape-kits.webp",
     "glowColor": "green",
     "tagline": "Heavy-duty polished stainless steel chain lanyard",
     "shortDescription": "Caliburn Premium Metal Lanyard Chain by Caliburn delivers exceptional quality, precision engineering, and outstanding performance.",
@@ -6207,7 +6207,7 @@ const PRODUCTS_DATA = [
       }
     ],
     "thumbnails": [
-      "assets/category_trending/cat_prod_2_isolated.png",
+      "assets/reusable-vape-kits.webp",
       "assets/product/thumb_1.png",
       "assets/product/thumb_2.png"
     ],
@@ -6248,8 +6248,8 @@ const PRODUCTS_DATA = [
     "positiveReviews": "97% Positive Reviews",
     "badge": "",
     "badgeType": "none",
-    "image": "assets/category_trending/cat_prod_3_isolated.png",
-    "fullImage": "assets/category_trending/cat_prod_3_isolated.png",
+    "image": "assets/nicotine-salts.png",
+    "fullImage": "assets/nicotine-salts.png",
     "glowColor": "green",
     "tagline": "Molded EVA hard shell travel case for vapes and pods",
     "shortDescription": "VapeHouse Shockproof Protective Case by Others delivers exceptional quality, precision engineering, and outstanding performance.",
@@ -6292,7 +6292,7 @@ const PRODUCTS_DATA = [
       }
     ],
     "thumbnails": [
-      "assets/category_trending/cat_prod_3_isolated.png",
+      "assets/nicotine-salts.png",
       "assets/product/thumb_1.png",
       "assets/product/thumb_2.png"
     ],
@@ -6333,8 +6333,8 @@ const PRODUCTS_DATA = [
     "positiveReviews": "97% Positive Reviews",
     "badge": "",
     "badgeType": "none",
-    "image": "assets/category_trending/cat_prod_1_isolated.png",
-    "fullImage": "assets/category_trending/cat_prod_1_isolated.png",
+    "image": "assets/disposable-vapes.webp",
+    "fullImage": "assets/disposable-vapes.webp",
     "glowColor": "green",
     "tagline": "GaN miniature 30W adapter for safe and rapid vape charging",
     "shortDescription": "VapeHouse Type-C Fast Charger 30W by Others delivers exceptional quality, precision engineering, and outstanding performance.",
@@ -6377,7 +6377,7 @@ const PRODUCTS_DATA = [
       }
     ],
     "thumbnails": [
-      "assets/category_trending/cat_prod_1_isolated.png",
+      "assets/disposable-vapes.webp",
       "assets/product/thumb_1.png",
       "assets/product/thumb_2.png"
     ],
