@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <script>
+    // GitHub Pages SPA router redirect
+    (function() {
+      var path = window.location.pathname;
+      var repo = '/vapes';
+      
+      // If deployed under repo subpath, strip repo
+      if (path.indexOf(repo) === 0) {
+        path = path.slice(repo.length);
+      }
+      
+      if (path.indexOf('/collections') === 0) {
+        var query = window.location.search;
+        window.location.replace((window.location.pathname.indexOf(repo) === 0 ? repo : '') + '/collections.html' + query);
+      } else if (path.indexOf('/products/') === 0 || path.indexOf('/product/') === 0) {
+        var slug = path.split('/').filter(Boolean).pop();
+        window.location.replace((window.location.pathname.indexOf(repo) === 0 ? repo : '') + '/product.html?slug=' + encodeURIComponent(slug));
+      } else {
+        window.location.replace((window.location.pathname.indexOf(repo) === 0 ? repo : '') + '/index.html');
+      }
+    })();
+  </script>
+</head>
+<body style="background:#0B0D12;color:#fff;font-family:sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;">
+  <p>Redirecting to Vape House...</p>
+</body>
+</html>

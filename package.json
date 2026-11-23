@@ -1,8 +1,18 @@
 {
-  "name": "vapes-root",
+  "name": "vape-house",
   "version": "1.0.0",
+  "description": "VAPE HOUSE - Premium Vape Store Website",
+  "main": "server.js",
   "scripts": {
-    "dev": "npm --prefix vapes run dev",
-    "start": "npm --prefix vapes start"
-  }
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "node -e \"console.log('Build complete')\""
+  },
+  "keywords": [
+    "vape",
+    "ecommerce",
+    "store"
+  ],
+  "author": "",
+  "license": "ISC"
 }
