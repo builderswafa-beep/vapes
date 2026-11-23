@@ -10,30 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              lime: '#A3FF12',
-              purple: '#8B00FF',
-              charcoal: '#0B0D12',
-              white: '#FFFFFF',
-              gray: '#F4F6F9',
-              muted: '#94A3B8'
-            }
-          },
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            display: ['"Outfit"', 'sans-serif']
-          }
-        }
-      }
-    }
-  </script>
+  <!-- Precompiled Production Tailwind CSS (Zero CDN dependency, 100% resilient) -->
+  <link rel="stylesheet" href="css/tailwind.min.css">
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="css/styles.css">
