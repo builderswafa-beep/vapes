@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #e2e8f0; }
+    .footer-mockup {
+      width: 1000px;
+      margin: 0 auto;
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      position: relative;
+      overflow: hidden;
+      min-height: 400px;
+    }
+    .dark-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: #0b0d12;
+      border-top: 1px solid #222;
+    }
+    /* The organic black hill in the bottom right corner */
+    .corner-hill {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 320px;
+      height: 220px;
+      pointer-events: none;
+      z-index: 5;
+    }
+    .vape-img-container {
+      position: absolute;
+      bottom: 10px;
+      right: 20px;
+      z-index: 10;
+    }
+    .vape-img {
+      height: 180px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h2>Test Footer Curve & Blend</h2>
+  <div class="footer-mockup">
+    <!-- SVG Corner Hill with Neon Lime Accent Stroke -->
+    <svg class="corner-hill" viewBox="0 0 320 220" fill="none">
+      <path d="M 0 220 C 60 220 80 180 120 120 C 160 60 220 10 320 20 L 320 220 Z" fill="#0B0D12" />
+      <path d="M 0 220 C 60 220 80 180 120 120 C 160 60 220 10 320 20" stroke="#A3FF12" stroke-width="2.5" stroke-linecap="round" style="filter: drop-shadow(0 0 8px rgba(163,255,18,0.8));" />
+    </svg>
+    <div class="dark-bar"></div>
+    <div class="vape-img-container">
+      <img src="footer_vapes_blended.png" class="vape-img" style="filter: drop-shadow(0 15px 25px rgba(0,0,0,0.7));">
+    </div>
+  </div>
+</body>
+</html>

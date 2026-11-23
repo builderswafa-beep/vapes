@@ -1,0 +1,8 @@
+{
+  "name": "vapes-root",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npm --prefix vapes run dev",
+    "start": "npm --prefix vapes start"
+  }
+}

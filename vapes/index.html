@@ -1,0 +1,1779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VAPE HOUSE | Premium Vape Collection & Fast Delivery</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              lime: '#A3FF12',
+              purple: '#8B00FF',
+              charcoal: '#0B0D12',
+              white: '#FFFFFF',
+              gray: '#F4F6F9',
+              muted: '#94A3B8'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Outfit"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#0B0D12] text-white selection:bg-[#A3FF12] selection:text-[#0B0D12] min-h-screen flex flex-col justify-between">
+
+  <!-- =========================================================================
+       1. TOP ANNOUNCEMENT BAR (Exact match to reference)
+       ========================================================================= -->
+  <div class="anim-entry-top bg-[#0B0D12] border-b border-white/[0.08] text-xs text-white/90 py-2.5 px-4 sm:px-8 relative z-50">
+    <div class="max-w-[1600px] mx-auto flex flex-wrap items-center justify-between gap-y-2">
+      
+      <!-- Left trust badges -->
+      <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-[12px] font-medium tracking-wide">
+        
+        <!-- Badge 1: 25 Minutes Delivery -->
+        <div class="flex items-center gap-2 group cursor-pointer">
+          <svg class="w-4 h-4 text-[#A3FF12] icon-hover-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+          <span class="group-hover:text-[#A3FF12] transition-colors">25 Minutes Delivery in Bangalore</span>
+        </div>
+
+        <span class="text-white/20 select-none hidden sm:inline">|</span>
+
+        <!-- Badge 2: 100% Authentic -->
+        <div class="flex items-center gap-2 group cursor-pointer">
+          <svg class="w-4 h-4 text-[#A3FF12] icon-hover-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+          <span class="group-hover:text-[#A3FF12] transition-colors">100% Authentic Products</span>
+        </div>
+
+        <span class="text-white/20 select-none hidden md:inline">|</span>
+
+        <!-- Badge 3: Discreet Packaging -->
+        <div class="flex items-center gap-2 group cursor-pointer hidden md:flex">
+          <svg class="w-4 h-4 text-[#A3FF12] icon-hover-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+          </svg>
+          <span class="group-hover:text-[#A3FF12] transition-colors">Discreet & Secure Packaging</span>
+        </div>
+      </div>
+
+      <!-- Right location selector -->
+      <div class="relative">
+        <button id="city-selector-trigger" class="flex items-center gap-1.5 text-xs font-semibold hover:text-[#A3FF12] transition-colors">
+          <svg class="w-3.5 h-3.5 text-white/70" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+          <span id="city-current-name">Bangalore</span>
+          <svg class="w-3.5 h-3.5 text-white/60 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <!-- City Dropdown Menu -->
+        <div id="city-selector-menu" class="hidden absolute right-0 mt-2 w-40 bg-[#121620] border border-white/10 rounded-lg shadow-2xl py-1 text-xs z-50">
+          <button data-city="Bangalore" class="w-full text-left px-3 py-1.5 hover:bg-[#A3FF12]/10 hover:text-[#A3FF12] transition-colors flex items-center justify-between">
+            <span>Bangalore</span>
+            <span class="text-[10px] text-[#A3FF12] font-bold">25m Fast</span>
+          </button>
+          <button data-city="Mumbai" class="w-full text-left px-3 py-1.5 hover:bg-white/5 transition-colors">Mumbai</button>
+          <button data-city="Delhi NCR" class="w-full text-left px-3 py-1.5 hover:bg-white/5 transition-colors">Delhi NCR</button>
+          <button data-city="Hyderabad" class="w-full text-left px-3 py-1.5 hover:bg-white/5 transition-colors">Hyderabad</button>
+          <button data-city="Chennai" class="w-full text-left px-3 py-1.5 hover:bg-white/5 transition-colors">Chennai</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       2. MAIN NAVIGATION HEADER (Exact match to reference)
+       ========================================================================= -->
+  <header class="anim-entry-header bg-white text-[#0B0D12] sticky top-0 z-40 shadow-sm border-b border-[#E2E8F0]">
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-8 h-18 sm:h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo: VAPE HOUSE -->
+      <a href="/" class="flex items-center gap-1 group py-2">
+        <div class="relative">
+          <div class="font-display font-black italic tracking-tighter text-2xl sm:text-3xl leading-none flex items-center">
+            <span class="text-[#0B0D12] pr-1">VAPE</span>
+            <span class="text-[#A3FF12] drop-shadow-[0_1px_2px_rgba(0,0,0,0.15)] filter brightness-95">HOUSE</span>
+          </div>
+          <!-- Exact lime swoosh under HOUSE -->
+          <svg class="absolute -bottom-1 right-0 w-24 h-2 text-[#A3FF12] group-hover:scale-x-105 transition-transform" viewBox="0 0 100 8" fill="none">
+            <path d="M0 2C30 6 70 6 100 1C70 4 30 4 0 2Z" fill="currentColor"/>
+          </svg>
+        </div>
+      </a>
+
+      <!-- Center Navigation Links -->
+      <nav class="hidden md:flex items-center gap-1 lg:gap-2 font-medium text-[15px]">
+        <!-- Home (Active Pill in Purple #8B00FF) -->
+        <a href="/" class="bg-[#8B00FF] text-white px-5 py-2 rounded-full font-semibold shadow-md shadow-[#8B00FF]/25 hover:bg-[#7a00e0] transition-all">
+          Home
+        </a>
+
+        <!-- Collections Dropdown -->
+        <div class="relative group">
+          <a href="/collections" class="flex items-center gap-1.5 px-4 py-2 text-gray-700 hover:text-[#8B00FF] font-medium transition-colors">
+            <span>Collections</span>
+            <svg class="w-4 h-4 text-gray-400 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </a>
+          <!-- Dropdown items -->
+          <div class="header-dropdown p-2">
+            <a href="/collections?category=disposable" class="block px-3 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-[#8B00FF] rounded-lg">Top 2026 Disposable Vapes</a>
+            <a href="/collections?category=disposable" class="block px-3 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-[#8B00FF] rounded-lg">40,000 Puffs High Capacity</a>
+            <a href="/collections?category=salts" class="block px-3 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-[#8B00FF] rounded-lg">Exotic Mint & Ice Salts</a>
+            <a href="/collections?category=reusable" class="block px-3 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-[#8B00FF] rounded-lg">Starter Kits & Mods</a>
+          </div>
+        </div>
+
+        <!-- Products Dropdown -->
+        <div class="relative group">
+          <a href="/collections" class="flex items-center gap-1.5 px-4 py-2 text-gray-700 hover:text-[#8B00FF] font-medium transition-colors">
+            <span>Products</span>
+            <svg class="w-4 h-4 text-gray-400 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </a>
+          <!-- Dropdown items -->
+          <div class="header-dropdown p-2">
+            <a href="/products/elfbar-raya-d3" class="block px-3 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-[#8B00FF] rounded-lg">ELFBAR Series</a>
+            <a href="/products/iget-bar-plus-6000" class="block px-3 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-[#8B00FF] rounded-lg">iGET Bar & Legend</a>
+            <a href="/products/nasty-cush-man-mango-salt" class="block px-3 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-[#8B00FF] rounded-lg">NASTY Juice & Pods</a>
+            <a href="/products/caliburn-g3-pods-4-pack-06" class="block px-3 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-[#8B00FF] rounded-lg">Replacement Coils & Tanks</a>
+          </div>
+        </div>
+
+        <!-- About -->
+        <a href="#about" class="px-4 py-2 text-gray-700 hover:text-[#8B00FF] transition-colors">
+          About
+        </a>
+
+        <!-- Contact -->
+        <a href="#contact" class="px-4 py-2 text-gray-700 hover:text-[#8B00FF] transition-colors">
+          Contact
+        </a>
+      </nav>
+
+      <!-- Right Utility Actions -->
+      <div class="flex items-center gap-3 sm:gap-5">
+        <!-- Divider -->
+        <span class="w-[1px] h-6 bg-gray-200 hidden sm:block"></span>
+
+        <!-- Search Icon -->
+        <button id="btn-search-trigger" class="p-2 text-gray-700 hover:text-[#8B00FF] hover:scale-110 transition-all" title="Search">
+          <svg class="w-5 h-5 icon-hover-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </button>
+
+        <!-- User Profile Icon -->
+        <button class="p-2 text-gray-700 hover:text-[#8B00FF] hover:scale-110 transition-all" title="My Account">
+          <svg class="w-5 h-5 icon-hover-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+          </svg>
+        </button>
+
+        <!-- Shopping Cart Icon with Lime Badge -->
+        <button id="btn-cart-trigger" class="relative p-2 text-gray-700 hover:text-[#8B00FF] hover:scale-110 transition-all" title="Shopping Cart">
+          <svg class="w-5 h-5 icon-hover-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+          <!-- Lime Badge with item count -->
+          <span id="cart-badge" class="absolute -top-1 -right-1 bg-[#A3FF12] text-[#0B0D12] text-[11px] font-black w-4.5 h-4.5 rounded-full flex items-center justify-center shadow-sm transition-transform">
+            0
+          </span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       3. HERO SECTION (Exact visual & layout match)
+       ========================================================================= -->
+  <main class="relative bg-[#0B0D12] flex-grow flex items-center justify-center overflow-hidden py-10 lg:py-16">
+    
+    <!-- Ambient Background Radial Lighting (Purple on Left, Lime on Right) -->
+    <div class="ambient-glow-purple -top-20 -left-20"></div>
+    <div class="ambient-glow-lime -bottom-20 -right-20"></div>
+    <div class="absolute inset-0 bg-radial-gradient from-transparent via-[#0B0D12]/60 to-[#0B0D12] pointer-events-none"></div>
+
+    <!-- Interactive Smoke / Vapor Particles Canvas -->
+    <canvas id="smoke-canvas" class="absolute inset-0 pointer-events-none z-10 w-full h-full"></canvas>
+
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-8 w-full relative z-20">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center min-h-[520px]">
+        
+        <!-- ================= LEFT COLUMN: HERO CONTENT ================= -->
+        <div class="lg:col-span-6 xl:col-span-5 flex flex-col justify-center space-y-6 pt-2">
+          
+          <!-- Eyebrow Badge -->
+          <div class="anim-entry-badge flex items-center gap-3">
+            <span class="text-xs uppercase font-extrabold tracking-[0.24em] text-gray-300">
+              PREMIUM VAPE COLLECTION
+            </span>
+            <span class="w-12 h-[2px] bg-[#A3FF12] inline-block shadow-[0_0_10px_#A3FF12]"></span>
+          </div>
+
+          <!-- Main Title with Dynamic Text Changing Effect -->
+          <div class="anim-entry-title space-y-1">
+            <h1 class="font-display font-extrabold text-4xl sm:text-5xl xl:text-6xl text-white tracking-tight leading-[1.08]">
+              Your Go-To
+            </h1>
+            <div class="font-display font-extrabold text-4xl sm:text-5xl xl:text-6xl text-[#A3FF12] tracking-tight leading-[1.08] flex items-center">
+              <span id="dynamic-title-text" class="glow-lime-text">Vape Store</span>
+              <span class="dynamic-cursor"></span>
+            </div>
+          </div>
+
+          <!-- Subtitle Description -->
+          <p class="anim-entry-subtitle hero-subtitle text-[#94A3B8] text-base sm:text-lg max-w-lg leading-relaxed font-normal">
+            Disposable Vapes, Reusable Kits, Nicotine Salts & Pods — All in One Place.
+          </p>
+
+          <!-- 3 Feature Badges in horizontal row with vertical dividers (Exact to Reference) -->
+          <div class="anim-entry-cards flex flex-wrap items-center gap-3 sm:gap-5 pt-1 text-white">
+            
+            <!-- Item 1: 25 Minutes Delivery -->
+            <div class="flex items-center gap-2.5 group cursor-pointer">
+              <div class="w-8 h-8 rounded-full border border-[#A3FF12] bg-[#A3FF12]/10 flex items-center justify-center text-[#A3FF12] group-hover:scale-110 transition-transform shadow-[0_0_10px_rgba(163,255,18,0.3)]">
+                <svg class="w-4 h-4 icon-hover-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <div class="leading-tight">
+                <div class="text-[13px] font-bold text-white group-hover:text-[#A3FF12] transition-colors">25 Minutes</div>
+                <div class="text-[11px] text-gray-400">Delivery</div>
+              </div>
+            </div>
+
+            <!-- Divider -->
+            <span class="text-white/20 select-none text-base hidden sm:inline">|</span>
+
+            <!-- Item 2: 100% Authentic -->
+            <div class="flex items-center gap-2.5 group cursor-pointer">
+              <div class="w-8 h-8 rounded-full border border-[#A3FF12] bg-[#A3FF12]/10 flex items-center justify-center text-[#A3FF12] group-hover:scale-110 transition-transform shadow-[0_0_10px_rgba(163,255,18,0.3)]">
+                <svg class="w-4 h-4 icon-hover-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <div class="leading-tight">
+                <div class="text-[13px] font-bold text-white group-hover:text-[#A3FF12] transition-colors">100%</div>
+                <div class="text-[11px] text-gray-400">Authentic</div>
+              </div>
+            </div>
+
+            <!-- Divider -->
+            <span class="text-white/20 select-none text-base hidden sm:inline">|</span>
+
+            <!-- Item 3: Discreet Packaging -->
+            <div class="flex items-center gap-2.5 group cursor-pointer">
+              <div class="w-8 h-8 rounded-full border border-[#A3FF12] bg-[#A3FF12]/10 flex items-center justify-center text-[#A3FF12] group-hover:scale-110 transition-transform shadow-[0_0_10px_rgba(163,255,18,0.3)]">
+                <svg class="w-4 h-4 icon-hover-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                </svg>
+              </div>
+              <div class="leading-tight">
+                <div class="text-[13px] font-bold text-white group-hover:text-[#A3FF12] transition-colors">Discreet</div>
+                <div class="text-[11px] text-gray-400">Packaging</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- CTA Action Buttons -->
+          <div class="anim-entry-buttons flex flex-wrap items-center gap-4 pt-3">
+            <!-- Primary Button: Shop Now -> -->
+            <button id="btn-shop-now" class="btn-lime px-8 py-3.5 rounded-full text-[15px] flex items-center gap-2.5 group cursor-pointer font-bold">
+              <span>Shop Now</span>
+              <svg class="w-4 h-4 transition-transform group-hover:translate-x-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </button>
+
+            <!-- Secondary Button: Explore Collection -->
+            <button id="btn-explore-collection" class="btn-explore px-6 py-3.5 rounded-full text-[15px] flex items-center gap-3 group cursor-pointer">
+              <span class="w-7 h-7 rounded-full bg-white/10 group-hover:bg-[#8B00FF] flex items-center justify-center text-white transition-colors">
+                <svg class="w-3.5 h-3.5 ml-0.5 fill-current" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </span>
+              <span class="text-white/90 group-hover:text-white font-medium">Explore Collection</span>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- ================= RIGHT COLUMN: 3D VAPE SHOWCASE & CONTROLS ================= -->
+        <div id="hero-showcase-container" class="lg:col-span-6 xl:col-span-7 relative flex items-center justify-center min-h-[500px] select-none">
+          
+          <!-- Neon Portal Halo Ring (Purple & Lime) -->
+          <div class="neon-portal-ring"></div>
+
+          <!-- Top Right Floating Card: Top Vape Brands -->
+          <div class="top-brands-card absolute top-2 sm:top-6 right-2 sm:right-6 z-30 px-4 py-2.5 rounded-2xl flex items-center gap-3 cursor-pointer group">
+            <div class="text-[#A3FF12] text-xl icon-hover-bounce">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7l4 3 5-7 5 7 4-3v11H3V7z"/>
+                <circle cx="12" cy="3" r="1" fill="#A3FF12"/>
+                <circle cx="3" cy="7" r="1" fill="#A3FF12"/>
+                <circle cx="21" cy="7" r="1" fill="#A3FF12"/>
+              </svg>
+            </div>
+            <div class="leading-tight text-left">
+              <div class="text-[11px] text-gray-400 font-medium">Top</div>
+              <div class="text-xs sm:text-sm font-extrabold text-white tracking-wide brand-badge-title">Vape Brands</div>
+            </div>
+          </div>
+
+          <!-- Right Vertical Slider Pagination Controls -->
+          <div class="anim-entry-slider absolute right-0 sm:right-2 top-1/2 -translate-y-1/2 z-30 flex flex-col items-center gap-3">
+            <!-- Up Arrow -->
+            <button id="slider-btn-up" class="slider-arrow-btn" title="Previous Slide">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"/>
+              </svg>
+            </button>
+
+            <!-- Dots -->
+            <div class="flex flex-col items-center gap-2 py-1">
+              <div class="slider-dot active" data-index="0" title="Flagship Master Trio"></div>
+              <div class="slider-dot" data-index="1" title="MAX PRO 40,000 Focus"></div>
+            </div>
+
+            <!-- Down Arrow -->
+            <button id="slider-btn-down" class="slider-arrow-btn" title="Next Slide">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+          </div>
+
+          <!-- 3D Vape Showcase Stage with User's Exact Master Image -->
+          <div id="hero-showcase-tilt" class="anim-entry-showcase relative w-full max-w-[760px] 2xl:max-w-[800px] transition-transform duration-200 ease-out z-20 flex items-center justify-center cursor-pointer group">
+            
+            <div class="vape-stage-3d relative w-full flex items-end justify-center">
+              
+              <!-- 3D Master Vapes Stage with 3 Separately Animated Bottles -->
+              <div class="master-vapes-stage relative z-12 w-full max-w-[680px] aspect-[1024/682] mb-5 select-none">
+                
+                <!-- Bottle 1 (Left): ELFBAR RAYA D1 6000 Puffs -->
+                <div class="hero-bottle-card bottle-left group/bottle cursor-pointer" data-bottle="raya" title="ELFBAR RAYA D1 • 6,000 Puffs">
+                  <!-- Mouthpiece smoke plume -->
+                  <div class="mouthpiece-smoke-plume plume-raya">
+                    <div class="smoke-puff"></div>
+                    <div class="smoke-puff"></div>
+                    <div class="smoke-puff"></div>
+                  </div>
+                  <!-- 3D Bottle Image -->
+                  <div class="bottle-img-wrapper">
+                    <img src="assets/hero_bottle_left.png" alt="ELFBAR RAYA D1 6000 Puffs" class="bottle-3d-img" />
+                  </div>
+                  <!-- Hover Tooltip Pill -->
+                  <div class="bottle-hover-pill pill-raya">
+                    <span class="w-2 h-2 rounded-full bg-[#A855F7] inline-block shadow-[0_0_6px_#A855F7]"></span>
+                    <span>ELFBAR RAYA D1 • 6,000 Puffs</span>
+                  </div>
+                </div>
+
+                <!-- Bottle 2 (Center): ELFBAR MAX PRO 40,000 Puffs Flagship -->
+                <div class="hero-bottle-card bottle-center group/bottle cursor-pointer" data-bottle="maxpro" title="ELFBAR MAX PRO • 40,000 Puffs Flagship">
+                  <!-- Mouthpiece smoke plume -->
+                  <div class="mouthpiece-smoke-plume plume-maxpro">
+                    <div class="smoke-puff"></div>
+                    <div class="smoke-puff"></div>
+                    <div class="smoke-puff"></div>
+                  </div>
+                  <!-- 3D Bottle Image -->
+                  <div class="bottle-img-wrapper">
+                    <img src="assets/hero_bottle_center.png" alt="ELFBAR MAX PRO 40,000 Puffs Flagship" class="bottle-3d-img" />
+                  </div>
+                  <!-- Hover Tooltip Pill -->
+                  <div class="bottle-hover-pill pill-maxpro">
+                    <span class="w-2 h-2 rounded-full bg-[#A3FF12] inline-block shadow-[0_0_6px_#A3FF12]"></span>
+                    <span>ELFBAR MAX PRO • 40,000 Puffs Flagship</span>
+                  </div>
+                </div>
+
+                <!-- Bottle 3 (Right): ELFBAR BC4000 Smart Display -->
+                <div class="hero-bottle-card bottle-right group/bottle cursor-pointer" data-bottle="bc4000" title="ELFBAR BC4000 • Smart Display">
+                  <!-- Mouthpiece smoke plume -->
+                  <div class="mouthpiece-smoke-plume plume-bc4000">
+                    <div class="smoke-puff"></div>
+                    <div class="smoke-puff"></div>
+                    <div class="smoke-puff"></div>
+                  </div>
+                  <!-- 3D Bottle Image -->
+                  <div class="bottle-img-wrapper">
+                    <img src="assets/hero_bottle_right.png" alt="ELFBAR BC4000 Smart Display" class="bottle-3d-img" />
+                  </div>
+                  <!-- Hover Tooltip Pill -->
+                  <div class="bottle-hover-pill pill-bc4000">
+                    <span class="w-2 h-2 rounded-full bg-[#38BDF8] inline-block shadow-[0_0_6px_#38BDF8]"></span>
+                    <span>ELFBAR BC4000 • Smart Display</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Real Craggy Mossy Rock Pedestal Base -->
+              <div class="mossy-rock-container">
+                <img src="assets/mossy-rock-pedestal.png" alt="Craggy Mossy Rock Pedestal" class="mossy-rock-img" />
+                <div class="rock-moss-glow"></div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- =========================================================================
+           4. BOTTOM FLOATING CATEGORY FILTER DOCK (White Floating Pill - Exact Match)
+           ========================================================================= -->
+      <div class="anim-entry-dock mt-8 lg:mt-6 w-full flex justify-center pb-2">
+        <div class="category-dock-white px-2 sm:px-3 py-2 flex items-center gap-1 sm:gap-2 overflow-x-auto max-w-full shadow-2xl">
+          
+          <!-- Category 1: Disposable Vapes (Active default) -->
+          <button class="category-tab-white active flex items-center gap-2.5 px-5 sm:px-6 py-2.5 rounded-full cursor-pointer whitespace-nowrap text-xs sm:text-sm font-bold" data-category="disposable">
+            <!-- Vape Pen Icon -->
+            <svg class="w-4 h-4 text-[#0B0D12]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+            </svg>
+            <span>Disposable Vapes</span>
+          </button>
+
+          <!-- Divider -->
+          <span class="w-[1px] h-6 bg-gray-200 hidden sm:block"></span>
+
+          <!-- Category 2: Reusable Vape Kits -->
+          <button class="category-tab-white text-gray-800 flex items-center gap-2.5 px-4 sm:px-5 py-2.5 rounded-full cursor-pointer whitespace-nowrap text-xs sm:text-sm font-semibold" data-category="reusable">
+            <!-- Device Kit Icon -->
+            <svg class="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <rect x="6" y="7" width="12" height="14" rx="2" stroke-width="2"/>
+              <path stroke-linecap="round" stroke-width="2" d="M10 3h4v4h-4zM9 11h6"/>
+            </svg>
+            <span>Reusable Vape Kits</span>
+          </button>
+
+          <!-- Divider -->
+          <span class="w-[1px] h-6 bg-gray-200 hidden sm:block"></span>
+
+          <!-- Category 3: Nicotine Salts -->
+          <button class="category-tab-white text-gray-800 flex items-center gap-2.5 px-4 sm:px-5 py-2.5 rounded-full cursor-pointer whitespace-nowrap text-xs sm:text-sm font-semibold" data-category="salts">
+            <!-- E-liquid Drop Icon -->
+            <svg class="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/>
+            </svg>
+            <span>Nicotine Salts</span>
+          </button>
+
+          <!-- Divider -->
+          <span class="w-[1px] h-6 bg-gray-200 hidden sm:block"></span>
+
+          <!-- Category 4: Pods (Replacement) -->
+          <button class="category-tab-white text-gray-800 flex items-center gap-2.5 px-4 sm:px-5 py-2.5 rounded-full cursor-pointer whitespace-nowrap text-xs sm:text-sm font-semibold" data-category="pods">
+            <!-- Pod Cartridge Icon -->
+            <svg class="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <rect x="7" y="4" width="10" height="13" rx="2" stroke-width="2"/>
+              <path stroke-linecap="round" stroke-width="2" d="M9 17v3m6-3v3M10 9h4"/>
+            </svg>
+            <span>Pods (Replacement)</span>
+          </button>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       4. SHOP BY CATEGORY SECTION
+       (Light Glassmorphism Theme - Exact Visual Match to Reference)
+       ========================================================================= -->
+  <section id="shop-catalog" class="relative bg-gradient-to-b from-[#F6F8FC] via-[#FFFFFF] to-[#EFF3F9] text-[#0B0D12] py-16 sm:py-24 px-4 sm:px-8 overflow-hidden">
+    
+    <!-- Ambient Background Radial Glows (Exact to reference atmosphere) -->
+    <div class="ambient-blob w-[500px] h-[500px] bg-[#A3FF12]/15 -top-32 -left-32"></div>
+    <div class="ambient-blob w-[550px] h-[550px] bg-[#8B00FF]/10 top-1/4 -right-28"></div>
+    <div class="ambient-blob w-[600px] h-[600px] bg-[#38BDF8]/10 bottom-10 left-1/3"></div>
+
+    <div class="max-w-[1600px] mx-auto relative z-10 space-y-16">
+      
+      <!-- =====================================================================
+           SUBSECTION A: SHOP BY CATEGORY
+           ===================================================================== -->
+      <div>
+        <!-- Section Header Bar -->
+        <div class="anim-reveal flex flex-wrap items-center justify-between gap-4 mb-8">
+          <div>
+            <span class="text-xs uppercase font-extrabold tracking-[0.2em] text-[#84CC16]">
+              SHOP BY
+            </span>
+            <div class="flex items-center gap-3 mt-0.5">
+              <h2 class="font-display font-black text-3xl sm:text-4xl text-[#0B0D12] tracking-tight">
+                Category
+              </h2>
+              <span class="w-8 h-1.5 bg-[#A3FF12] rounded-full inline-block shadow-[0_0_8px_rgba(163,255,18,0.8)]"></span>
+            </div>
+          </div>
+
+          <!-- View All Categories Pill Button -->
+          <a href="#collections" class="view-all-cat-btn flex items-center gap-2 px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold text-gray-800 group">
+            <span>View All Categories</span>
+            <svg class="w-4 h-4 text-gray-700 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Category 4-Card Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 xl:gap-6">
+          
+          <!-- Category Card 1: Disposable Vapes -->
+          <div class="anim-reveal delay-100 category-glass-card card-theme-disposable p-6 flex flex-col justify-between min-h-[220px] group cursor-pointer" data-cat="disposable">
+            <div class="relative z-10 flex justify-between items-start">
+              <div class="space-y-3">
+                <!-- Icon box with hover animation -->
+                <div class="icon-badge-box bg-[#DCFCE7] text-[#15803D] shadow-sm">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-display font-black text-xl sm:text-2xl text-[#0B0D12] leading-tight">
+                    Disposable<br>Vapes
+                  </h3>
+                  <p class="text-xs sm:text-[13px] text-gray-600 mt-1.5 font-medium leading-snug">
+                    Ready to use<br>& hassle free
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="relative z-10 mt-6 flex items-center justify-between">
+              <button class="cat-arrow-btn" title="Explore Disposable Vapes">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                </svg>
+              </button>
+            </div>
+            <!-- Isolated Product Render with floating animation -->
+            <img src="assets/disposable-vapes.webp" alt="Disposable Vapes" class="card-product-float absolute -right-2 bottom-0 h-44 sm:h-48 object-contain pointer-events-none select-none z-0" />
+          </div>
+
+          <!-- Category Card 2: Reusable Vape Kits -->
+          <div class="anim-reveal delay-200 category-glass-card card-theme-reusable p-6 flex flex-col justify-between min-h-[220px] group cursor-pointer" data-cat="reusable">
+            <div class="relative z-10 flex justify-between items-start">
+              <div class="space-y-3">
+                <div class="icon-badge-box bg-[#EDE4FF] text-[#6B21A8] shadow-sm">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 2v4m0 12v4M2 12h4m12 0h4m-3.172-6.828l-2.828 2.828m-8 8l-2.828 2.828m0-13.656l2.828 2.828m8 8l2.828 2.828" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-display font-black text-xl sm:text-2xl text-[#0B0D12] leading-tight">
+                    Reusable<br>Vape Kits
+                  </h3>
+                  <p class="text-xs sm:text-[13px] text-gray-600 mt-1.5 font-medium leading-snug">
+                    Refillable kits<br>with more control
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="relative z-10 mt-6 flex items-center justify-between">
+              <button class="cat-arrow-btn" title="Explore Reusable Kits">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                </svg>
+              </button>
+            </div>
+            <img src="assets/reusable-vape-kits.webp" alt="Reusable Vape Kits" class="card-product-float absolute -right-2 bottom-0 h-44 sm:h-48 object-contain pointer-events-none select-none z-0" />
+          </div>
+
+          <!-- Category Card 3: Nicotine Salts -->
+          <div class="anim-reveal delay-300 category-glass-card card-theme-salts p-6 flex flex-col justify-between min-h-[220px] group cursor-pointer" data-cat="salts">
+            <div class="relative z-10 flex justify-between items-start max-w-[55%]">
+              <div class="space-y-3">
+                <div class="icon-badge-box bg-[#E0F2FE] text-[#0284C7] shadow-sm">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-display font-black text-xl sm:text-2xl text-[#0B0D12] leading-tight">
+                    Nicotine<br>Salts
+                    <span class="block text-xs font-semibold text-gray-500">(Vape Liquid)</span>
+                  </h3>
+                  <p class="text-xs sm:text-[13px] text-gray-600 mt-1.5 font-medium leading-snug">
+                    Smooth, rich<br>& satisfying
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="relative z-10 mt-6 flex items-center justify-between">
+              <button class="cat-arrow-btn" title="Explore Nicotine Salts">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                </svg>
+              </button>
+            </div>
+            <img src="assets/nicotine-salts.png" alt="Nicotine Salts" class="card-product-float absolute -right-2 bottom-0 h-40 sm:h-44 object-contain pointer-events-none select-none z-0" />
+          </div>
+
+          <!-- Category Card 4: Pods (Replacement) -->
+          <div class="anim-reveal delay-400 category-glass-card card-theme-pods p-6 flex flex-col justify-between min-h-[220px] group cursor-pointer" data-cat="pods">
+            <div class="relative z-10 flex justify-between items-start max-w-[55%]">
+              <div class="space-y-3">
+                <div class="icon-badge-box bg-[#FEF3C7] text-[#B45309] shadow-sm">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <rect x="7" y="4" width="10" height="13" rx="2" stroke-width="2"/>
+                    <path stroke-linecap="round" stroke-width="2" d="M9 17v3m6-3v3M10 9h4"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-display font-black text-xl sm:text-2xl text-[#0B0D12] leading-tight">
+                    Pods
+                    <span class="block text-xs font-semibold text-gray-500">(Replacement Pods)</span>
+                  </h3>
+                  <p class="text-xs sm:text-[13px] text-gray-600 mt-1.5 font-medium leading-snug">
+                    Genuine pods for<br>a consistent vape
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="relative z-10 mt-6 flex items-center justify-between">
+              <button class="cat-arrow-btn" title="Explore Replacement Pods">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                </svg>
+              </button>
+            </div>
+            <img src="assets/pods.webp" alt="Replacement Pods" class="card-product-float absolute -right-2 bottom-0 h-40 sm:h-44 object-contain pointer-events-none select-none z-0" />
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- =========================================================================
+       5. DUAL PROMOTIONAL SHOWCASE BANNERS (Exact Match to Reference)
+       ========================================================================= -->
+  <section id="promo-showcase" class="relative bg-[#07090E] py-14 sm:py-18 px-4 sm:px-8 overflow-hidden border-t border-b border-white/[0.06]">
+    
+    <!-- Ambient Radial Glows -->
+    <div class="ambient-blob w-[450px] h-[450px] bg-[#8B00FF]/20 -top-24 -left-20"></div>
+    <div class="ambient-blob w-[450px] h-[450px] bg-[#A3FF12]/15 -bottom-24 -right-20"></div>
+
+    <div class="max-w-[1600px] mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+        
+        <!-- Left Banner: ELFBAR Collection High Puff Disposable Vapes -->
+        <div class="anim-reveal delay-100 promo-banner-card promo-banner-purple min-h-[300px] sm:min-h-[320px] p-6 sm:p-10 flex flex-col justify-between group cursor-pointer relative">
+          
+          <!-- Content Left -->
+          <div class="max-w-[62%] sm:max-w-[58%] z-10 space-y-4">
+            <!-- Eyebrow -->
+            <div class="flex items-center gap-2.5">
+              <span class="text-[11px] sm:text-xs uppercase font-extrabold tracking-[0.2em] text-white/90">
+                ELFBAR COLLECTION
+              </span>
+              <span class="w-8 h-[2px] bg-[#A3FF12] inline-block shadow-[0_0_8px_#A3FF12]"></span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="font-display font-extrabold text-2xl sm:text-3xl xl:text-4xl text-white tracking-tight leading-[1.12]">
+              High Puff<br>
+              <span class="text-[#A3FF12] glow-lime-text">Disposable Vapes</span>
+            </h3>
+
+            <!-- Subtitle -->
+            <p class="text-xs sm:text-sm text-gray-300 font-medium leading-relaxed">
+              Long-lasting. Smooth. Powerful.
+            </p>
+
+            <!-- CTA Button -->
+            <div class="pt-2">
+              <a href="#trending-products" class="inline-flex items-center gap-2.5 px-6 py-3 rounded-full font-bold text-xs sm:text-sm text-[#0B0D12] bg-[#A3FF12] shadow-lg shadow-[#A3FF12]/30 hover:bg-[#8ee607] hover:scale-105 active:scale-95 transition-all group/btn">
+                <span>Explore Disposable</span>
+                <svg class="w-4 h-4 transition-transform group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 3D Vape Visual Right with Tilted Ring & Vapor -->
+          <div class="absolute right-0 bottom-0 top-0 w-[48%] sm:w-[50%] flex items-center justify-end pointer-events-none select-none overflow-hidden pr-2 sm:pr-4">
+            <!-- Ambient Purple Aura behind device for seamless blend -->
+            <div class="absolute right-6 top-1/2 -translate-y-1/2 w-56 h-56 bg-[#8B00FF]/35 rounded-full blur-3xl pointer-events-none"></div>
+            <img src="assets/promo_trust/banner_disposable_hd.png" alt="High Puff Disposable Vapes" class="banner-floating-device relative z-10 max-h-[92%] sm:max-h-[96%] object-contain drop-shadow-[0_15px_35px_rgba(139,0,255,0.5)]" />
+          </div>
+        </div>
+
+        <!-- Right Banner: Vape Kits & Accessories -->
+        <div class="anim-reveal delay-200 promo-banner-card promo-banner-green min-h-[300px] sm:min-h-[320px] p-6 sm:p-10 flex flex-col justify-between group cursor-pointer relative">
+          
+          <!-- Content Left -->
+          <div class="max-w-[62%] sm:max-w-[58%] z-10 space-y-4">
+            <!-- Title -->
+            <h3 class="font-display font-extrabold text-2xl sm:text-3xl xl:text-4xl text-white tracking-tight leading-[1.12]">
+              Vape Kits &<br>
+              <span class="text-[#A3FF12] glow-lime-text">Accessories</span>
+            </h3>
+
+            <!-- Subtitle -->
+            <p class="text-xs sm:text-sm text-gray-300 font-medium leading-relaxed">
+              Everything you need for<br class="hidden sm:inline">a better vaping experience.
+            </p>
+
+            <!-- CTA Button -->
+            <div class="pt-2">
+              <a href="#trending-products" class="inline-flex items-center gap-2.5 px-6 py-3 rounded-full font-bold text-xs sm:text-sm text-[#0B0D12] bg-[#A3FF12] shadow-lg shadow-[#A3FF12]/30 hover:bg-[#8ee607] hover:scale-105 active:scale-95 transition-all group/btn">
+                <span>Shop All Kits</span>
+                <svg class="w-4 h-4 transition-transform group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 3D Vape Visual Right with Glowing Ring & Nic Salt Bottle -->
+          <div class="absolute right-0 bottom-0 top-0 w-[48%] sm:w-[50%] flex items-center justify-end pointer-events-none select-none overflow-hidden pr-2 sm:pr-4">
+            <!-- Ambient Lime Aura behind device for seamless blend -->
+            <div class="absolute right-6 top-1/2 -translate-y-1/2 w-56 h-56 bg-[#A3FF12]/25 rounded-full blur-3xl pointer-events-none"></div>
+            <img src="assets/promo_trust/banner_kits_hd.png" alt="Vape Kits and Accessories" class="banner-floating-device relative z-10 max-h-[92%] sm:max-h-[96%] object-contain drop-shadow-[0_15px_35px_rgba(163,255,18,0.45)]" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       6. TRENDING PRODUCTS CAROUSEL SECTION
+       (Positioned directly before Our Promise section - Exact Match to Design)
+       ========================================================================= -->
+  <section id="trending-products" class="relative bg-gradient-to-b from-[#EFF3F9] via-[#FFFFFF] to-[#F5F7FB] text-[#0B0D12] py-16 sm:py-20 px-4 sm:px-8 overflow-hidden">
+    
+    <!-- Ambient Background Radial Glows (Exact to reference atmosphere) -->
+    <div class="ambient-blob w-[500px] h-[500px] bg-[#A3FF12]/12 -top-28 -right-28"></div>
+    <div class="ambient-blob w-[550px] h-[550px] bg-[#8B00FF]/10 bottom-10 -left-28"></div>
+    <div class="ambient-blob w-[600px] h-[600px] bg-[#38BDF8]/10 top-1/3 right-1/4"></div>
+
+    <div class="max-w-[1600px] mx-auto relative z-10">
+
+        <!-- Trending Header Bar with Interactive Tabs -->
+        <div class="anim-reveal flex flex-wrap items-center justify-between gap-y-4 gap-x-6 mb-8">
+          
+          <!-- Left: Flame Icon + Title -->
+          <div class="flex items-center gap-3 group cursor-pointer">
+            <div class="icon-badge-box bg-[#A3FF12]/20 border border-[#A3FF12]/40 text-[#4D7C0F]">
+              <svg class="w-5 h-5 flame-icon-pulse text-[#4D7C0F]" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2c-.5 2.5-2.5 4.5-3.5 6.5C7.2 11 7 12.3 7 14c0 3.3 2.7 6 6 6s6-2.7 6-6c0-4-3-7.5-3.5-9.5-.2-.8-.8-1.5-1.5-2-.3-.2-.7-.4-1-.5-.4 0-.8.2-1 .5zm-1 8.5c1.5-1 2.5-2.5 3-4 1.5 2 2 4.5 1.5 6.5-.5 2-2 3.5-3.5 3.5s-2.5-1-2.5-2.5c0-1.2.6-2.4 1.5-3.5z"/>
+              </svg>
+            </div>
+            <div class="flex items-center gap-3">
+              <h2 class="font-display font-black text-2xl sm:text-3xl text-[#0B0D12] tracking-tight">
+                Trending Products
+              </h2>
+              <span class="w-8 h-1.5 bg-[#A3FF12] rounded-full inline-block shadow-[0_0_8px_rgba(163,255,18,0.8)]"></span>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Category Filter Tabs -->
+          <div class="flex flex-wrap items-center gap-2">
+            <button class="trend-tab active" data-filter="all">All Products</button>
+            <button class="trend-tab" data-filter="disposable">Disposable</button>
+            <button class="trend-tab" data-filter="reusable">Vape Kits</button>
+            <button class="trend-tab" data-filter="salts">Nicotine Salts</button>
+            <button class="trend-tab" data-filter="pods">Pods</button>
+          </div>
+        </div>
+
+        <!-- Carousel Wrapper with Left & Right Arrows -->
+        <div class="relative group/carousel">
+          
+          <!-- Left Arrow Navigation Button -->
+          <button id="trend-prev-btn" class="carousel-btn carousel-btn-white absolute -left-3 sm:-left-5 top-1/2 -translate-y-1/2 z-20 shadow-xl opacity-90 hover:opacity-100" title="Previous Products">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          <!-- Right Arrow Navigation Button -->
+          <button id="trend-next-btn" class="carousel-btn carousel-btn-lime absolute -right-3 sm:-right-5 top-1/2 -translate-y-1/2 z-20 shadow-xl opacity-90 hover:opacity-100" title="Next Products">
+            <svg class="w-5 h-5 text-[#0B0D12]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
+          <!-- Scrollable Carousel Track -->
+          <div id="trend-carousel-track" class="flex gap-4 sm:gap-6 overflow-x-auto no-scrollbar scroll-smooth py-3 px-1">
+            
+            <!-- Product Card 1: Disposable Vapes Collection -->
+            <div class="anim-reveal delay-100 trend-card-item product-card-glass min-w-[240px] sm:min-w-[260px] max-w-[280px] p-4 flex flex-col justify-between group flex-shrink-0" data-cat="disposable">
+              <!-- Top Row: Sale Badge & Heart -->
+              <div class="flex items-center justify-between">
+                <span class="bg-[#E9FCD4] text-[#2F6803] text-[11px] font-extrabold px-2.5 py-0.5 rounded-full border border-[#A3FF12]/30">
+                  Sale
+                </span>
+                <button class="wishlist-heart-btn p-1.5 text-gray-400 hover:text-red-500 transition-colors" title="Add to Wishlist">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Product Image with floating hover -->
+              <div class="my-3 flex items-center justify-center h-28 relative">
+                <img src="assets/disposable-vapes-trending.webp" alt="Disposable Vapes Collection" class="card-product-float max-h-28 object-contain drop-shadow-md select-none pointer-events-none" />
+              </div>
+
+              <!-- Content & Footer -->
+              <div class="space-y-3">
+                <h4 class="font-display font-bold text-sm text-[#0B0D12] leading-snug group-hover:text-[#8B00FF] transition-colors line-clamp-2">
+                  Disposable Vapes Collection
+                </h4>
+                <div class="flex items-center justify-between pt-1">
+                  <!-- Rating -->
+                  <div class="flex items-center gap-1.5 text-xs text-gray-500">
+                    <svg class="star-icon w-3.5 h-3.5 text-amber-400 fill-current" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                    <span class="font-black text-[#0B0D12]">4.8</span>
+                    <span class="text-[11px] text-gray-400">(320+ Reviews)</span>
+                  </div>
+                  <!-- Add to cart -->
+                  <button class="card-cart-btn w-8 h-8 rounded-xl bg-[#A3FF12] text-[#0B0D12] flex items-center justify-center shadow-md shadow-[#A3FF12]/30" title="Add to Cart" data-title="Disposable Vapes Collection" data-price="2499">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 2: Reusable Vape Kits Collection -->
+            <div class="anim-reveal delay-200 trend-card-item product-card-glass min-w-[240px] sm:min-w-[260px] max-w-[280px] p-4 flex flex-col justify-between group flex-shrink-0" data-cat="reusable">
+              <div class="flex items-center justify-between">
+                <span class="bg-[#E9FCD4] text-[#2F6803] text-[11px] font-extrabold px-2.5 py-0.5 rounded-full border border-[#A3FF12]/30">
+                  Sale
+                </span>
+                <button class="wishlist-heart-btn p-1.5 text-gray-400 hover:text-red-500 transition-colors" title="Add to Wishlist">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
+                </button>
+              </div>
+
+              <div class="my-3 flex items-center justify-center h-28 relative">
+                <img src="assets/reusable-vape-kits.webp" alt="Reusable Vape Kits Collection" class="card-product-float max-h-28 object-contain drop-shadow-md select-none pointer-events-none" />
+              </div>
+
+              <div class="space-y-3">
+                <h4 class="font-display font-bold text-sm text-[#0B0D12] leading-snug group-hover:text-[#8B00FF] transition-colors line-clamp-2">
+                  Reusable Vape Kits Collection
+                </h4>
+                <div class="flex items-center justify-between pt-1">
+                  <div class="flex items-center gap-1.5 text-xs text-gray-500">
+                    <svg class="star-icon w-3.5 h-3.5 text-amber-400 fill-current" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                    <span class="font-black text-[#0B0D12]">4.7</span>
+                    <span class="text-[11px] text-gray-400">(215+ Reviews)</span>
+                  </div>
+                  <button class="card-cart-btn w-8 h-8 rounded-xl bg-[#A3FF12] text-[#0B0D12] flex items-center justify-center shadow-md shadow-[#A3FF12]/30" title="Add to Cart" data-title="Reusable Vape Kits Collection" data-price="3499">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 3: Nicotine Salts (Vape Liquid) -->
+            <div class="anim-reveal delay-300 trend-card-item product-card-glass min-w-[240px] sm:min-w-[260px] max-w-[280px] p-4 flex flex-col justify-between group flex-shrink-0" data-cat="salts">
+              <div class="flex items-center justify-between">
+                <span class="bg-[#E9FCD4] text-[#2F6803] text-[11px] font-extrabold px-2.5 py-0.5 rounded-full border border-[#A3FF12]/30">
+                  Sale
+                </span>
+                <button class="wishlist-heart-btn p-1.5 text-gray-400 hover:text-red-500 transition-colors" title="Add to Wishlist">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
+                </button>
+              </div>
+
+              <div class="my-3 flex items-center justify-center h-28 relative">
+                <img src="assets/nicotine-salts.png" alt="Nicotine Salts (Vape Liquid)" class="card-product-float max-h-28 object-contain drop-shadow-md select-none pointer-events-none" />
+              </div>
+
+              <div class="space-y-3">
+                <h4 class="font-display font-bold text-sm text-[#0B0D12] leading-snug group-hover:text-[#8B00FF] transition-colors line-clamp-2">
+                  Nicotine Salts (Vape Liquid)
+                </h4>
+                <div class="flex items-center justify-between pt-1">
+                  <div class="flex items-center gap-1.5 text-xs text-gray-500">
+                    <svg class="star-icon w-3.5 h-3.5 text-amber-400 fill-current" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                    <span class="font-black text-[#0B0D12]">4.8</span>
+                    <span class="text-[11px] text-gray-400">(180+ Reviews)</span>
+                  </div>
+                  <button class="card-cart-btn w-8 h-8 rounded-xl bg-[#A3FF12] text-[#0B0D12] flex items-center justify-center shadow-md shadow-[#A3FF12]/30" title="Add to Cart" data-title="Nicotine Salts (Vape Liquid)" data-price="1299">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 4: Replacement Pods Collection -->
+            <div class="anim-reveal delay-350 trend-card-item product-card-glass min-w-[240px] sm:min-w-[260px] max-w-[280px] p-4 flex flex-col justify-between group flex-shrink-0" data-cat="pods">
+              <div class="flex items-center justify-between">
+                <span class="bg-[#E9FCD4] text-[#2F6803] text-[11px] font-extrabold px-2.5 py-0.5 rounded-full border border-[#A3FF12]/30">
+                  Sale
+                </span>
+                <button class="wishlist-heart-btn p-1.5 text-gray-400 hover:text-red-500 transition-colors" title="Add to Wishlist">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
+                </button>
+              </div>
+
+              <div class="my-3 flex items-center justify-center h-28 relative">
+                <img src="assets/pods.webp" alt="Replacement Pods Collection" class="card-product-float max-h-28 object-contain drop-shadow-md select-none pointer-events-none" />
+              </div>
+
+              <div class="space-y-3">
+                <h4 class="font-display font-bold text-sm text-[#0B0D12] leading-snug group-hover:text-[#8B00FF] transition-colors line-clamp-2">
+                  Replacement Pods Collection
+                </h4>
+                <div class="flex items-center justify-between pt-1">
+                  <div class="flex items-center gap-1.5 text-xs text-gray-500">
+                    <svg class="star-icon w-3.5 h-3.5 text-amber-400 fill-current" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                    <span class="font-black text-[#0B0D12]">4.7</span>
+                    <span class="text-[11px] text-gray-400">(160+ Reviews)</span>
+                  </div>
+                  <button class="card-cart-btn w-8 h-8 rounded-xl bg-[#A3FF12] text-[#0B0D12] flex items-center justify-center shadow-md shadow-[#A3FF12]/30" title="Add to Cart" data-title="Replacement Pods Collection" data-price="899">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 5: Elfbar 40000 Puffs Disposable -->
+            <div class="anim-reveal delay-400 trend-card-item product-card-glass min-w-[240px] sm:min-w-[260px] max-w-[280px] p-4 flex flex-col justify-between group flex-shrink-0" data-cat="disposable">
+              <div class="flex items-center justify-between">
+                <span class="bg-[#E9FCD4] text-[#2F6803] text-[11px] font-extrabold px-2.5 py-0.5 rounded-full border border-[#A3FF12]/30">
+                  Sale
+                </span>
+                <button class="wishlist-heart-btn p-1.5 text-gray-400 hover:text-red-500 transition-colors" title="Add to Wishlist">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
+                </button>
+              </div>
+
+              <div class="my-3 flex items-center justify-center h-28 relative">
+                <img src="assets/elfabare-40000.webp" alt="Elfbar 40000 Puffs Disposable" class="card-product-float max-h-28 object-contain drop-shadow-md select-none pointer-events-none" />
+              </div>
+
+              <div class="space-y-3">
+                <h4 class="font-display font-bold text-sm text-[#0B0D12] leading-snug group-hover:text-[#8B00FF] transition-colors line-clamp-2">
+                  Elfbar 40000 Puffs Disposable
+                </h4>
+                <div class="flex items-center justify-between pt-1">
+                  <div class="flex items-center gap-1.5 text-xs text-gray-500">
+                    <svg class="star-icon w-3.5 h-3.5 text-amber-400 fill-current" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                    <span class="font-black text-[#0B0D12]">4.9</span>
+                    <span class="text-[11px] text-gray-400">(98+ Reviews)</span>
+                  </div>
+                  <button class="card-cart-btn w-8 h-8 rounded-xl bg-[#A3FF12] text-[#0B0D12] flex items-center justify-center shadow-md shadow-[#A3FF12]/30" title="Add to Cart" data-title="Elfbar 40000 Puffs Disposable" data-price="2799">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 6: iGET Bar Plus 6000 Puffs -->
+            <div class="anim-reveal delay-450 trend-card-item product-card-glass min-w-[240px] sm:min-w-[260px] max-w-[280px] p-4 flex flex-col justify-between group flex-shrink-0" data-cat="disposable">
+              <div class="flex items-center justify-between">
+                <span class="bg-[#E9FCD4] text-[#2F6803] text-[11px] font-extrabold px-2.5 py-0.5 rounded-full border border-[#A3FF12]/30">
+                  Sale
+                </span>
+                <button class="wishlist-heart-btn p-1.5 text-gray-400 hover:text-red-500 transition-colors" title="Add to Wishlist">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
+                </button>
+              </div>
+
+              <div class="my-3 flex items-center justify-center h-28 relative">
+                <img src="assets/iget-bar-plus-vap.webp" alt="iGET Bar Plus 6000 Puffs" class="card-product-float max-h-28 object-contain drop-shadow-md select-none pointer-events-none" />
+              </div>
+
+              <div class="space-y-3">
+                <h4 class="font-display font-bold text-sm text-[#0B0D12] leading-snug group-hover:text-[#8B00FF] transition-colors line-clamp-2">
+                  iGET Bar Plus 6000 Puffs
+                </h4>
+                <div class="flex items-center justify-between pt-1">
+                  <div class="flex items-center gap-1.5 text-xs text-gray-500">
+                    <svg class="star-icon w-3.5 h-3.5 text-amber-400 fill-current" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                    <span class="font-black text-[#0B0D12]">4.9</span>
+                    <span class="text-[11px] text-gray-400">(240+ Reviews)</span>
+                  </div>
+                  <button class="card-cart-btn w-8 h-8 rounded-xl bg-[#A3FF12] text-[#0B0D12] flex items-center justify-center shadow-md shadow-[#A3FF12]/30" title="Add to Cart" data-title="iGET Bar Plus 6000 Puffs" data-price="1899">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 7: Lost Mary MT15000 Disposable -->
+            <div class="anim-reveal delay-500 trend-card-item product-card-glass min-w-[240px] sm:min-w-[260px] max-w-[280px] p-4 flex flex-col justify-between group flex-shrink-0" data-cat="disposable">
+              <div class="flex items-center justify-between">
+                <span class="bg-[#E9FCD4] text-[#2F6803] text-[11px] font-extrabold px-2.5 py-0.5 rounded-full border border-[#A3FF12]/30">
+                  Sale
+                </span>
+                <button class="wishlist-heart-btn p-1.5 text-gray-400 hover:text-red-500 transition-colors" title="Add to Wishlist">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
+                </button>
+              </div>
+
+              <div class="my-3 flex items-center justify-center h-28 relative">
+                <img src="assets/lost-mary.webp" alt="Lost Mary MT15000 Disposable" class="card-product-float max-h-28 object-contain drop-shadow-md select-none pointer-events-none" />
+              </div>
+
+              <div class="space-y-3">
+                <h4 class="font-display font-bold text-sm text-[#0B0D12] leading-snug group-hover:text-[#8B00FF] transition-colors line-clamp-2">
+                  Lost Mary MT15000 Disposable
+                </h4>
+                <div class="flex items-center justify-between pt-1">
+                  <div class="flex items-center gap-1.5 text-xs text-gray-500">
+                    <svg class="star-icon w-3.5 h-3.5 text-amber-400 fill-current" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                    <span class="font-black text-[#0B0D12]">4.8</span>
+                    <span class="text-[11px] text-gray-400">(175+ Reviews)</span>
+                  </div>
+                  <button class="card-cart-btn w-8 h-8 rounded-xl bg-[#A3FF12] text-[#0B0D12] flex items-center justify-center shadow-md shadow-[#A3FF12]/30" title="Add to Cart" data-title="Lost Mary MT15000 Disposable" data-price="2199">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+    </div>
+  </section>
+
+
+<!-- =========================================================================
+       7. OUR PROMISE ("Why Shop With Us?") & TOP VAPE BRANDS SHOWCASE
+       (Exact Match to Reference)
+       ========================================================================= -->
+  <section id="trust-and-brands" class="relative bg-gradient-to-b from-[#F5F7FB] via-[#FFFFFF] to-[#EFF2F8] text-[#0B0D12] py-16 sm:py-24 px-4 sm:px-8 overflow-hidden">
+    
+    <!-- Ambient Background Radial Glows -->
+    <div class="ambient-blob w-[500px] h-[500px] bg-[#A3FF12]/15 -top-28 -right-20"></div>
+    <div class="ambient-blob w-[500px] h-[500px] bg-[#8B00FF]/10 top-1/2 -left-28"></div>
+
+    <div class="max-w-[1600px] mx-auto relative z-10 space-y-16 sm:space-y-20">
+      
+      <!-- =====================================================================
+           SUBSECTION A: OUR PROMISE — Why Shop With Us?
+           ===================================================================== -->
+      <div class="space-y-10">
+        
+        <!-- Header -->
+        <div class="anim-reveal text-center space-y-3">
+          <!-- Crown Eyebrow Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-[#84CC16]/40 shadow-sm text-xs font-bold tracking-wider text-gray-800 uppercase">
+            <span class="text-amber-500">👑</span>
+            <span>OUR PROMISE</span>
+          </div>
+
+          <!-- Title with Accent Lines -->
+          <div class="flex items-center justify-center gap-3 sm:gap-6">
+            <span class="w-10 sm:w-20 h-[2px] bg-gradient-to-r from-transparent to-[#84CC16]"></span>
+            <h2 class="font-display font-black text-3xl sm:text-4xl text-[#0B0D12] tracking-tight">
+              Why Shop <span class="text-[#78D64B] italic">With Us?</span>
+            </h2>
+            <span class="w-10 sm:w-20 h-[2px] bg-gradient-to-l from-transparent to-[#84CC16]"></span>
+          </div>
+        </div>
+
+        <!-- 4 Trust Feature Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          
+          <!-- Card 1: Fast Delivery -->
+          <div class="anim-reveal delay-100 trust-feature-card p-5 flex items-center gap-4 cursor-pointer group">
+            <div class="trust-icon-box bg-[#DCFCE7] text-[#15803D] border border-[#A3FF12]/40 shadow-sm">
+              <svg class="w-6 h-6 icon-truck" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8h4.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a2 2 0 104 0m-4 0a2 2 0 114 0m-10 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
+              </svg>
+            </div>
+            <div>
+              <div class="font-display font-black text-base text-[#0B0D12] group-hover:text-[#15803D] transition-colors">
+                Fast Delivery
+              </div>
+              <div class="text-xs text-gray-500 font-medium mt-0.5">
+                25 Minutes in Bangalore
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: 100% Authentic -->
+          <div class="anim-reveal delay-200 trust-feature-card p-5 flex items-center gap-4 cursor-pointer group">
+            <div class="trust-icon-box bg-[#F3E8FF] text-[#7E22CE] border border-purple-300 shadow-sm">
+              <svg class="w-6 h-6 icon-shield" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <div>
+              <div class="font-display font-black text-base text-[#0B0D12] group-hover:text-[#7E22CE] transition-colors">
+                100% Authentic
+              </div>
+              <div class="text-xs text-gray-500 font-medium mt-0.5">
+                Genuine & Trusted Products
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Secure & Discreet -->
+          <div class="anim-reveal delay-300 trust-feature-card p-5 flex items-center gap-4 cursor-pointer group">
+            <div class="trust-icon-box bg-[#DCFCE7] text-[#15803D] border border-[#A3FF12]/40 shadow-sm">
+              <svg class="w-6 h-6 icon-lock" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+            </div>
+            <div>
+              <div class="font-display font-black text-base text-[#0B0D12] group-hover:text-[#15803D] transition-colors">
+                Secure & Discreet
+              </div>
+              <div class="text-xs text-gray-500 font-medium mt-0.5">
+                Private Packaging
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Customer Support -->
+          <div class="anim-reveal delay-400 trust-feature-card p-5 flex items-center gap-4 cursor-pointer group">
+            <div class="trust-icon-box bg-[#F3E8FF] text-[#7E22CE] border border-purple-300 shadow-sm">
+              <svg class="w-6 h-6 icon-headset" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+            </div>
+            <div>
+              <div class="font-display font-black text-base text-[#0B0D12] group-hover:text-[#7E22CE] transition-colors">
+                Customer Support
+              </div>
+              <div class="text-xs text-gray-500 font-medium mt-0.5">
+                Quick & Friendly Assistance
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- =====================================================================
+           SUBSECTION B: TOP VAPE BRANDS (Dark Showcase Container)
+           ===================================================================== -->
+      <div class="anim-reveal brands-container-dark p-6 sm:p-10 relative">
+        
+        <!-- Ambient Vapor Accents on Left & Right -->
+        <div class="absolute -left-10 top-0 bottom-0 w-32 bg-gradient-to-r from-[#A3FF12]/10 to-transparent pointer-events-none"></div>
+        <div class="absolute -right-10 top-0 bottom-0 w-32 bg-gradient-to-l from-[#A3FF12]/10 to-transparent pointer-events-none"></div>
+
+        <!-- Header -->
+        <div class="text-center space-y-3 relative z-10">
+          <!-- Eyebrow Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-white/5 border border-white/15 text-[11px] font-bold tracking-widest text-gray-300 uppercase">
+            <span class="text-[#A3FF12]">❖</span>
+            <span>TOP VAPE BRANDS</span>
+          </div>
+
+          <!-- Main Title -->
+          <div class="flex items-center justify-center gap-3 sm:gap-6">
+            <span class="w-8 sm:w-16 h-[2px] bg-gradient-to-r from-transparent to-[#A3FF12]"></span>
+            <h3 class="font-display font-black text-2xl sm:text-3xl text-white tracking-tight">
+              Shop From <span class="text-[#A3FF12] glow-lime-text">Top Vape Brands</span>
+            </h3>
+            <span class="w-8 sm:w-16 h-[2px] bg-gradient-to-l from-transparent to-[#A3FF12]"></span>
+          </div>
+        </div>
+
+        <!-- 6 Brand Pills Row -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 mt-8 relative z-10">
+          
+          <!-- Brand 1: ELFBAR (Purple Neon Border) -->
+          <div class="brand-pill-btn brand-pill-purple group cursor-pointer" data-brand="ELFBAR" title="Shop ELFBAR">
+            <span class="font-display font-black tracking-widest text-sm text-white group-hover:text-[#A855F7] transition-colors">
+              ELFBAR<sup>®</sup>
+            </span>
+          </div>
+
+          <!-- Brand 2: iGET -->
+          <div class="brand-pill-btn group cursor-pointer" data-brand="iGET" title="Shop iGET">
+            <span class="font-display font-extrabold tracking-wider text-sm text-gray-200 group-hover:text-[#A3FF12] transition-colors">
+              iGET<sup>®</sup>
+            </span>
+          </div>
+
+          <!-- Brand 3: NASTY -->
+          <div class="brand-pill-btn group cursor-pointer" data-brand="NASTY" title="Shop NASTY">
+            <span class="font-display font-black italic tracking-wider text-sm text-gray-200 group-hover:text-[#A3FF12] transition-colors">
+              NASTY<sup>®</sup>
+            </span>
+          </div>
+
+          <!-- Brand 4: LOST MARY (Purple Neon Border) -->
+          <div class="brand-pill-btn brand-pill-purple group cursor-pointer" data-brand="LOST MARY" title="Shop LOST MARY">
+            <span class="font-display font-black tracking-widest text-xs text-[#E9D5FF] group-hover:text-white transition-colors">
+              LOST MARY<sup>®</sup>
+            </span>
+          </div>
+
+          <!-- Brand 5: OXVA -->
+          <div class="brand-pill-btn group cursor-pointer" data-brand="OXVA" title="Shop OXVA">
+            <span class="font-display font-black tracking-widest text-sm text-gray-200 group-hover:text-[#A3FF12] transition-colors">
+              OXVA<sup>®</sup>
+            </span>
+          </div>
+
+          <!-- Brand 6: VOOPOO -->
+          <div class="brand-pill-btn group cursor-pointer" data-brand="VOOPOO" title="Shop VOOPOO">
+            <span class="font-display font-black tracking-widest text-sm text-gray-200 group-hover:text-[#A3FF12] transition-colors">
+              VOOPOO<sup>®</sup>
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- =========================================================================
+       7. MAIN SITE FOOTER (Exact Match to Reference)
+       ========================================================================= -->
+  <footer id="site-footer" class="relative bg-gradient-to-b from-[#F6F8FC] via-[#FFFFFF] to-[#EFF2F8] text-[#0B0D12] pt-16 sm:pt-20 overflow-hidden border-t border-gray-200/80">
+    
+    <!-- Top-Right Organic Lime Curve Decoration (Matching Reference) -->
+    <div class="absolute -top-16 -right-16 w-80 h-80 rounded-full bg-gradient-to-br from-[#A3FF12]/20 via-[#A3FF12]/10 to-transparent blur-2xl pointer-events-none select-none"></div>
+
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-8 relative z-10">
+      
+      <!-- Upper Footer Grid: Brand Info, Links, and Newsletter -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-6 pb-12">
+        
+        <!-- Column 1: Brand Info & Social Media (4 cols) -->
+        <div class="lg:col-span-4 space-y-4">
+          <!-- Logo -->
+          <a href="#" class="inline-block group">
+            <div class="flex items-center gap-1.5 leading-none">
+              <span class="font-display font-black text-3xl sm:text-4xl text-[#0B0D12] tracking-tighter">NOX</span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-[#A3FF12] tracking-tighter drop-shadow-[0_2px_8px_rgba(163,255,18,0.6)]">I</span>
+            </div>
+            <div class="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.25em] text-gray-500 mt-1">
+              PREMIUM VAPE STORE
+            </div>
+          </a>
+
+          <!-- Description -->
+          <p class="text-xs sm:text-[13px] text-gray-600 max-w-sm leading-relaxed font-medium">
+            Your trusted destination for premium vapes, kits, pods and accessories.
+          </p>
+
+          <!-- Social Links Row (Instagram, YouTube, TikTok, X) -->
+          <div class="flex items-center gap-2.5 pt-1">
+            <!-- Instagram -->
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Instagram">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+
+            <!-- YouTube -->
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="YouTube">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </a>
+
+            <!-- TikTok -->
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="TikTok">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.97v7.54c0 1.93-.66 3.86-1.91 5.34-1.41 1.67-3.5 2.66-5.69 2.68-2.52.02-4.94-1.16-6.44-3.18-1.58-2.1-1.89-4.97-.81-7.39 1.08-2.43 3.44-4.04 6.1-4.14.36-.02.73 0 1.09.05v4.11c-.34-.1-.7-.15-1.06-.13-1.17.06-2.28.66-2.92 1.63-.64.97-.73 2.22-.24 3.27.49 1.06 1.56 1.76 2.73 1.77 1.25.02 2.45-.69 2.97-1.83.24-.51.35-1.07.35-1.63V.02z"/>
+              </svg>
+            </a>
+
+            <!-- X (Twitter) -->
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="X (Twitter)">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Shop Links (2 cols) -->
+        <div class="lg:col-span-2 space-y-3">
+          <div class="space-y-1">
+            <h4 class="font-display font-black text-sm sm:text-base text-[#0B0D12]">Shop</h4>
+            <div class="w-6 h-[2px] bg-[#A3FF12] rounded-full"></div>
+          </div>
+          <ul class="space-y-2.5 pt-1 text-xs sm:text-[13px]">
+            <li class="flex items-center gap-2.5 group/link">
+              <span class="menu-bullet-dot"></span>
+              <a href="#shop-catalog" class="footer-link">Disposable Vapes</a>
+            </li>
+            <li class="flex items-center gap-2.5 group/link">
+              <span class="menu-bullet-dot"></span>
+              <a href="#shop-catalog" class="footer-link">Vape Kits</a>
+            </li>
+            <li class="flex items-center gap-2.5 group/link">
+              <span class="menu-bullet-dot"></span>
+              <a href="#shop-catalog" class="footer-link">Nicotine Salts</a>
+            </li>
+            <li class="flex items-center gap-2.5 group/link">
+              <span class="menu-bullet-dot"></span>
+              <a href="#shop-catalog" class="footer-link">Replacement Pods</a>
+            </li>
+            <li class="flex items-center gap-2.5 group/link">
+              <span class="menu-bullet-dot"></span>
+              <a href="#shop-catalog" class="footer-link">Accessories</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Support Links (2 cols) -->
+        <div class="lg:col-span-2 space-y-3">
+          <div class="space-y-1">
+            <h4 class="font-display font-black text-sm sm:text-base text-[#0B0D12]">Support</h4>
+            <div class="w-6 h-[2px] bg-[#A3FF12] rounded-full"></div>
+          </div>
+          <ul class="space-y-2.5 pt-1 text-xs sm:text-[13px]">
+            <li class="flex items-center gap-2.5 group/link">
+              <span class="menu-bullet-dot"></span>
+              <a href="#contact" class="footer-link">Track Order</a>
+            </li>
+            <li class="flex items-center gap-2.5 group/link">
+              <span class="menu-bullet-dot"></span>
+              <a href="#about" class="footer-link">Returns & Refunds</a>
+            </li>
+            <li class="flex items-center gap-2.5 group/link">
+              <span class="menu-bullet-dot"></span>
+              <a href="#about" class="footer-link">Shipping Info</a>
+            </li>
+            <li class="flex items-center gap-2.5 group/link">
+              <span class="menu-bullet-dot"></span>
+              <a href="#about" class="footer-link">FAQs</a>
+            </li>
+            <li class="flex items-center gap-2.5 group/link">
+              <span class="menu-bullet-dot"></span>
+              <a href="#contact" class="footer-link">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Company Links (2 cols) -->
+        <div class="lg:col-span-2 space-y-3">
+          <div class="space-y-1">
+            <h4 class="font-display font-black text-sm sm:text-base text-[#0B0D12]">Company</h4>
+            <div class="w-6 h-[2px] bg-[#A3FF12] rounded-full"></div>
+          </div>
+          <ul class="space-y-2.5 pt-1 text-xs sm:text-[13px]">
+            <li class="flex items-center gap-2.5 group/link">
+              <span class="menu-bullet-dot"></span>
+              <a href="#about" class="footer-link">About Us</a>
+            </li>
+            <li class="flex items-center gap-2.5 group/link">
+              <span class="menu-bullet-dot"></span>
+              <a href="#about" class="footer-link">Privacy Policy</a>
+            </li>
+            <li class="flex items-center gap-2.5 group/link">
+              <span class="menu-bullet-dot"></span>
+              <a href="#about" class="footer-link">Terms & Conditions</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 5: Stay in the Loop (Newsletter Card - 2 cols) -->
+        <div class="lg:col-span-2 space-y-3">
+          <div class="bg-white/85 backdrop-blur-xl border border-white/95 rounded-2xl p-4 sm:p-5 shadow-[0_10px_25px_rgba(0,0,0,0.05)] space-y-3">
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-[#A3FF12]/20 text-[#15803D] flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-display font-bold text-sm text-[#0B0D12] leading-tight">
+                  Stay in the Loop
+                </h4>
+                <p class="text-[11px] text-gray-500 mt-1 leading-snug">
+                  Get the latest products, offers and restock updates.
+                </p>
+              </div>
+            </div>
+
+            <!-- Email Subscribe Input -->
+            <form id="footer-newsletter-form" class="flex items-center bg-[#F4F6F9] border border-gray-200 rounded-xl p-1 focus-within:border-[#A3FF12] focus-within:bg-white transition-all">
+              <input id="footer-email-input" type="email" placeholder="Enter your email" required class="w-full bg-transparent px-2.5 py-1.5 text-xs text-gray-800 placeholder-gray-400 focus:outline-none" />
+              <button type="submit" class="w-8 h-8 rounded-lg bg-[#A3FF12] text-[#0B0D12] flex items-center justify-center hover:bg-[#8ee607] hover:scale-105 active:scale-95 transition-all flex-shrink-0 shadow-sm" title="Subscribe">
+                <svg class="w-3.5 h-3.5 fill-current transform rotate-45 -translate-y-0.5 translate-x-0.5" viewBox="0 0 24 24">
+                  <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Middle Floating Trust Bar (Exact Match to Reference) -->
+      <div class="anim-reveal mb-8 bg-white/90 backdrop-blur-xl border border-white/95 rounded-2xl lg:rounded-full px-6 py-4 shadow-[0_8px_25px_rgba(0,0,0,0.04)] flex flex-wrap items-center justify-between gap-y-4 gap-x-6 relative z-10">
+        
+        <!-- Trust 1: Fast Delivery -->
+        <div class="flex items-center gap-3 group cursor-pointer">
+          <div class="w-9 h-9 rounded-full bg-[#A3FF12]/20 text-[#15803D] flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
+            <svg class="w-5 h-5 icon-truck" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8h4.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a2 2 0 104 0m-4 0a2 2 0 114 0m-10 0a2 2 0 104 0m-4 0a2 2 0 114 0"/>
+            </svg>
+          </div>
+          <div>
+            <div class="font-display font-black text-xs sm:text-sm text-[#0B0D12] group-hover:text-[#15803D] transition-colors">
+              Fast Delivery
+            </div>
+            <div class="text-[11px] text-gray-500 font-medium">
+              25 Minutes in Bangalore
+            </div>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <span class="hidden lg:block w-[1px] h-6 bg-gray-200"></span>
+
+        <!-- Trust 2: 100% Authentic -->
+        <div class="flex items-center gap-3 group cursor-pointer">
+          <div class="w-9 h-9 rounded-full bg-[#A3FF12]/20 text-[#15803D] flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
+            <svg class="w-5 h-5 icon-shield" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="font-display font-black text-xs sm:text-sm text-[#0B0D12] group-hover:text-[#15803D] transition-colors">
+              100% Authentic
+            </div>
+            <div class="text-[11px] text-gray-500 font-medium">
+              Genuine & Trusted Products
+            </div>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <span class="hidden lg:block w-[1px] h-6 bg-gray-200"></span>
+
+        <!-- Trust 3: Secure & Discreet -->
+        <div class="flex items-center gap-3 group cursor-pointer">
+          <div class="w-9 h-9 rounded-full bg-[#A3FF12]/20 text-[#15803D] flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
+            <svg class="w-5 h-5 icon-lock" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="font-display font-black text-xs sm:text-sm text-[#0B0D12] group-hover:text-[#15803D] transition-colors">
+              Secure & Discreet
+            </div>
+            <div class="text-[11px] text-gray-500 font-medium">
+              Private Packaging
+            </div>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <span class="hidden lg:block w-[1px] h-6 bg-gray-200"></span>
+
+        <!-- Trust 4: Customer Support -->
+        <div class="flex items-center gap-3 group cursor-pointer">
+          <div class="w-9 h-9 rounded-full bg-[#A3FF12]/20 text-[#15803D] flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
+            <svg class="w-5 h-5 icon-headset" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="font-display font-black text-xs sm:text-sm text-[#0B0D12] group-hover:text-[#15803D] transition-colors">
+              Customer Support
+            </div>
+            <div class="text-[11px] text-gray-500 font-medium">
+              Quick & Friendly Assistance
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bottom-Right Seamless Organic Curved Cove with 3D Vapes (Exact Match to Reference) -->
+    <div class="hidden lg:block absolute right-0 bottom-0 w-[380px] xl:w-[460px] 2xl:w-[500px] h-[260px] xl:h-[300px] pointer-events-none select-none z-20 overflow-hidden">
+      <!-- Dark Curved Cove with Neon Lime Contour Stroke -->
+      <svg viewBox="0 0 460 300" fill="none" class="w-full h-full" preserveAspectRatio="none">
+        <path d="M 0 300 C 130 300 160 220 210 140 C 260 60 340 20 460 35 L 460 300 Z" fill="#0B0D12" />
+        <path d="M 0 300 C 130 300 160 220 210 140 C 260 60 340 20 460 35" stroke="#A3FF12" stroke-width="2.5" stroke-linecap="round" style="filter: drop-shadow(0 0 10px rgba(163,255,18,0.9));" />
+      </svg>
+
+      <!-- Ambient Green Glow Blob Inside Cove -->
+      <div class="absolute right-12 bottom-12 w-48 h-48 bg-[#A3FF12]/20 rounded-full blur-3xl pointer-events-none"></div>
+
+      <!-- Transparent 3D Vapes Perfectly Nestled Inside the Dark Cove -->
+      <div class="absolute right-4 xl:right-12 bottom-6 z-30">
+        <img src="assets/footer/footer_vapes_blended.png" alt="Premium Vape Devices" class="h-44 xl:h-52 object-contain drop-shadow-[0_15px_30px_rgba(0,0,0,0.9)]" />
+      </div>
+    </div>
+
+    <!-- Bottom Dark Strip with Copyright, Payments & Secure Badge -->
+    <div class="bg-[#0B0D12] text-white pt-8 pb-8 px-4 sm:px-8 border-t border-white/10 relative z-30">
+
+      <div class="max-w-[1600px] mx-auto flex flex-wrap items-center justify-between gap-y-4 relative z-10">
+        
+        <!-- Left: Copyright -->
+        <div class="text-xs text-gray-400 font-normal">
+          © 2026 Noxi Vape Store. All Rights Reserved.
+        </div>
+
+        <!-- Center / Right: Payment Methods & Secure Badge -->
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6 pr-0 xl:pr-64">
+          <!-- Payment Pills -->
+          <div class="flex items-center gap-2">
+            <!-- VISA -->
+            <div class="bg-white text-[#1A1F71] font-black italic px-2.5 py-1 rounded text-xs leading-none shadow-sm flex items-center justify-center">
+              VISA
+            </div>
+            <!-- Mastercard -->
+            <div class="bg-white px-2 py-1 rounded shadow-sm flex items-center justify-center">
+              <div class="flex items-center -space-x-1.5">
+                <span class="w-3.5 h-3.5 rounded-full bg-[#EB001B] inline-block"></span>
+                <span class="w-3.5 h-3.5 rounded-full bg-[#F79E1B]/90 inline-block"></span>
+              </div>
+            </div>
+            <!-- UPI -->
+            <div class="bg-white text-[#0B0D12] font-black px-2 py-1 rounded text-xs leading-none shadow-sm flex items-center justify-center">
+              UPI
+            </div>
+          </div>
+
+          <!-- Secure Payments -->
+          <div class="flex items-center gap-2 text-xs text-gray-300 font-semibold group cursor-pointer">
+            <svg class="w-4 h-4 text-[#A3FF12] group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+            </svg>
+            <span class="group-hover:text-white transition-colors">Secure Payments</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- =========================================================================
+       FLOATING ACTION DOCK (Back to Top & WhatsApp)
+       ========================================================================= -->
+  <aside id="floating-actions" class="floating-actions-dock" aria-label="Quick Actions">
+    
+    <!-- Back to Top Button -->
+    <div class="floating-btn-item">
+      <button id="btn-back-to-top" class="btn-back-to-top" title="Back to Top" aria-label="Back to top of page">
+        <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"/>
+        </svg>
+      </button>
+      <span class="floating-btn-tooltip">Back to Top</span>
+    </div>
+
+    <!-- WhatsApp Live Chat Button -->
+    <div class="floating-btn-item">
+      <a id="btn-whatsapp" href="https://wa.me/919999999999?text=Hi%20Noxi%20Vape%20Store%2C%20I%20have%20an%20inquiry%20about%20your%20products" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-float" title="Chat on WhatsApp" aria-label="Chat with us on WhatsApp">
+        <span class="whatsapp-radar-ring"></span>
+        <svg class="w-7 h-7 fill-current relative z-10" viewBox="0 0 24 24">
+          <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.215.602 4.29 1.65 6.079l-1.758 6.425 6.577-1.725c1.714.936 3.682 1.471 5.77 1.471 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12zm0 21.84c-1.921 0-3.702-.547-5.215-1.492l-.374-.234-3.873 1.016 1.034-3.774-.256-.407c-1.032-1.642-1.579-3.551-1.579-5.549 0-5.424 4.411-9.835 9.835-9.835 5.423 0 9.834 4.411 9.834 9.835 0 5.424-4.411 9.844-9.834 9.844z"/>
+        </svg>
+      </a>
+      <span class="floating-btn-tooltip">Chat with Us</span>
+    </div>
+
+  </aside>
+
+  <!-- =========================================================================
+       5. INTERACTIVE MODALS & DRAWERS
+       ========================================================================= -->
+
+  <!-- Search Modal -->
+  <div id="search-modal" class="hidden opacity-0 fixed inset-0 z-50 modal-overlay flex items-center justify-center p-4 transition-opacity">
+    <div class="bg-[#121620] border border-white/10 rounded-2xl w-full max-w-xl p-6 shadow-2xl space-y-4">
+      <div class="flex items-center justify-between pb-3 border-b border-white/10">
+        <h3 class="text-lg font-bold text-white flex items-center gap-2">
+          <svg class="w-5 h-5 text-[#A3FF12]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          Search Vape House
+        </h3>
+        <button id="close-search-modal" class="text-gray-400 hover:text-white p-1">✕</button>
+      </div>
+      <div class="relative">
+        <input id="search-input" type="text" placeholder="Search by brand, puffs (e.g. 40000), flavor..." 
+          class="w-full bg-[#0B0D12] border border-white/15 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#A3FF12] transition-colors" />
+      </div>
+      <div class="text-xs text-gray-400 space-y-2">
+        <div class="font-semibold text-gray-300">Trending Searches:</div>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-white/5 hover:bg-[#A3FF12]/15 hover:text-[#A3FF12] cursor-pointer px-3 py-1 rounded-full border border-white/10 transition-colors">ELFBAR 40000 Puffs</span>
+          <span class="bg-white/5 hover:bg-[#A3FF12]/15 hover:text-[#A3FF12] cursor-pointer px-3 py-1 rounded-full border border-white/10 transition-colors">iGET Legend</span>
+          <span class="bg-white/5 hover:bg-[#A3FF12]/15 hover:text-[#A3FF12] cursor-pointer px-3 py-1 rounded-full border border-white/10 transition-colors">NASTY Cush Man Ice</span>
+          <span class="bg-white/5 hover:bg-[#A3FF12]/15 hover:text-[#A3FF12] cursor-pointer px-3 py-1 rounded-full border border-white/10 transition-colors">20mg Nicotine Salts</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Slide-Over Drawer -->
+  <div id="cart-drawer-overlay" class="hidden opacity-0 fixed inset-0 z-50 modal-overlay transition-opacity"></div>
+  <div id="cart-drawer" class="hidden translate-x-full fixed top-0 right-0 h-full w-full max-w-md bg-[#121620] border-l border-white/10 z-50 shadow-2xl flex flex-col justify-between cart-drawer">
+    <div class="p-6 border-b border-white/10 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <svg class="w-5 h-5 text-[#A3FF12]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+        </svg>
+        <h3 class="font-display font-bold text-lg text-white">Your Vape Cart</h3>
+      </div>
+      <button id="close-cart-drawer" class="text-gray-400 hover:text-white p-1 text-lg">✕</button>
+    </div>
+
+    <!-- Cart items list -->
+    <div class="p-6 flex-grow overflow-y-auto space-y-4">
+      <div class="bg-white/5 border border-white/10 rounded-xl p-3.5 flex gap-3 items-center">
+        <div class="w-14 h-14 bg-[#0B0D12] rounded-lg border border-[#A3FF12]/30 flex items-center justify-center text-[#A3FF12] font-black text-xs">
+          ELFBAR
+        </div>
+        <div class="flex-grow">
+          <div class="font-bold text-sm text-white">ELFBAR Ultra 40,000 Puffs</div>
+          <div class="text-xs text-gray-400">Flavor: Watermelon Bubblegum Ice</div>
+          <div class="text-sm font-extrabold text-[#A3FF12] mt-1">₹ 2,499</div>
+        </div>
+        <div class="flex items-center gap-1.5 text-xs bg-white/10 px-2 py-1 rounded-md">
+          <span>Qty: 1</span>
+        </div>
+      </div>
+      <div class="text-xs text-[#A3FF12] flex items-center gap-1.5 bg-[#A3FF12]/10 p-2.5 rounded-lg border border-[#A3FF12]/20">
+        <span>⚡</span> Eligible for 25-minute instant delivery in Bangalore!
+      </div>
+    </div>
+
+    <!-- Drawer Footer -->
+    <div class="p-6 border-t border-white/10 bg-[#0B0D12] space-y-3">
+      <div class="flex items-center justify-between text-sm">
+        <span class="text-gray-400">Subtotal:</span>
+        <span class="font-bold text-white text-base">₹ 2,499</span>
+      </div>
+      <div class="flex items-center justify-between text-xs text-gray-400">
+        <span>Delivery:</span>
+        <span class="text-[#A3FF12] font-semibold">FREE</span>
+      </div>
+      <button class="btn-lime w-full py-3.5 rounded-xl text-center font-bold text-sm shadow-lg flex items-center justify-center gap-2">
+        <span>Proceed to Fast Checkout</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Explore Collection Modal -->
+  <div id="explore-modal" class="hidden opacity-0 fixed inset-0 z-50 modal-overlay flex items-center justify-center p-4 transition-opacity">
+    <div class="bg-[#121620] border border-white/15 rounded-2xl w-full max-w-2xl p-6 shadow-2xl space-y-4">
+      <div class="flex items-center justify-between pb-3 border-b border-white/10">
+        <h3 class="text-lg font-bold text-white flex items-center gap-2">
+          <span class="text-[#8B00FF]">✦</span> Explore 2026 Vape House Collection
+        </h3>
+        <button id="close-explore-modal" class="text-gray-400 hover:text-white p-1">✕</button>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+        <div class="bg-white/5 border border-purple-500/30 rounded-xl p-4 text-center hover:border-purple-500 transition-colors">
+          <div class="w-12 h-12 mx-auto rounded-full bg-[#8B00FF]/20 flex items-center justify-center text-[#8B00FF] mb-2 font-black">iGET</div>
+          <div class="font-bold text-sm text-white">iGET Series</div>
+          <div class="text-xs text-gray-400 mt-1">High-density vapor, rich battery life</div>
+        </div>
+        <div class="bg-white/5 border border-lime-500/30 rounded-xl p-4 text-center hover:border-[#A3FF12] transition-colors">
+          <div class="w-12 h-12 mx-auto rounded-full bg-[#A3FF12]/20 flex items-center justify-center text-[#A3FF12] mb-2 font-black">ELF</div>
+          <div class="font-bold text-sm text-white">ELFBAR 40K</div>
+          <div class="text-xs text-gray-400 mt-1">Smart dual-core, animated display</div>
+        </div>
+        <div class="bg-white/5 border border-lime-500/30 rounded-xl p-4 text-center hover:border-[#A3FF12] transition-colors">
+          <div class="w-12 h-12 mx-auto rounded-full bg-[#A3FF12]/20 flex items-center justify-center text-[#A3FF12] mb-2 font-black">NASTY</div>
+          <div class="font-bold text-sm text-white">NASTY Worldwide</div>
+          <div class="text-xs text-gray-400 mt-1">Award-winning low mint fruit blends</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Application Logic -->
+  <script src="js/app.js"></script>
+</body>
+</html>
