@@ -4,6 +4,8 @@
   "routes": [
     { "handle": "filesystem" },
     { "src": "/collections", "dest": "/collections.html" },
+    { "src": "/deals", "dest": "/deals.html" },
+    { "src": "/offers", "dest": "/deals.html" },
     { "src": "/products/(.*)", "dest": "/product.html" },
     { "src": "/product/(.*)", "dest": "/product.html" },
     { "src": "/(.*)", "dest": "/$1" }

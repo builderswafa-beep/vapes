@@ -27,6 +27,8 @@ const server = http.createServer((req, res) => {
     reqPath = '/index.html';
   } else if (reqPath === '/collections' || reqPath === '/collections/') {
     reqPath = '/collections.html';
+  } else if (reqPath === '/deals' || reqPath === '/deals/' || reqPath === '/offers' || reqPath === '/offers/') {
+    reqPath = '/deals.html';
   } else if (reqPath.startsWith('/products/') || reqPath.startsWith('/product/') || reqPath === '/products' || reqPath === '/product') {
     reqPath = '/product.html';
   }
